@@ -12,6 +12,7 @@ public class FindFirstLastPositionOfElement {
         int upperBound = searchUpper(nums, target) - 1;  // -1
         int lowerBound = searchLower(nums, target);
 
+
         if (lowerBound <= upperBound && upperBound < nums.length && nums[lowerBound] == target) {
             return new int[] {lowerBound, upperBound};
         }
@@ -51,7 +52,6 @@ public class FindFirstLastPositionOfElement {
                 left = mid + 1;
             }
         }
-
 
         return right;
     }
