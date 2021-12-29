@@ -1,7 +1,7 @@
 /**
  * @author: Peter
  * @date: 29/12/2021
- * @description:
+ * @description: https://leetcode.com/problems/design-linked-list/submissions/
  */
 public class DesignLinkedList {
 
