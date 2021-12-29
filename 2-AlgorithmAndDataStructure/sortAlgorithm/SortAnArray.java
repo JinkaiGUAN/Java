@@ -8,8 +8,8 @@ import java.util.Arrays;
 public class SortAnArray {
     public int[] sortArray(int[] nums) {
 //        insertSort(nums);
-//        quickSort(nums, 0, nums.length - 1);
-        mergeSort(nums);
+        quickSort(nums, 0, nums.length - 1);
+//        mergeSort(nums);
         return nums;
     }
 
@@ -148,6 +148,7 @@ public class SortAnArray {
 
     public static void main(String[] args) {
         int[] array = {1, 7, 4, 6, 3, 2, 8, 9, 5, 6};
+//        int[] array = {2, 0, 2, 1, 1, 0};
 
         SortAnArray sortArr = new SortAnArray();
         sortArr.sortArray(array);
