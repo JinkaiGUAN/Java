@@ -13,7 +13,7 @@ import java.io.PrintStream;
  */
 public class TestPatient {
     Patient pat;
-    String name = new String("Martin");
+    String name = "Martin";
 
     @BeforeEach
     public void setUP() {
