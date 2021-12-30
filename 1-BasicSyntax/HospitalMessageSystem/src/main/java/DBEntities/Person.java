@@ -1,9 +1,11 @@
+package DBEntities;
+
 /**
  * @author: Peter
  * @date: 29/12/2021
  * @description:
  */
-public abstract class Person {
+public abstract class Person implements Contactable {
     protected String name;
     protected String contactNum;
 
@@ -11,7 +13,7 @@ public abstract class Person {
         this.name = name;
     }
 
-    public abstract void contact(String msg);
+//    public abstract void contact(String msg);
 
 
 }

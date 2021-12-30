@@ -11,8 +11,11 @@ public class Main {
         db.addDoctor("Martin Holloway", "78668898");
         db.addDoctor("Jeff Lynne", "9998");
         db.addDoctor("Harold Green", "554698");
+        db.addPatient("Jesus", "01523");
+        db.addUltrasoundScanner("AGHJ524");
 
         db.messageAll("Emergency - clear the hospital!");
 
+        System.out.println(db.locateAll());
     }
 }

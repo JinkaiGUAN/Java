@@ -1,3 +1,5 @@
+package DBEntities;
+
 /**
  * @author: Peter
  * @date: 29/12/2021
@@ -17,6 +19,7 @@ public class Doctor extends Person {
         contactNum = pageNum;
     }
 
+    @Override
     public void contact(String msg) {
         //todo: Add a patient as the input
         System.out.println("Paging Dr " + name + " on " + contactNum +  " Message: " + msg);

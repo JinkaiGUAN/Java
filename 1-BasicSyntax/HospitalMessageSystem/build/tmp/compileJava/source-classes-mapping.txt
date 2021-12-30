@@ -1,10 +1,18 @@
-Main.java
- Main
-HospitalContactDB.java
- HospitalContactDB
-Doctor.java
- Doctor
+Contactable.java
+ Contactable
 Person.java
  Person
+Scanner.java
+ Scanner
+Doctor.java
+ Doctor
 Patient.java
  Patient
+HospitalContactDB.java
+ HospitalContactDB
+Locatable.java
+ Locatable
+UltrasoundScanner.java
+ UltrasoundScanner
+Main.java
+ Main

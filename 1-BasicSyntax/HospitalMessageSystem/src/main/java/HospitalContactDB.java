@@ -1,3 +1,5 @@
+import DBEntities.*;
+
 import java.util.ArrayList;
 
 /**
@@ -6,25 +8,40 @@ import java.util.ArrayList;
  * @description:
  */
 public class HospitalContactDB {
-    ArrayList<Person> persons = new ArrayList<>();
-
+    ArrayList<Contactable> contacts = new ArrayList<>();
+    ArrayList<Locatable> locList = new ArrayList<>();
 
     public void addDoctor(String name, String contactNum) {
         Doctor doctor = new Doctor(name);
         doctor.setPageNum(contactNum);
-        persons.add(doctor);
+        contacts.add(doctor);
     }
 
     public void addPatient(String name, String bedPhoneNum) {
         Patient patient = new Patient(name);
         patient.setBedPhoneNum(bedPhoneNum);
-        persons.add(patient);
+        contacts.add(patient);
+        locList.add(patient);
+    }
+
+    public void addUltrasoundScanner(String IDnum) {
+        UltrasoundScanner scanner = new UltrasoundScanner(IDnum);
+        contacts.add(scanner);
+        locList.add(scanner);
     }
 
     public void messageAll(String msg) {
-        for (Person person: persons) {
-            person.contact(msg);
+        for (Contactable contactor: contacts) {
+            contactor.contact(msg);
+        }
+    }
+
+    public String locateAll() {
+        String ret = new String();
+        for (Locatable locator: locList) {
+            ret += locator.whereAmI() + "\n";
         }
 
+        return ret;
     }
 }
