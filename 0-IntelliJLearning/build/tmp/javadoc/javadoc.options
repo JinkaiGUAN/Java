@@ -1,0 +1,8 @@
+-classpath 'E:\\SoftwareDevelopmentJava\\0-IntelliJLearning\\build\\classes\\java\\main;E:\\SoftwareDevelopmentJava\\0-IntelliJLearning\\build\\resources\\main'
+-d 'E:\\SoftwareDevelopmentJava\\0-IntelliJLearning\\build\\docs\\javadoc'
+-doctitle '0-IntelliJLearning 1.0-SNAPSHOT API'
+-notimestamp 
+-quiet 
+-windowtitle '0-IntelliJLearning 1.0-SNAPSHOT API'
+'E:\\SoftwareDevelopmentJava\\0-IntelliJLearning\\src\\main\\java\\Main.java'
+'E:\\SoftwareDevelopmentJava\\0-IntelliJLearning\\src\\main\\java\\Technician.java'
