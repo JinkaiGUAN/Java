@@ -1,5 +1,7 @@
 package DBEntities;
 
+import DBEntities.Interfaces.Locatable;
+
 /**
  * @author: Peter
  * @date: 29/12/2021
@@ -27,6 +29,6 @@ public class Patient extends Person implements Locatable {
 
     @Override
     public String whereAmI() {
-        return "US DBEntities.Patient " + name + " is in the ward 5. ";
+        return name + " is in the ward 5.";
     }
 }

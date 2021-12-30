@@ -1,6 +1,7 @@
 package DBEntities;
 
-import DBEntities.Person;
+import DBEntities.Interfaces.Contactable;
+import DBEntities.Interfaces.Locatable;
 
 /**
  * @author: Peter

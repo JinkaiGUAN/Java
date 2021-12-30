@@ -1,18 +1,20 @@
-Contactable.java
- Contactable
-Person.java
- Person
-Scanner.java
- Scanner
-Doctor.java
- Doctor
-Patient.java
- Patient
-HospitalContactDB.java
- HospitalContactDB
-Locatable.java
- Locatable
-UltrasoundScanner.java
- UltrasoundScanner
+DBEntities/Scanner.java
+ DBEntities.Scanner
 Main.java
  Main
+DBEntities/UltrasoundScanner.java
+ DBEntities.UltrasoundScanner
+DBEntities/Interfaces/Contactable.java
+ DBEntities.Interfaces.Contactable
+DBEntities/Interfaces/Locatable.java
+ DBEntities.Interfaces.Locatable
+HospitalContactDB.java
+ HospitalContactDB
+DBEntities/Doctor.java
+ DBEntities.Doctor
+DBEntities/Patient.java
+ DBEntities.Patient
+DBEntities/Person.java
+ DBEntities.Person
+DBEntities/Technician.java
+ DBEntities.Technician

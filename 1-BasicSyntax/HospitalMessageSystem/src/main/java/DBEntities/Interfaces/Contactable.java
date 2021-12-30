@@ -1,4 +1,4 @@
-package DBEntities;
+package DBEntities.Interfaces;
 
 /**
  * @author: Peter

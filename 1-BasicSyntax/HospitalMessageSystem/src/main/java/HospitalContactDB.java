@@ -1,4 +1,6 @@
 import DBEntities.*;
+import DBEntities.Interfaces.Contactable;
+import DBEntities.Interfaces.Locatable;
 
 import java.util.ArrayList;
 

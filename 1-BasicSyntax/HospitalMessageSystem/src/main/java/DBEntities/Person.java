@@ -1,5 +1,7 @@
 package DBEntities;
 
+import DBEntities.Interfaces.Contactable;
+
 /**
  * @author: Peter
  * @date: 29/12/2021
