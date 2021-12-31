@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.gretty' version '3.0.3'
+}
+
+war{
+    from{
+        // all of the library jar files used are to be zipped into the war file
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+sourceCompatibility=1.8
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+//    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
