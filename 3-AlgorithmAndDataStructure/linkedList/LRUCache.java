@@ -37,8 +37,6 @@ public class LRUCache {
         this.size = 0;
 
         // initialize the double linkedlist
-//        this.head = new ListNode(-1, -1);
-//        this.tail = new ListNode(-1, -1);
         this.head = new ListNode();
         this.tail = new ListNode();
         this.head.next = this.tail;
@@ -67,7 +65,6 @@ public class LRUCache {
         deleteNode(temp);
         return temp;
     }
-
 
     public int get(int key) {
         ListNode node = cache.get(key);
