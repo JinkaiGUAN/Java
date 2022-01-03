@@ -21,6 +21,7 @@ public class ThreeSum {
 
             if (nums[i] > 0) return res;
 
+            // 需要和上一次枚举的数不相同
             if (i > 0 && nums[i] == nums[i - 1]) continue;
 
             int left = i + 1;
@@ -45,11 +46,8 @@ public class ThreeSum {
                     right--;
                 }
             }
-
         }
         return res;
-
-
     }
 
 }
