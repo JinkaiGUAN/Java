@@ -106,3 +106,47 @@ public class Demo {
 		int size = list.size();
 	}
 }
+
+
+
+/**
+ * 字符串特点：
+ * 1. 字符串内容用不可变
+ * 2. 字符串是共享使用的， 因为不可变性。
+ * 3. 字符串效果上相当于是char[] 字符数组， 但是底层原理是byte[]字节数组
+ * 
+ * 创建字符串的常见3+1种方式
+ * 
+ * 三种构造方法：
+ * 1. public String(), 创建一个空白字符串， 不会有任何内容。
+ * 2. public String(char[] array), 根据字符数组的内容， 来创建对应的字符串
+ * 3. public String(byte[] array), 根据字节数组的内容， 来创建对应的字符串
+ * 
+ * 直接创建
+ * String str = "Hello"; // 直接写上"" 就是字符串对象， JDK内部处理
+ * 
+ * 字符串常量池， 程序当中直接写上的双引号字符串， 就在字符串常量池中。
+ * 
+ * 对于基本类型来说， == 是进行数值的比较。
+ * 对于引用类型来说， == 是进行地址值的比较。
+ * 
+ * public boolean equals(Object obj): 参数可以是任何对象， 只有参数是一个字
+ * 符串并且内容相同时才会给true， 否则返回false。 
+ * 注意： 
+ * 1. 任何对象都能使用object进行接收。
+ * 2. equals方法具有对称性, a.equals(b) = b.equals(a).
+ * 3. 如果比较双方一个常量一个引用， 推荐把常量字符串卸载前面： "abs".equals(str);
+ * 
+ * public boolean equalsIgnoreCases(String str): 忽略大小写进行比较
+ * 
+ */
+public class Demo {
+	public static void main(String[] args) }{
+		String str1 = new String();
+		cahr[] arrayChar = new char[] {'s', 'b'};
+		String str2 = new String(arrayChar);
+		byte[] arrayByte = new byte[] {97, 98, 99};
+		String str3 = String(arrayByte);
+	}
+
+}
