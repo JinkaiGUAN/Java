@@ -1,3 +1,6 @@
+import java.util.Deque;
+import java.util.ArrayDeque;
+
 /**
  * @author: Peter
  * @date: 05/01/2022
@@ -10,43 +13,84 @@ public class ReverseWordsInString {
         if (s == null || s.length() == 0) return s;
 
         // clear free whitespace
-        int left = getBound(s, 0, true);
-        int right = getBound(s, s.length() - 1, false); // 最右侧不是空格的下标
-
-        char[] oldStringArray = s.toCharArray();
-        char[] newArray = new char[right - left + 1];
-        if (right + 1 - left >= 0) System.arraycopy(oldStringArray, left, newArray, left - left, right + 1 - left);
+        String oldString = trimSpaces(s).toString();
+        char[] newArray= oldString.toCharArray();
 
         // 反转截取之后的字符
         reverseCharArray(newArray, 0, newArray.length - 1);
 
         // 反转每个单词
         int start = 0, end = 0;
-        while (end < newArray.length) {
+        while (end <= newArray.length) {
 
-            if (newArray[end] == ' ') {
+            if (end == newArray.length || newArray[end] == ' ' ) {
                 reverseCharArray(newArray, start, end - 1);
-                start++;
+                // Using loop to filter more whitespace between two words and assign the start to the first index
+                // of the next word.
+                start = end;  // assign the start index to the end
+                while (start < newArray.length && newArray[start] == ' ') {
+                    start++;
+                    end++;
+                }
             }
             end++;
         }
 
         return new String(newArray);
+    }
+
+    public String reverseWords2(String s) {
+        // This method used deque to solve the problem
+        int left = 0, right = s.length() - 1;
+
+        // trim whitespace
+        while (left <= right && s.charAt(left) == ' ') ++left;
+        while (right >= left && s.charAt(right) == ' ') --right;
+
+        Deque<String> deque = new ArrayDeque<String>();
+        StringBuilder word = new StringBuilder();
+
+        while (left <= right) {
+            char c = s.charAt(left);
+
+            if (word.length() != 0 && c == ' ') {
+                deque.offerFirst(word.toString());
+                word.setLength(0);
+            } else if (c != ' ') {
+                word.append(c);
+            }
+            ++left;
+        }
+        deque.offerFirst(word.toString());
+
+        return String.join(" ", deque);
 
     }
 
-    public int getBound(String s, int startIdx, boolean lower) {
-        // 返回的是第一个不是空格的元素下标， 或者是最后一个不是空格元素的下标
-        while ((startIdx < s.length() && lower) || (!lower && startIdx >= 0)) {
-            char letter = s.charAt(startIdx);
-            if (letter == ' ') {
-                startIdx = lower ? startIdx + 1 : startIdx - 1;
-            } else {
-                break;
-            }
-        }
+    public StringBuilder trimSpaces(String s) {
+        int left = 0, right = s.length() - 1;
 
-        return startIdx;
+        // trim the redundant whitespace in the left part.
+        while (left <= right && s.charAt(left) == ' ') left++;
+
+        // trim the redundant whitespace in the right part
+        while (right >= left && s.charAt(right) == ' ') right--;
+
+        // trim the whitespace between the words
+        //todo: StringBuilder is not thread safe class in Java, use StringBuffer instead.
+        StringBuilder sb = new StringBuilder();
+        while (left <= right) {
+            char c = s.charAt(left);
+
+            if (c != ' ') {
+                sb.append(c);
+            } else if (sb.charAt(sb.length() - 1) != ' ') {
+                sb.append(c);
+            }
+            left++;
+        }
+        return sb;
+
     }
 
     public void reverseCharArray(char[] array, int left, int right) {
@@ -61,10 +105,9 @@ public class ReverseWordsInString {
     }
 
     public static void main(String[] args) {
-        String str = "the sky is blue";
+        String str = "  the  sky s blue   ";
 
         ReverseWordsInString solution = new ReverseWordsInString();
-        //todo: figure out the bug.
-        System.out.println(solution.reverseWords(str)); // expected: "blue is sky the"
+        System.out.println(solution.reverseWords2(str)); // expected: "blue is sky the"
     }
 }
