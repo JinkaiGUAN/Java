@@ -38,6 +38,7 @@ public class ImplementQueueUsingStacks {
     public void checkStackIn(){
         // 如果队列不为空， out为空， in有值，出栈到out中
         if (!stackIn.isEmpty() && stackOut.isEmpty()) {
+
             while (!stackIn.isEmpty()) {
                 stackOut.push(stackIn.pop());
             }
