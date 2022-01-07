@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 /**
  * @author: Peter
  * @date: 05/01/2022
- * @description:
+ * @description: https://leetcode-cn.com/problems/reverse-words-in-a-string/
  */
 public class ReverseWordsInString {
     public String reverseWords(String s) {
@@ -77,7 +77,7 @@ public class ReverseWordsInString {
         while (right >= left && s.charAt(right) == ' ') right--;
 
         // trim the whitespace between the words
-        //todo: StringBuilder is not thread safe class in Java, use StringBuffer instead.
+        // todo: StringBuilder is not thread safe class in Java, use StringBuffer instead.
         StringBuilder sb = new StringBuilder();
         while (left <= right) {
             char c = s.charAt(left);
