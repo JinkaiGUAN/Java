@@ -7,15 +7,23 @@ public class ImplementstrStr {
     public int strStr(String haystack, String needle) {
         if (needle == null || needle.length() == 0) return 0;
 
+        int n = haystack.length(), m = needle.length();
+
         // todo: filter repeated words
-        for (int i = 0; i < haystack.length(); i++) {
-            if (haystack.charAt(i) == needle.charAt(0)) {
-                int left = 0;
-                while (left < needle.length() && (i + left) < haystack.length() && haystack.charAt(i + left) == needle.charAt(left))
-                    left++;
-                    if (left == needle.length()) return i;
+        for (int i = 0; i +  m <= n; i++) {
+            boolean flag = true;
+            for (int j = 0; j < m; j++) {
+                if (haystack.charAt(i + j) != needle.charAt(j)) {
+                    flag = false;
+                    break;
+                }
             }
+            if (flag) return i;
         }
+        return -1;
+    }
+
+    public int strStrKMP(String haystack, String needle) {
 
         return -1;
     }

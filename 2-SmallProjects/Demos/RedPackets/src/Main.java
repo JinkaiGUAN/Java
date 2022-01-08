@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<User> db = new ArrayList<>();
-
+        db.add(new Manager("jon", 188));
 
     }
 }
