@@ -51,7 +51,7 @@ public class ImplementstrStr {
         // 获取next数组， next数组：下标i之前（包括i）的字符串中， 有多大长度的相同前缀后缀
         int j = -1;
         next[0] = j;
-        for(int i = 0; i < s.length(); i++){
+        for(int i = 1; i < s.length(); i++){
             while (j >= 0 && s.charAt(i) != s.charAt(j+1)) {
                 j = next[j];
             }
@@ -63,4 +63,30 @@ public class ImplementstrStr {
         }
     }
 
+    public int[] getNext(String needle) {
+        // q前后缀表到底有什么用
+        // next[i] 表示i（包括i）之前最长相等的前后缀长度， 即为j
+        int[] next = new int[needle.length()];
+
+        // 1. 初始化: 定义两个指针i和j， j指向前缀起始位置（不包括）， i指向后缀起始位置（包括 ）
+        int j = -1;
+        next[0] = j;
+
+        for (int i = 1; i < needle.length(); i++) {
+            //2. 处理前后缀不相同的情况
+            while (j >= 0 && needle.charAt(i) != needle.charAt(j + 1)) {
+                // 前后缀不相同
+                j = next[j]; // 向前回退
+            }
+
+            //3. 处理前后缀相同的情况
+            if (needle.charAt(i) == needle.charAt(j + 1)) {
+                // 找到相同的前后缀
+                j++;
+            }
+            next[i] = j;
+        }
+
+        return new int[]{};
+    }
 }
