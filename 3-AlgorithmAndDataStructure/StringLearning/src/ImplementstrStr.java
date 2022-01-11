@@ -47,6 +47,7 @@ public class ImplementstrStr {
         return -1;
     }
 
+
     public void getNext(int[] next, String s) {
         // 获取next数组， next数组：下标i之前（包括i）的字符串中， 有多大长度的相同前缀后缀
         int j = -1;
@@ -75,7 +76,7 @@ public class ImplementstrStr {
         for (int i = 1; i < needle.length(); i++) {
             //2. 处理前后缀不相同的情况
             while (j >= 0 && needle.charAt(i) != needle.charAt(j + 1)) {
-                // 前后缀不相同
+                // 前后缀不相同: 遇见冲突， 看next数组的前一位
                 j = next[j]; // 向前回退
             }
 
@@ -88,5 +89,27 @@ public class ImplementstrStr {
         }
 
         return new int[]{};
+    }
+
+    public void getNextSelfMade(int[] next, String needle) {
+        // i ： 后缀末尾， j： 前缀末尾, (i (包括i)最长相等前后缀的长度)
+        // 1. 初始化
+        int j = 0;
+        next[0] = j;
+
+        for (int i = 1; i < needle.length(); i++) {
+
+            // 2. 前后缀不相同的情况
+            while (j > 0 && needle.charAt(i) != needle.charAt(j)) {
+                j = next[j - 1];
+            }
+
+            // 3. 前后缀相同的情况
+            if (needle.charAt(i) == needle.charAt(j)) {
+                j++;
+            }
+            // 4. update next array
+            next[i] = j;
+        }
     }
 }
