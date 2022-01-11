@@ -47,6 +47,27 @@ public class ImplementstrStr {
         return -1;
     }
 
+    public int strStrSelfMade(String haystack, String needle) {
+        if (needle.length() == 0) return 0;
+
+        int[] next = new int[needle.length()];
+        getNextSelfMade(next, needle);
+        int j = 0;
+        for (int i = 0; i < haystack.length(); i++) {
+            while(j > 0 && haystack.charAt(i) != needle.charAt(j)) {
+                j = next[j - 1];
+            }
+
+            if (haystack.charAt(i) == needle.charAt(j)) {
+                j++;
+            }
+            if (j == needle.length()) {
+                return i - needle.length() + 1;
+            }
+        }
+
+        return -1;
+    }
 
     public void getNext(int[] next, String s) {
         // 获取next数组， next数组：下标i之前（包括i）的字符串中， 有多大长度的相同前缀后缀
@@ -111,5 +132,13 @@ public class ImplementstrStr {
             // 4. update next array
             next[i] = j;
         }
+    }
+
+    public static void main(String[] args) {
+        String haystack = "hello";
+        String needle = "ll";
+
+        ImplementstrStr solution = new ImplementstrStr();
+        System.out.println(solution.strStrSelfMade(haystack, needle));
     }
 }
