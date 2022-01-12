@@ -26,4 +26,10 @@ public class FindCrossPointInTheListNode {
 
     }
 
+    public static void main(String[] args) {
+        ListNode a = null;
+        ListNode b = null;
+        System.out.println(a ==b);
+    }
+
 }
