@@ -7,12 +7,11 @@ public class RemoveElement {
     public int removeElement(int[] nums, int val) {
 //        if (nums == null || nums.length == 0) return 0;
 
-        int left = 0, right = nums.length;
+        int left = 0, right = nums.length - 1;
 
-        while (left < right) {
+        while (left <= right) {
             if (nums[left] == val) {
-                nums[left] = nums[right-1];
-                right--;
+                nums[left] = nums[right--];
             } else {
                 left++;
             }
