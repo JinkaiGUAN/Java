@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EmailApp/EmailApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailApp/src/Email.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailApp/src/EmailApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/doublePointer/src/FindCrossPointInTheListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/doublePointer/src/FindCrossPointInTheListNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/out/production/doublePointer/RemoveElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/out/production/doublePointer/RemoveElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailApp/src/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/EmailApp/src/Email.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailApp/src/EmailApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/EmailApp/src/EmailApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EmailApp/Email.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EmailApp/Email.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
