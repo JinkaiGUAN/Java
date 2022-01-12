@@ -1,7 +1,7 @@
 /**
  * @author: Peter
  * @date: 12/01/2022
- * @description:
+ * @description: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  */
 public class RemoveNthNodeFromEndOfList {
     public class ListNode {
@@ -34,7 +34,7 @@ public class RemoveNthNodeFromEndOfList {
             slowPtr = slowPtr.next;
         }
         pre.next = slowPtr.next;
-        slowPtr.next = null;
+        slowPtr.next = null; // we need to set the original node to null
 
         return dummyHead.next;
     }
