@@ -2,8 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="StudentDatabaseApplication.main" target="15" />
-      <module name="StudentDatabaseApplication.test" target="15" />
+      <module name="StudentDatabaseApplication" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>
