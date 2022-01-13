@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/2-SmallProjects.iml" filepath="$PROJECT_DIR$/2-SmallProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/EmailApp/EmailApp.iml" filepath="$PROJECT_DIR$/EmailApp/EmailApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/SchoolManageSystem/SchoolManageSystem.iml" filepath="$PROJECT_DIR$/SchoolManageSystem/SchoolManageSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StudentDatabaseApplication.iml" filepath="$PROJECT_DIR$/.idea/modules/StudentDatabaseApplication.iml" />
     </modules>
   </component>
 </project>

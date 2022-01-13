@@ -43,6 +43,7 @@ public class Teacher extends People{
 
     public void receiveSalary(int salary) {
         salaryEarned += salary;
+        School.updateTotalMoneySpent(salary);
 
     }
 
