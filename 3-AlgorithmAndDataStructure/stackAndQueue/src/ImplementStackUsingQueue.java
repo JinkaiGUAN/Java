@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Queue;
 import java.util.LinkedList;
 
@@ -9,6 +11,8 @@ import java.util.LinkedList;
  */
 public class ImplementStackUsingQueue {
     //使用linkedlist时， 我们只能用addLast and getFirst methods
+    // 一个队列在模拟栈弹出元素的时候只要将队列头部的元素（除了最后一个元素外） 重新添加到队列尾部，此时在去弹出元素就是栈的顺序了。
+    // todo: Using one queue to accomplish this structure.
 
     private Queue<Integer> queue1; // 作为主要队列
     private Queue<Integer> queue2; // 作为备份队列
@@ -61,7 +65,6 @@ public class ImplementStackUsingQueue {
         }
 
         return peekEle;
-
     }
 
     public boolean empty() {

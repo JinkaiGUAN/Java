@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/binarySearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sortAlgorithm" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/linkedList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/stackAndQueue" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
