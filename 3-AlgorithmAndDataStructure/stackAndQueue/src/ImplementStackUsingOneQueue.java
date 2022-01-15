@@ -36,16 +36,7 @@ public class ImplementStackUsingOneQueue {
     }
 
     public int top() {
-        if (isEmpty()) {
-            System.out.println("The stack is empty!");
-            return Integer.MIN_VALUE;
-        }
-
-        for (int i = 0; i < queue.size() - 1; i ++) {
-            queue.add(queue.remove());
-        }
-
-        int peek = queue.remove();
+        int peek = pop();
         queue.add(peek);
 
         return peek;
