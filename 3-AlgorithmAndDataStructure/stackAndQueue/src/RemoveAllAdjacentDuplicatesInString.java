@@ -26,5 +26,26 @@ public class RemoveAllAdjacentDuplicatesInString {
         return stack.toString().replaceAll("\\[", "").replaceAll("]", "").replaceAll(", ", "");
     }
 
-//    public String removeDuplicate(String s) {}
+    public String removeDuplicate2(String s) {
+        StringBuffer stack = new StringBuffer();
+        int top = -1;
+        for (int i = 0; i < s.length();  i++) {
+            char letter = s.charAt(i);
+            if (top >= 0 && stack.charAt(top) == letter) {
+                stack.deleteCharAt(top);
+                --top;
+            } else {
+                stack.append(letter);
+                ++top;
+            }
+        }
+        return stack.toString();
+    }
+
+    public static void main(String[] args) {
+        String s = "abbaca";
+
+        RemoveAllAdjacentDuplicatesInString solution = new RemoveAllAdjacentDuplicatesInString();
+        System.out.println(solution.removeDuplicate2(s));
+    }
 }
