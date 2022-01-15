@@ -1,8 +1,11 @@
 package src;
 
 import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Set;
 import java.util.HashSet;
+
 
 /**
  * @author: Peter
@@ -26,16 +29,12 @@ public class EvaluateReversePolishNotation {
                 // 我们默认输入的逆波兰表达式都有效， 即出现一个operator时， 我们的stack当中有两个元素
                 int firstNum = stack.pop(), secondNum = stack.pop();
                 // todo: do the calculation
-                int res = 0;
-                if (ele.equals("+")) {
-                    res = firstNum + secondNum;
-                } else if (ele.equals("-")) {
-                    res = secondNum - firstNum;
-                } else if (ele.equals("*")) {
-                    res = firstNum * secondNum;
-                } else {
-                    res = secondNum / firstNum;
-                }
+                int res = switch (ele) {
+                    case "+" -> firstNum + secondNum;
+                    case "-" -> secondNum - firstNum;
+                    case "*" -> firstNum * secondNum;
+                    default -> secondNum / firstNum;
+                };
 
                 stack.push(res);
             } else {
@@ -45,5 +44,39 @@ public class EvaluateReversePolishNotation {
         }
 
         return stack.pop();
+    }
+
+    public int evalRPN2(String[] tokens) {
+        Deque<Integer> stack = new LinkedList<>();
+
+        int n = tokens.length;
+        for (String token : tokens) {
+            if (isNumber(token)) {
+                stack.push(Integer.parseInt(token));
+            } else {
+                int num2 = stack.pop();
+                int num1 = stack.pop();
+                switch (token) {
+                    case "+":
+                        stack.push(num1 + num2);
+                        break;
+                    case "-":
+                        stack.push(num1 - num2);
+                        break;
+                    case "*":
+                        stack.push(num1 * num2);
+                        break;
+                    case "/":
+                        stack.push(num1 / num2);
+                        break;
+                    default:
+                }
+            }
+        }
+        return stack.pop();
+    }
+
+    public boolean isNumber(String token) {
+        return !("+".equals(token) || "-".equals(token) || "*".equals(token) || "/".equals(token));
     }
 }
