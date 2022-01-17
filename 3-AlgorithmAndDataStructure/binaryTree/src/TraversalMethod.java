@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
 
 /**
  * @author: Peter
@@ -17,6 +20,30 @@ public class TraversalMethod {
         preorderTraversal(cur.right, res);
     }
 
+    public List<Integer> preorderTraversalIteration(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+
+        if (root == null) {
+            return res;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.add(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            res.add(node.val);
+
+            if (node.right != null) {
+                stack.add(node.right);
+            }
+            if (node.left != null) {
+                stack.add(node.left);
+            }
+        }
+
+        return res;
+    }
+
     public void inorderTraversal(TreeNode cur, ArrayList<Integer> res) {
         if (cur == null) {
             return;
@@ -24,6 +51,30 @@ public class TraversalMethod {
         inorderTraversal(cur.left, res);
         res.add(cur.val);
         inorderTraversal(cur.right, res);
+    }
+
+    public List<Integer> inorderTraversalIteration(TreeNode root) {
+        // 入栈顺序： 左 - 右
+        List<Integer> res = new ArrayList<>();
+
+        if (root == null) {
+            return res;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            if (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            } else {
+                cur = stack.pop();
+                res.add(cur.val);
+                cur = cur.right;
+            }
+        }
+
+        return res;
     }
 
     public void postorderTraversal(TreeNode cur, ArrayList<Integer> res) {
@@ -34,6 +85,33 @@ public class TraversalMethod {
         postorderTraversal(cur.right, res);
         res.add(cur.val);
     }
+
+    public List<Integer> postorderTraversalIteration(TreeNode root) {
+        // 先序遍历（中左右） -> 中右左 -> 左右中
+        List<Integer> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while(!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            res.add(node.val);
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+        Collections.reverse(res);
+
+        return res;
+    }
+
 
     public static void main(String[] args) {
 
