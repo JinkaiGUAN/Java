@@ -40,4 +40,22 @@ public class LevelOrderTraversal {
 
         return res;
     }
+
+    public void levelOrderIterative(TreeNode node, List<List<Integer>> res, int deep) {
+        // deep 表示当前深度为多少
+        if (node == null) {
+            return;
+        }
+        deep++;
+
+        if (res.size() < deep) {
+            List<Integer> item = new LinkedList<>();
+            res.add(item);
+        }
+
+        res.get(deep - 1).add(node.val);
+
+        levelOrderIterative(node.left, res, deep);;
+        levelOrderIterative(node.right, res, deep);
+    }
 }
