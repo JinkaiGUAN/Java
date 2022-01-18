@@ -2,7 +2,6 @@ import java.util.List;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 /**
  * @author: Peter
  * @date: 18/01/2022
@@ -11,6 +10,7 @@ import java.util.Queue;
 public class LevelOrderTraversal {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
+        // 使用queue储存， 此处level order traversal属于BFS范畴
         List<List<Integer>> res = new LinkedList<>();
         Queue<TreeNode> queue = new LinkedList<>();
 
@@ -24,7 +24,7 @@ public class LevelOrderTraversal {
 
             // add elements of the same level to a list
             for (int i = 0; i < size; i++) {
-                TreeNode node = queue.remove();
+                TreeNode node = queue.remove(); // 在queue是空的情况下 返回null
                 innerList.add(node.val);
 
                 if (node.left != null) {
