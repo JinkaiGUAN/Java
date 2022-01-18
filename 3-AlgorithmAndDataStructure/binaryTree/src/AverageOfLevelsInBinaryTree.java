@@ -22,7 +22,7 @@ public class AverageOfLevelsInBinaryTree {
 
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.remove();
-                sum += (double) node.val;
+                sum += node.val;
 
                 if (node.left != null) {
                     queue.add(node.left);
