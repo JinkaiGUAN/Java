@@ -30,6 +30,9 @@ public class PopulatingNextRightPointersInEachNode {
         }
     }
 
+    Node last = null;
+    Node nextStart = null;
+
     public Node connect(Node root) {
         Queue<Node> queue = new LinkedList<>();
 
@@ -61,5 +64,39 @@ public class PopulatingNextRightPointersInEachNode {
         }
 
         return root;
+    }
+
+    public Node connect2(Node root) {
+        // 此处将优化额外空间的使用
+        if (root == null) {
+            return null;
+        }
+
+        Node start = root;
+        while (start != null) {
+            last = null;
+            nextStart = null; // 每一层的第一个node
+
+            for (Node p = start; p != null; p = p.next) {
+                if (p.left != null) {
+                    handle(p.left);
+                }
+                if (p.right != null) {
+                    handle(p.right);
+                }
+            }
+            start = nextStart;
+        }
+        return root;
+    }
+
+    public void handle(Node p) {
+        if (last != null) {
+            last.next = p;
+        }
+        if (nextStart == null) {
+            nextStart = p;
+        }
+        last = p;
     }
 }
