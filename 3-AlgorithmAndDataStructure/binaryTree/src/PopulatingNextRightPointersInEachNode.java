@@ -74,7 +74,7 @@ public class PopulatingNextRightPointersInEachNode {
 
         Node start = root;
         while (start != null) {
-            last = null;
+            last = null; // 用来迭代更新每一个节点
             nextStart = null; // 每一层的第一个node
 
             for (Node p = start; p != null; p = p.next) {
