@@ -30,12 +30,27 @@ public class MinimumDepthOfBinaryTree {
                 if (node.right != null) {
                     queue.add(node.right);
                 }
-
             }
 
             depth++;
         }
-
         return depth;
+    }
+
+    public int minDepth2(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftDepth = minDepth2(root.left);
+        int rightDepth = minDepth2(root.right);
+        if (root.left == null) {
+            return leftDepth + 1;
+        }
+        if (root.right == null) {
+            return rightDepth + 1;
+        }
+
+        return Math.min(leftDepth, rightDepth) + 1;
     }
 }
