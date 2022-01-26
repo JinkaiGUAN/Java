@@ -15,8 +15,21 @@ public class LinkList<T> implements Iterable<T> {
     private Node head;  // head node -> dummy head
     private int N;  // the length of the linkedList.
 
-    private class Node {
+    private class Node<T> {
+        public T item;
+        public Node next;
 
+        public Node() {}
+
+        public Node(T item) {
+            this.item = item;
+            next = null;
+        }
+
+        public Node(T item, Node next) {
+            this.item = item;
+            this.next = next;
+        }
     }
 
     public void clear() {

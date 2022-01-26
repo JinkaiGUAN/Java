@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4106db22-56cc-48b7-ab08-8e81b6e909fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/LinkList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2-LinearTable/src/test/SequenceListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/binaryTree/src/ConstructBinaryTreeFromInorderAndPostOrderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/binaryTree/src/ConstructBinaryTreeFromInorderAndPostOrderTraversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/SequenceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/SequenceList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/DoublyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/LinkList.java" beforeDir="false" afterPath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/LinkList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
