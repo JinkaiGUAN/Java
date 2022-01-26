@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Copyright (C), Peter GUAN
  * FileName: ConstructBinaryTreeFromInorderAndPostOrderTraversal
@@ -20,6 +17,7 @@ public class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
     public TreeNode getChild(int[] inorder, int inLeft, int inRight, int[] postorder, int postLeft, int postRight) {
         // 中断条件
         if (inRight - inLeft < 1) {
+            // 此条件必要， 因为可能会出现子树只有一颗
             return null;
         }
         if (inRight - inLeft == 1) {

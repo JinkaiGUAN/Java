@@ -11,6 +11,7 @@ import java.util.function.Consumer;
 public class SequenceList<T> implements Iterable<T>{
     private T[] eles;
     private int N;
+    // todo: change the capacity to a changeable variable according to the elements in the array.
     private int Capacity;
 
     public SequenceList() {}
@@ -42,7 +43,7 @@ public class SequenceList<T> implements Iterable<T>{
         eles[N++] = t;
     }
 
-    public void inset(int i, T t) {
+    public void insert(int i, T t) {
         if (i >= Capacity) {
             throw new ArrayIndexOutOfBoundsException("The index is out of bound!");
         }
@@ -79,13 +80,8 @@ public class SequenceList<T> implements Iterable<T>{
 
     // todo: Enable Generate missed test method function in IntelliJ
     @Override
-    public Iterator<T> iterator() {
+    public Iterator iterator() {
         return new SIterator();
-    }
-
-    @Override
-    public void forEach(Consumer<? super T> action) {
-
     }
 
     private class SIterator implements Iterator {
