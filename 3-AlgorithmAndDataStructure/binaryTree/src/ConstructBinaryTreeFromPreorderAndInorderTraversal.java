@@ -39,7 +39,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
             }
         }
 
-        root.left = getChild(preorder, preLeft+1, preLeft  + 1 + (inIdx - inLeft), inorder, inLeft, inIdx);
+        root.left = getChild(preorder, preLeft + 1, preLeft  + 1 + (inIdx - inLeft), inorder, inLeft, inIdx);
         root.right = getChild(preorder, preLeft + 1 + (inIdx - inLeft), preRight, inorder, inIdx + 1, inRight);
 
         return root;
