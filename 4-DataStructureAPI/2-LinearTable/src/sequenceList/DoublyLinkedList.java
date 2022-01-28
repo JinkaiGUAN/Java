@@ -12,6 +12,8 @@ import java.util.Iterator;
  * Version:
  */
 public class DoublyLinkedList<T> implements Iterable<T> {
+    // This is the doubly linked list API. In this API, you should be careful to the head and last node, since the head
+    // can be the dummy head, while the last node is not the dummy tail.
 
     private Node head;  // dummy head
     private Node last; // the last node
@@ -24,7 +26,11 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     }
 
     public void clear() {
-
+        // Clear the doubly linked list. First time, we need to set the dummy head point to null and last node to
+        // null. Then we will assign the length of the linked list to 0.
+        last = null;
+        head.next = null;
+        N = 0;
     }
 
     public boolean isEmpty() {
@@ -40,11 +46,27 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     }
 
     public void insert(T t) {
-
+        // Insert a node at the head. Here are are going to call the overloading function to insert at the index of 0.
+        insert(0, t);
     }
 
     public void insert(int i, T t) {
+        // Insert the node in a certain position. We have to consider the following things: If the linked list is
+        // empty, what if the linked list if not empty.
+        Node newNode = new Node(t);
+        if (isEmpty()) {
+            last = newNode;
+            head.next = last;
+        }
 
+        // find the position to be inserted
+        for (int idx = 0; idx < i - 1; i++) {
+
+        }
+
+
+        // add the node number
+        N++;
     }
 
     public T remove(int i) {
