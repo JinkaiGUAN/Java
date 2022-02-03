@@ -1,6 +1,7 @@
 package sequenceList;
 
 import java.util.Iterator;
+import java.util.LinkedList;
 
 /**
  * Copyright (C), Peter GUAN
@@ -15,7 +16,126 @@ public class LinkList<T> implements Iterable<T> {
     private Node head;  // head node -> dummy head
     private int N;  // the length of the linkedList.
 
-    private class Node<T> {
+    public LinkList() {
+        this.head = new Node(null, null);
+        this.N = 0;
+    }
+
+    public void clear() {
+        N = 0;
+    }
+
+    public boolean isEmpty() {
+        return N == 0;
+    }
+
+    public int length() {return N;}
+
+    public T get(int i) {
+        // get the i-th element in the linkedList, we start from 0 in the index
+        if (i >= N) {
+            throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!");
+        }
+
+        Node pre = head.next;
+        for (int idx = 0; idx < i; idx++) {
+            pre = pre.next;
+        }
+
+        return pre.item;
+    }
+
+    public void insert(T t) {
+        // Add an element into the linkedList. Normally we insert such node after the dummy head.
+        Node newNode = new Node(t);
+        Node cur = head.next;
+        //  insert the node
+        head.next = newNode;
+        newNode.next = cur;
+        N++;
+    }
+
+    /**
+     * Insert an element at the certain position.
+     *
+     * Note: Here we are going to consider when the index i == N. We must test this function in our test class.
+     *
+     * @param i: Index。
+     * @param t: Value.
+     */
+    public void insert(int i, T t) {
+        // Overload the preceding insert function
+        Node newNode = new Node(t);
+
+        if (i > N) {
+            throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!");
+        }
+
+        if (isEmpty()) {
+            this.head = newNode;
+            N++;
+            return;
+        }
+
+        // find the previous node
+        Node pre = head;
+        for (int idx = 0; idx < i; idx ++) {
+            pre = pre.next;
+        }
+
+        Node lastNode = pre.next;
+        pre.next = newNode;
+        newNode.next = lastNode;
+        N++;
+    }
+
+    public T remove(int i) {
+        if (i >= N) {
+            throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!")
+        }
+
+        Node pre = head;
+        for (int idx = 0; idx < i; idx++) {
+            pre = pre.next;
+        }
+        // delete the node
+        Node removedNode = pre.next;
+//        removedNode.next = null;
+        pre.next = pre.next.next;
+
+        N--;
+
+        return removedNode.item;
+    }
+
+    public int indexOf(T t) {
+        // If the element does not exist, return -1
+
+        return -1;
+    }
+
+    // todo: Implement for loop interface
+    @Override
+    public Iterator<T> iterator() {
+        return new LinkedListIterator();
+    }
+
+    private class LinkedListIterator implements Iterator<T> {
+        private Node n = head;
+
+        @Override
+        public boolean hasNext() {
+            return n.next == null;
+        }
+
+        @Override
+        public T next() {
+            n = n.next;
+            return n.item;
+        }
+    }
+
+    private class Node {
         public T item;
         public Node next;
 
@@ -29,57 +149,6 @@ public class LinkList<T> implements Iterable<T> {
         public Node(T item, Node next) {
             this.item = item;
             this.next = next;
-        }
-    }
-
-    public void clear() {
-
-    }
-
-    public boolean isEmpty() {
-
-    }
-
-    public int length() {}
-
-    public T get(int i) {
-        // get the i-th element in the linkedList, we start from 0 in the index
-    }
-
-    public void insert(T t) {
-        // Add an element into the linkedList. Normally we insert such node after the dummy head.
-    }
-
-    public void insert(int i, T t) {
-        // Overload the preceding insert function
-    }
-
-    public T remove(int i) {
-
-    }
-
-    public int indexOf(T t) {
-        // If the element does not exist, return -1
-
-        return -1;
-    }
-
-    // todo: Implement for loop interface
-    @Override
-    public Iterator<T> iterator() {
-        return null;
-    }
-
-    private class LinkedListIterator implements Iterator<T> {
-
-        @Override
-        public boolean hasNext() {
-            return false;
-        }
-
-        @Override
-        public T next() {
-            return null;
         }
     }
 

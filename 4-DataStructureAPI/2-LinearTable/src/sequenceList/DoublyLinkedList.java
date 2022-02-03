@@ -2,6 +2,7 @@ package sequenceList;
 
 import java.util.Iterator;
 
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: DoublyLinkedList
@@ -50,30 +51,101 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         insert(0, t);
     }
 
+    /**
+     * Insert an element in the doubly linked list.
+     *
+     * Note: The underlying mechanism is as follows,
+     * 1. we need to take the first node into consideration.
+     * 2. Find the previous node so that we can finish the insertion process.
+     *
+     * Exception:
+     * 1. We must consider the situation when the index is larger than or equal to the total numbers we have now. For
+     * this situation, we would like ot output a message tell that the user inout a wrong index. We take it into the
+     * last node.
+     *
+     * @param i: The index where we are going to insert the new node.
+     * @param t: The value of the inserted element.
+     */
     public void insert(int i, T t) {
         // Insert the node in a certain position. We have to consider the following things: If the linked list is
         // empty, what if the linked list if not empty.
         Node newNode = new Node(t);
+
+        if (i > N) {
+            System.out.println("The input index " + t + "if out of boundary!");
+            Node pre = last;
+            pre.next = newNode;
+            last = newNode;
+            N++;
+            return;
+        }
+
         if (isEmpty()) {
             last = newNode;
             head.next = last;
+            N++;
+            return;
         }
 
-        // find the position to be inserted
+        // find the position, where the inserting node should be followed
+        Node pre = head;
         for (int idx = 0; idx < i - 1; i++) {
-
+            pre = pre.next;
         }
-
+        newNode.next = pre.next;
+        pre.next = newNode;
 
         // add the node number
         N++;
     }
 
+    /**
+     * Remove the element in the certain position.
+     *
+     * Exception:
+     * 1. If the input position is wrong, throw an exception.
+     *
+     * @param i: The index of the positon we are going to insert the element.
+     * @return Return the value of the position.
+     */
     public T remove(int i) {
-        return null;
+        if (i >= N) {
+            throw new IndexOutOfBoundsException("The index of " + i + "is out of boundary of " + N + "!" );
+        }
+
+        // find the previous node
+        Node pre = head;
+        for (int idx = 0; idx < i - 1; idx++) {
+            pre = pre.next;
+        }
+        Node removedNode = pre.next;
+        pre.next = pre.next.next;
+
+        // update the element number
+        N--;
+
+        return removedNode.item;
     }
 
+    /**
+     * Give the index of the element.
+     *
+     * If we did not find the element, -1 would be returned.
+     * @param t: The element value.
+     * @return Return the index of the element.
+     */
     public int indexOf(T t) {
+
+        Node pre = head.next;
+        for (int i = 0; i < N; i++) {
+            // Comparable elements should  be used.
+            // todo: Using comparable interface here
+            if (pre.item == t) {
+                return i;
+            }
+            pre = pre.next;
+        }
+
         return -1;
     }
 
@@ -86,27 +158,32 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     }
 
     public T getLast() {
+        if (last == null) {
+            return null;
+        }
 
-        return null;
+        return last.item;
     }
 
 
     // todo:implement for-loop
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new DoublyLinkedListIterator();
     }
 
     private class DoublyLinkedListIterator implements Iterator<T> {
+        private Node n = head;
 
         @Override
         public boolean hasNext() {
-            return false;
+            return n.next == null;
         }
 
         @Override
         public T next() {
-            return null;
+            n = n.next;
+            return n.item;
         }
     }
 
