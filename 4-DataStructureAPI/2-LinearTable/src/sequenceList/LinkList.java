@@ -86,7 +86,7 @@ public class LinkList<T> implements Iterable<T> {
 
     public T remove(int i) {
         if (i >= N || i < 0) {
-            throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!")
+            throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!");
         }
 
         Node pre = head;
