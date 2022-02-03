@@ -22,6 +22,7 @@ public class LinkList<T> implements Iterable<T> {
     }
 
     public void clear() {
+        head.next = null;
         N = 0;
     }
 
@@ -33,7 +34,7 @@ public class LinkList<T> implements Iterable<T> {
 
     public T get(int i) {
         // get the i-th element in the linkedList, we start from 0 in the index
-        if (i >= N) {
+        if (i >= N || i < 0) {
             throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!");
         }
 
@@ -67,14 +68,8 @@ public class LinkList<T> implements Iterable<T> {
         // Overload the preceding insert function
         Node newNode = new Node(t);
 
-        if (i > N) {
+        if (i > N || i < 0) {
             throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!");
-        }
-
-        if (isEmpty()) {
-            this.head = newNode;
-            N++;
-            return;
         }
 
         // find the previous node
@@ -90,7 +85,7 @@ public class LinkList<T> implements Iterable<T> {
     }
 
     public T remove(int i) {
-        if (i >= N) {
+        if (i >= N || i < 0) {
             throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!")
         }
 
@@ -110,6 +105,13 @@ public class LinkList<T> implements Iterable<T> {
 
     public int indexOf(T t) {
         // If the element does not exist, return -1
+        Node cur = head;
+        for (int i = 0; i < N; i++) {
+            cur = cur.next;
+            if (cur.item.equals(t)) {
+                return i;
+            }
+        }
 
         return -1;
     }
@@ -121,11 +123,15 @@ public class LinkList<T> implements Iterable<T> {
     }
 
     private class LinkedListIterator implements Iterator<T> {
-        private Node n = head;
+        private Node n;
+
+        public LinkedListIterator() {
+            n = head;
+        }
 
         @Override
         public boolean hasNext() {
-            return n.next == null;
+            return n.next != null;
         }
 
         @Override
@@ -135,7 +141,7 @@ public class LinkList<T> implements Iterable<T> {
         }
     }
 
-    private class Node {
+    private class Node{
         public T item;
         public Node next;
 
@@ -150,6 +156,8 @@ public class LinkList<T> implements Iterable<T> {
             this.item = item;
             this.next = next;
         }
+
+
     }
 
 }
