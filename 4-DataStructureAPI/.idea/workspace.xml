@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4106db22-56cc-48b7-ab08-8e81b6e909fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2-LinearTable/src/test/DoublyLinkedListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-LinearTable/2-LinearTable.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2-LinearTable/2-LinearTable.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/2-LinearTable/src/sequenceList/DoublyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-LinearTable/src/test/LinkListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/2-LinearTable/src/test/LinkListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-LinearTable/src/test/DoublyLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/2-LinearTable/src/test/DoublyLinkedListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2-LinearTable/sequenceList/DoublyLinkedList$DoublyLinkedListIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2-LinearTable/sequenceList/DoublyLinkedList$DoublyLinkedListIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2-LinearTable/sequenceList/DoublyLinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2-LinearTable/sequenceList/DoublyLinkedList$Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2-LinearTable/sequenceList/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2-LinearTable/sequenceList/DoublyLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2-LinearTable/test/LinkListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2-LinearTable/test/LinkListTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../5 -Maven/1-manual-maven-java-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../5 -Maven/1-manual-maven-java-project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../5 -Maven/1-manual-maven-java-project/src/main/java/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../5 -Maven/1-manual-maven-java-project/src/main/java/com/peter/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../5 -Maven/1-manual-maven-java-project/src/main/java/com/peter/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2-LinearTable/test/DoublyLinkedListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2-LinearTable/test/DoublyLinkedListTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,34 +48,8 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
-  <component name="RunManager" selected="JUnit.DoublyLinkedListTest.testLength">
-    <configuration name="LinkListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.LinkListTest" />
-      <module name="2-LinearTable" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SequenceListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.SequenceListTest" />
-      <module name="2-LinearTable" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DoublyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DoublyLinkedListTest.testGetLast">
+    <configuration name="DoublyLinkedListTest.testGetFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="2-LinearTable" />
       <extension name="coverage">
         <pattern>
@@ -90,12 +59,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.DoublyLinkedListTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testGetFirst" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoublyLinkedListTest.testLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DoublyLinkedListTest.testGetLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="2-LinearTable" />
       <extension name="coverage">
         <pattern>
@@ -105,7 +75,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.DoublyLinkedListTest" />
-      <option name="METHOD_NAME" value="testLength" />
+      <option name="METHOD_NAME" value="testGetLast" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoublyLinkedListTest.testIndexOf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="2-LinearTable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.DoublyLinkedListTest" />
+      <option name="METHOD_NAME" value="testIndexOf" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoublyLinkedListTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="2-LinearTable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.DoublyLinkedListTest" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoublyLinkedListTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="2-LinearTable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.DoublyLinkedListTest" />
+      <option name="METHOD_NAME" value="testRemove" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,10 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DoublyLinkedListTest.testLength" />
-        <item itemvalue="JUnit.DoublyLinkedListTest" />
-        <item itemvalue="Application.LinkListTest" />
-        <item itemvalue="Application.SequenceListTest" />
+        <item itemvalue="JUnit.DoublyLinkedListTest.testGetLast" />
+        <item itemvalue="JUnit.DoublyLinkedListTest.testGetFirst" />
+        <item itemvalue="JUnit.DoublyLinkedListTest.testIndexOf" />
+        <item itemvalue="JUnit.DoublyLinkedListTest.testRemove" />
+        <item itemvalue="JUnit.DoublyLinkedListTest.testInsert" />
       </list>
     </recent_temporary>
   </component>

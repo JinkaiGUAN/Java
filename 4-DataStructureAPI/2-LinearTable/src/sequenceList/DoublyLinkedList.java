@@ -43,12 +43,32 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     }
 
     public T get(int i) {
-        return null;
+        Node pre = head.next;
+        for (int idx = 0; idx < i; idx++) {
+            pre = pre.next;
+        }
+
+        return pre.item;
     }
 
     public void insert(T t) {
         // Insert a node at the head. Here are are going to call the overloading function to insert at the index of 0.
-        insert(0, t);
+        Node newNode = new Node(t);
+        if (isEmpty()) {
+            head.next = newNode;
+            newNode.pre = head;
+            last = newNode;
+            N++;
+            return;
+        }
+
+        newNode.next = head.next;
+        newNode.pre = head;
+        head.next.pre = newNode;
+        head.next = newNode;
+
+
+        N++;
     }
 
     /**
@@ -60,8 +80,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      *
      * Exception:
      * 1. We must consider the situation when the index is larger than or equal to the total numbers we have now. For
-     * this situation, we would like ot output a message tell that the user inout a wrong index. We take it into the
-     * last node.
+     * this situation, we would like ot output a message tell that the user inout a wrong index.
      *
      * @param i: The index where we are going to insert the new node.
      * @param t: The value of the inserted element.
@@ -71,31 +90,29 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         // empty, what if the linked list if not empty.
         Node newNode = new Node(t);
 
-        if (i > N || i < 0) {
-            System.out.println("The input index " + t + "if out of boundary!");
-            Node pre = last;
-            pre.next = newNode;
+        if (i >= N || i < 0) {
+            System.out.println("The input index " + i + " is out of boundary!");
+            return;
+        }
+
+        if (isEmpty()) {
+            head.next = newNode;
+            newNode.pre = head;
             last = newNode;
             N++;
             return;
         }
 
-//        if (isEmpty()) {
-//            last = newNode;
-//            head.next = newNode;
-//            N++;
-//            return;
-//        }
-
         // find the position, where the inserting node should be followed
-        Node pre = head;
-        for (int idx = 0; idx < i; i++) {
-            pre = pre.next;
+        Node curr = head.next;
+        for (int idx = 0; idx < i; idx++) {
+            curr = curr.next;
         }
-        Node curr = pre.next;
 
-        newNode.next = pre.next;
-        pre.next = newNode;
+        newNode.next = curr;
+        newNode.pre = curr.pre;
+        curr.pre.next = newNode;
+        curr.pre = newNode;
 
         // add the node number
         N++;
@@ -111,22 +128,22 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      * @return Return the value of the position.
      */
     public T remove(int i) {
-        if (i >= N) {
-            throw new IndexOutOfBoundsException("The index of " + i + "is out of boundary of " + N + "!" );
+        if (i >= N || i < 0) {
+            throw new IndexOutOfBoundsException("The index of " + i + " is out of boundary of " + N + "!" );
         }
 
-        // find the previous node
-        Node pre = head;
-        for (int idx = 0; idx < i - 1; idx++) {
-            pre = pre.next;
+        Node curr = head.next;
+        for (int idx = 0; idx < i; idx++) {
+            curr = curr.next;
         }
-        Node removedNode = pre.next;
-        pre.next = pre.next.next;
+
+        curr.pre.next = curr.next;
+        curr.next.pre = curr.pre;
 
         // update the element number
         N--;
 
-        return removedNode.item;
+        return curr.item;
     }
 
     /**
