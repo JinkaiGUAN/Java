@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="" />
+    <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/StudentDatabaseApplication.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/StudentDatabaseApplication.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunitTest/JunitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunitTest/src/main/com/vogella/junit5/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JunitTest/src/test/com/vogella/junit5/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentDatabaseApplication/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentDatabaseApplication/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentDatabaseApplication/StudentDatabaseApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentDatabaseApplication/StudentDatabaseApplication.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4-DataStructureAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../4-DataStructureAPI/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,13 +67,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../3-AlgorithmAndDataStructure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.StudentDatabaseApp">
+  <component name="RunManager" selected="JUnit.CalculatorTest.testMultiply">
     <configuration name="EmailApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="EmailApp" />
       <module name="EmailApp" />
@@ -81,8 +99,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CalculatorTest.testMultiply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JunitTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.com.vogella.junit5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.com.vogella.junit5" />
+      <option name="MAIN_CLASS_NAME" value="test.com.vogella.junit5.CalculatorTest" />
+      <option name="METHOD_NAME" value="testMultiply" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculatorTest.testMultiply" />
         <item itemvalue="Application.StudentDatabaseApp" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.EmailApp" />

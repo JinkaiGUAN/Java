@@ -1,7 +1,7 @@
 package test;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import sequenceList.DoublyLinkedList;
@@ -32,15 +32,12 @@ public class DoublyLinkedListTest {
     @Test
     @DisplayName("Test length")
     public void testLength() {
-        setUp();
-
         Assert.assertEquals(4, list.length());
     }
 
     @Test
     @DisplayName("Test iterator")
     public void testIterator() {
-        setUp();
         for (String s : list) {
             System.out.println(s);
         }
@@ -49,14 +46,12 @@ public class DoublyLinkedListTest {
     @Test
     @DisplayName("Test clear")
     public void testClear() {
-        setUp();
         list.clear();
         Assert.assertEquals(0, list.length());
     }
 
     @Test
     public void testIsEmpty() {
-        setUp();
         Assert.assertFalse(list.isEmpty());
         list.clear();
         Assert.assertTrue(list.isEmpty());
@@ -64,7 +59,6 @@ public class DoublyLinkedListTest {
 
     @Test
     public void testInsert() {
-        setUp();
         list.insert(1, "Tom_5");
         list.insert(7, "Tom_6");
         Assert.assertEquals(5, list.length());
@@ -75,7 +69,6 @@ public class DoublyLinkedListTest {
 
     @Test
     public void testRemove() {
-        setUp();
         Assert.assertEquals("Tom_3", list.remove(0));
         Assert.assertEquals("Tom_1", list.remove(1));
 
@@ -83,21 +76,16 @@ public class DoublyLinkedListTest {
 
     @Test
     public void testIndexOf() {
-        setUp();
         Assert.assertEquals(1, list.indexOf("Tom_2"));
     }
 
     @Test
     public void testGetFirst() {
-        setUp();
         Assert.assertEquals("Tom_3", list.getFirst());
     }
 
     @Test
     public void testGetLast() {
-        setUp();
         Assert.assertEquals("Tom_0", list.getLast());
     }
-
-
 }
