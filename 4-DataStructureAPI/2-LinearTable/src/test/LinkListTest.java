@@ -53,7 +53,5 @@ public class LinkListTest {
 
         int idx = list.indexOf("Tom_5");
         Assert.assertEquals(2, idx);
-
-
     }
 }

@@ -71,7 +71,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         // empty, what if the linked list if not empty.
         Node newNode = new Node(t);
 
-        if (i > N) {
+        if (i > N || i < 0) {
             System.out.println("The input index " + t + "if out of boundary!");
             Node pre = last;
             pre.next = newNode;
@@ -80,18 +80,20 @@ public class DoublyLinkedList<T> implements Iterable<T> {
             return;
         }
 
-        if (isEmpty()) {
-            last = newNode;
-            head.next = last;
-            N++;
-            return;
-        }
+//        if (isEmpty()) {
+//            last = newNode;
+//            head.next = newNode;
+//            N++;
+//            return;
+//        }
 
         // find the position, where the inserting node should be followed
         Node pre = head;
-        for (int idx = 0; idx < i - 1; i++) {
+        for (int idx = 0; idx < i; i++) {
             pre = pre.next;
         }
+        Node curr = pre.next;
+
         newNode.next = pre.next;
         pre.next = newNode;
 
@@ -139,8 +141,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         Node pre = head.next;
         for (int i = 0; i < N; i++) {
             // Comparable elements should  be used.
-            // todo: Using comparable interface here
-            if (pre.item == t) {
+            if (pre.item.equals(t)) {
                 return i;
             }
             pre = pre.next;
@@ -177,7 +178,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 
         @Override
         public boolean hasNext() {
-            return n.next == null;
+            return n.next != null;
         }
 
         @Override

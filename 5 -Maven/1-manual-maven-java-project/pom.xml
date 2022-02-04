@@ -21,22 +21,14 @@
   <groupId>com.peter</groupId>
   <artifactId>1-manual-maven-java-project</artifactId>
   <version>1.0</version>
-  <package>jar</package>
+  <packaging>jar</packaging>
 
-  
 
-  <url>http://commons.apache.org/proper/commons-cli/</url>
+  <properties>
+   <maven.compiler.source>7</maven.compiler.source>
+   <maven.compiler.target>7</maven.compiler.target>
+  </properties>
 
-  <issueManagement>
-    <system>jira</system>
-    <url>http://issues.apache.org/jira/browse/CLI</url>
-  </issueManagement>
-
-  <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/commons/proper/cli/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/proper/cli/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewvc/commons/proper/cli/trunk/</url>
-  </scm>
 
   <dependencies>
     <dependency>
