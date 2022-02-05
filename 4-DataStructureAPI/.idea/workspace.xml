@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4106db22-56cc-48b7-ab08-8e81b6e909fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/3-SymbolTable/3-SymbolTable.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3-SymbolTable/src/main/java/OrderSymbolTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3-SymbolTable/src/main/java/SymbolTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4-Trees/4-Trees.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4-Trees/src/main/java/BinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4-Trees/src/main/java/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="23yXNyo3avL0jt7aiGgvYc6K1My" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
