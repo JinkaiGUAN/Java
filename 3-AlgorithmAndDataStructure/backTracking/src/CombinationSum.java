@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.LinkedList;
 
@@ -37,5 +38,36 @@ public class CombinationSum {
             sum -= candidates[i];
             path.removeLast();
         }
+    }
+
+    public void backTracking(int[] candidates, int target, int startIdx) {
+        // todo: figure out why this function does not work? - Before we use this function, we must sort the
+        //  candidates so that we can repeatedly use the minimal value.
+        if (target == 0) {
+            res.add(new LinkedList<>(path));
+            return;
+        }
+
+        for (int i = startIdx; i < candidates.length; i++) {
+            if (target - candidates[i] < 0) {
+                break;
+            }
+            path.add(candidates[i]);
+            target -= candidates[i];
+            backTracking(candidates, target, i);
+            target += candidates[i];
+            path.removeLast();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] candidates = {2, 7, 6, 3, 5, 1};
+        int target = 9;
+//        Arrays.sort(candidates);
+        CombinationSum solution = new CombinationSum();
+        solution.backTracking(candidates, target, 0);
+//        solution.combinationSum(candidates, target);
+        System.out.println(solution.res.size());
+        System.out.println(solution.res.toString());
     }
 }
