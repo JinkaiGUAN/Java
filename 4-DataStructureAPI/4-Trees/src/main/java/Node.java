@@ -10,12 +10,12 @@ package main.java;
  * Version:
  */
 public class Node<Key, Value> {
-    public Node left;
-    public Node right;
+    public Node<Key, Value> left;
+    public Node<Key, Value> right;
     public Key key;
     public Value val;
 
-    public Node(Key key, Value val, Node left, Node right) {
+    public Node(Key key, Value val, Node<Key, Value> left, Node<Key, Value> right) {
         this.key = key;
         this.val = val;
         this.left = left;
