@@ -77,6 +77,4 @@ public class NQueens {
         return true;
     }
 
-
-
 }
