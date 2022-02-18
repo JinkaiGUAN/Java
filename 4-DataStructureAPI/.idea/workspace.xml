@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4106db22-56cc-48b7-ab08-8e81b6e909fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/backTracking/src/ReconstructItinerary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4-Trees/src/test/java/BinarySearchTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-Trees/src/main/java/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/4-Trees/src/main/java/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-Trees/4-Trees.iml" beforeDir="false" afterPath="$PROJECT_DIR$/4-Trees/4-Trees.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
