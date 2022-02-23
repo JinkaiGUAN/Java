@@ -11,17 +11,21 @@ public class candy {
     public int candy(int[] ratings) {
         // assign one for each person
         int[] candies = new int[ratings.length];
-        for (int i = 0; i < ratings.length; i++) {
-            candies[i] = 1;
-        }
+//        for (int i = 0; i < ratings.length; i++) {
+//            candies[i] = 1;
+//        }
 
         // rank children from left to right
+        candies[0] = 1;
         for (int i = 1; i < ratings.length; i++) {
-            // fixme： what if the ratings of two children are the same
             if (ratings[i] > ratings[i-1]) {
                 candies[i] = candies[i - 1] + 1;
+            } else {
+                candies[i] = 1;
             }
         }
+
+
 
         // rank the children from right ro left
         for (int i = ratings.length - 1; i > 0; i--) {
