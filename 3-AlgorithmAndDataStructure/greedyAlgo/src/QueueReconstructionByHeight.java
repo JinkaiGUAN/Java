@@ -20,6 +20,7 @@ public class QueueReconstructionByHeight {
             return b[0] - a[0];  // 按照身高排序， 身高高的放在前面
         });
 
+
         LinkedList<int[]> que = new LinkedList<>();
 
         for (int[] p : people) {
