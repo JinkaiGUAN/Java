@@ -15,8 +15,8 @@ public class PartitionLabels {
         List<Integer> list = new LinkedList<>();
         int[] mapping = new int[26];
         char[] chars = s.toCharArray();
-        for (char c : chars) {
-            mapping[c - 'a'] = i;
+        for (int i = 0; i < chars.length; i++) {
+            mapping[chars[i] - 'a'] = i;
         }
 
         int idx = 0;
