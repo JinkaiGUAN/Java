@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/StudentDatabaseApplication.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/StudentDatabaseApplication.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JunitTest/JunitTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JunitTest/src/main/com/vogella/junit5/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JunitTest/src/test/com/vogella/junit5/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentDatabaseApplication/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentDatabaseApplication/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/JavaNetCoding.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/test/TestInetAddress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudentDatabaseApplication/StudentDatabaseApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentDatabaseApplication/StudentDatabaseApplication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../4-DataStructureAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../4-DataStructureAPI/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +68,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest.testMultiply">
+  <component name="RunManager" selected="Application.TestInetAddress">
     <configuration name="EmailApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="EmailApp" />
       <module name="EmailApp" />
@@ -95,6 +86,19 @@
     <configuration name="StudentDatabaseApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="StudentDatabaseApp" />
       <module name="StudentDatabaseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestInetAddress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestInetAddress" />
+      <module name="JavaNetCoding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peter.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,6 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestInetAddress" />
         <item itemvalue="JUnit.CalculatorTest.testMultiply" />
         <item itemvalue="Application.StudentDatabaseApp" />
         <item itemvalue="Application.Main" />
