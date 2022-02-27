@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="" />
+    <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TcpClientDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TcpServerDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/dymamicProgramming/src/IntegerBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/dymamicProgramming/src/IntegerBreak.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,9 +69,28 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.TcpClientDemo1">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects" />
+      <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TcpClientDemo2">
     <configuration name="TcpClientDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.main.TcpClientDemo1" />
+      <module name="JavaNetCoding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peter.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TcpClientDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.TcpClientDemo2" />
       <module name="JavaNetCoding" />
       <extension name="coverage">
         <pattern>
@@ -90,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestInetAddress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestInetAddress" />
+    <configuration name="TcpServerDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.TcpServerDemo2" />
       <module name="JavaNetCoding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.peter.test.*" />
+          <option name="PATTERN" value="com.peter.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,29 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.testMultiply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JunitTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.com.vogella.junit5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.com.vogella.junit5" />
-      <option name="MAIN_CLASS_NAME" value="test.com.vogella.junit5.CalculatorTest" />
-      <option name="METHOD_NAME" value="testMultiply" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TcpClientDemo2" />
+        <item itemvalue="Application.TcpServerDemo2" />
         <item itemvalue="Application.TcpClientDemo1" />
         <item itemvalue="Application.TcpServerDemo1" />
         <item itemvalue="Application.TestInetSocketAddress" />
-        <item itemvalue="Application.TestInetAddress" />
-        <item itemvalue="JUnit.CalculatorTest.testMultiply" />
       </list>
     </recent_temporary>
   </component>
