@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TcpClientDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TcpServerDemo1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,17 +67,29 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.TestInetSocketAddress">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="SchoolManageSystem" />
+  <component name="RunManager" selected="Application.TcpClientDemo1">
+    <configuration name="TcpClientDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.TcpClientDemo1" />
+      <module name="JavaNetCoding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peter.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentDatabaseApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StudentDatabaseApp" />
-      <module name="StudentDatabaseApplication" />
+    <configuration name="TcpServerDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.TcpServerDemo1" />
+      <module name="JavaNetCoding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peter.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TcpClientDemo1" />
+        <item itemvalue="Application.TcpServerDemo1" />
         <item itemvalue="Application.TestInetSocketAddress" />
         <item itemvalue="Application.TestInetAddress" />
         <item itemvalue="JUnit.CalculatorTest.testMultiply" />
-        <item itemvalue="Application.StudentDatabaseApp" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
