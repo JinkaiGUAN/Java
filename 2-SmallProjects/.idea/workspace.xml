@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkReceive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkSend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/UdpReceiveDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/UdpSenderDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkTeacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/UdpPesudoServerDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/UdpPesudoServerDemo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkReceive.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkReceive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/main/TalkSend.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +83,9 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UdpSenderDemo1">
-    <configuration name="TcpClientDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.TcpClientDemo2" />
+  <component name="RunManager" selected="Application.TalkTeacher">
+    <configuration name="TalkStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.TalkStudent" />
       <module name="JavaNetCoding" />
       <extension name="coverage">
         <pattern>
@@ -98,8 +97,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UdpClientDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.UdpClientDemo1" />
+    <configuration name="TalkTeacher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.TalkTeacher" />
       <module name="JavaNetCoding" />
       <extension name="coverage">
         <pattern>
@@ -152,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TalkTeacher" />
+        <item itemvalue="Application.TalkStudent" />
         <item itemvalue="Application.UdpSenderDemo1" />
         <item itemvalue="Application.UdpReceiveDemo1" />
         <item itemvalue="Application.UdpPesudoServerDemo1" />
-        <item itemvalue="Application.UdpClientDemo1" />
-        <item itemvalue="Application.TcpClientDemo2" />
       </list>
     </recent_temporary>
   </component>
