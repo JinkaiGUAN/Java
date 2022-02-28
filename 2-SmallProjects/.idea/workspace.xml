@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/main/Race.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MultiThread/com/peter/test/TestThread4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MultiThread/com/peter/test/TestThread4.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +85,10 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestThread4">
-    <configuration name="TalkTeacher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.TalkTeacher" />
-      <module name="JavaNetCoding" />
+  <component name="RunManager" selected="Application.Race">
+    <configuration name="Race" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.Race" />
+      <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.peter.main.*" />
@@ -152,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Race" />
         <item itemvalue="Application.TestThread4" />
         <item itemvalue="Application.TestThread3" />
         <item itemvalue="Application.TestThread2" />
         <item itemvalue="Application.TestThread" />
-        <item itemvalue="Application.TalkTeacher" />
       </list>
     </recent_temporary>
   </component>
