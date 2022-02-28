@@ -27,6 +27,7 @@ public class TcpServerDemo2 {
         try{
             serverSocket = new ServerSocket(9000);
 
+            // fixme: 为什么用while不会返回结束信息？
             accept = serverSocket.accept();
             is = accept.getInputStream();
 
