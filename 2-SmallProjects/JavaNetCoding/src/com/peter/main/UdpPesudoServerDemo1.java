@@ -16,7 +16,7 @@ import java.net.SocketException;
 public class UdpPesudoServerDemo1 {
     public static void main(String[] args) throws Exception {
         // 开放端口
-        DatagramSocket socket = new DatagramSocket(9090);
+        DatagramSocket socket = new DatagramSocket(8888);
         // 数据容器
         byte[] buffer = new byte[1024];
         DatagramPacket packet = new DatagramPacket(buffer, 0, buffer.length);
