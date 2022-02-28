@@ -12,10 +12,9 @@ import java.util.Scanner;
 public class BackPack {
 
     public static void main(String[] args) {
-        // todo: Use scanner to input the value here.
         int[] weight = null; // {1, 3, 4};
         int[] value  = null; // {15, 20, 30};
-        int bagSize = 4;
+        int bagSize = 0; // 4;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input weight list: ");

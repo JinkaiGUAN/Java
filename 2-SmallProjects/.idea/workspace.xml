@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/lib/commons-io-2.11.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/MultiThread.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/MultiThread.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/dymamicProgramming/src/BackPack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/dymamicProgramming/src/BackPack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,16 +80,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MultiThread/src/com/lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\MultiThread\src\com\lib" />
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects" />
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TalkTeacher">
+  <component name="RunManager" selected="Application.TestThread3">
     <configuration name="TalkStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.main.TalkStudent" />
       <module name="JavaNetCoding" />
@@ -107,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UdpPesudoServerDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.UdpPesudoServerDemo1" />
-      <module name="JavaNetCoding" />
+    <configuration name="TestThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestThread" />
+      <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.peter.main.*" />
+          <option name="PATTERN" value="com.peter.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UdpReceiveDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.UdpReceiveDemo1" />
-      <module name="JavaNetCoding" />
+    <configuration name="TestThread2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestThread2" />
+      <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.peter.main.*" />
+          <option name="PATTERN" value="com.peter.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UdpSenderDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.UdpSenderDemo1" />
-      <module name="JavaNetCoding" />
+    <configuration name="TestThread3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestThread3" />
+      <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.peter.main.*" />
+          <option name="PATTERN" value="com.peter.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestThread3" />
+        <item itemvalue="Application.TestThread2" />
+        <item itemvalue="Application.TestThread" />
         <item itemvalue="Application.TalkTeacher" />
         <item itemvalue="Application.TalkStudent" />
-        <item itemvalue="Application.UdpSenderDemo1" />
-        <item itemvalue="Application.UdpReceiveDemo1" />
-        <item itemvalue="Application.UdpPesudoServerDemo1" />
       </list>
     </recent_temporary>
   </component>
