@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/EmailApp/EmailApp.iml" filepath="$PROJECT_DIR$/EmailApp/EmailApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaNetCoding/JavaNetCoding.iml" filepath="$PROJECT_DIR$/JavaNetCoding/JavaNetCoding.iml" />
       <module fileurl="file://$PROJECT_DIR$/JunitTest/JunitTest.iml" filepath="$PROJECT_DIR$/JunitTest/JunitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiThread/MultiThread.iml" filepath="$PROJECT_DIR$/MultiThread/MultiThread.iml" />
       <module fileurl="file://$PROJECT_DIR$/SchoolManageSystem/SchoolManageSystem.iml" filepath="$PROJECT_DIR$/SchoolManageSystem/SchoolManageSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudentDatabaseApplication/StudentDatabaseApplication.iml" filepath="$PROJECT_DIR$/StudentDatabaseApplication/StudentDatabaseApplication.iml" />
     </modules>
