@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: BackPack
@@ -11,11 +13,43 @@ public class BackPack {
 
     public static void main(String[] args) {
         // todo: Use scanner to input the value here.
-        int[] weight = {1, 3, 4};
-        int[] value  = {15, 20, 30};
+        int[] weight = null; // {1, 3, 4};
+        int[] value  = null; // {15, 20, 30};
         int bagSize = 4;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please input weight list: ");
+        String lineWeight = scanner.nextLine();
+        weight = parseLineToIntArr(lineWeight);
+
+        System.out.println("Please input Value list: ");
+        String lineValue = scanner.nextLine();
+        value = parseLineToIntArr(lineValue);
+
+        System.out.println("Please input bag size: ");
+        bagSize = scanner.nextInt();
+
         testWeightBagProblem(weight, value, bagSize);
 
+    }
+
+    public static int[] parseLineToIntArr(String s) {
+        if (s.isEmpty()) {
+            return new int[]{};
+        }
+        String[] strArr = s.split(" ");
+        int strArrLen = strArr.length;
+
+        int[] intArr = new int[strArrLen];
+        for (int i = 0; i < strArrLen; i++) {
+            try {
+                intArr[i] = Integer.parseInt(strArr[i]);
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return intArr;
     }
 
     public static void testWeightBagProblem(int[] weight, int[] value, int bagSize) {
@@ -24,7 +58,7 @@ public class BackPack {
 
         int[][] dp = new int[weightLen + 1][bagSize+1];
 
-        // initialization
+        // initialization, 将没有物体的时候重量都置为0
         for (int i = 0; i <= weightLen; i++) {
             dp[i][0] = 0;
         }
