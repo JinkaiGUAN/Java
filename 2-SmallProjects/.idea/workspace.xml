@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/main/StaticProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestLambda1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestLambda2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MultiThread/com/peter/main/DownloadImages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MultiThread/com/peter/main/DownloadImages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MultiThread/com/peter/main/WebDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MultiThread/com/peter/main/WebDownloader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,7 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DownloadImages">
+  <component name="RunManager" selected="Application.TestLambda2">
     <configuration name="DownloadImages" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.main.DownloadImages" />
       <module name="MultiThread" />
@@ -111,8 +114,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestThread2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestThread2" />
+    <configuration name="TestLambda1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestLambda1" />
       <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +127,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestThread3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestThread3" />
+    <configuration name="TestLambda2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestLambda2" />
       <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
@@ -152,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestLambda2" />
+        <item itemvalue="Application.TestLambda1" />
         <item itemvalue="Application.DownloadImages" />
         <item itemvalue="Application.Race" />
         <item itemvalue="Application.TestThread4" />
-        <item itemvalue="Application.TestThread3" />
-        <item itemvalue="Application.TestThread2" />
       </list>
     </recent_temporary>
   </component>
