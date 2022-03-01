@@ -48,13 +48,17 @@ public class TestLambda2 {
         };
         love.love(4);
 
-
         // lambda函数
         love = (a) -> System.out.println("I love " + a);
         love.love(5);
 
+        /**
+         * Note
+         * 1。实现函数的代码只有一行时， 可以删除代码体的花括号去掉。
+         * 2. 前提接口是函数式接口（接口只有一个方法）
+         * 3. 多个参数也可以参数类型， 如果去掉一个参数类型， 其他的也要去掉， 必须加上括号 （参数大于等于2时）。
+         */
     }
-
 }
 
 
