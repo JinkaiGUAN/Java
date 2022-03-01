@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestJoin">
+  <component name="RunManager" selected="Application.TestState">
     <configuration name="TestJoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.test.TestJoin" />
       <module name="MultiThread" />
@@ -97,8 +97,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestLambda1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestLambda1" />
+    <configuration name="TestLambda2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestLambda2" />
       <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestLambda2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestLambda2" />
+    <configuration name="TestState" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestState" />
       <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
@@ -151,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestState" />
         <item itemvalue="Application.TestJoin" />
         <item itemvalue="Application.TestYield" />
         <item itemvalue="Application.TestStop" />
         <item itemvalue="Application.TestLambda2" />
-        <item itemvalue="Application.TestLambda1" />
       </list>
     </recent_temporary>
   </component>
