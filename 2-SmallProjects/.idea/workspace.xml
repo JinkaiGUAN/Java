@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/main/concurrency/BuyTicketUnsafe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/main/concurrency/WithdrawMoneyUnsafe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/dymamicProgramming/src/PartitionToKEqualSumSubsets.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/dymamicProgramming/src/PartitionToKEqualSumSubsets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/out/production/dymamicProgramming/PartitionToKEqualSumSubsets.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3-AlgorithmAndDataStructure/out/production/dymamicProgramming/PartitionToKEqualSumSubsets.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BuyTicketUnsafe">
+  <component name="RunManager" selected="Application.WithdrawMoneyUnsafe">
     <configuration name="BuyTicketUnsafe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.main.concurrency.BuyTicketUnsafe" />
       <module name="MultiThread" />
@@ -102,19 +100,6 @@
     </configuration>
     <configuration name="TestDaemon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.test.TestDaemon" />
-      <module name="MultiThread" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.peter.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestJoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.test.TestJoin" />
       <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
@@ -152,13 +137,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WithdrawMoneyUnsafe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.concurrency.WithdrawMoneyUnsafe" />
+      <module name="MultiThread" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peter.main.concurrency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WithdrawMoneyUnsafe" />
         <item itemvalue="Application.BuyTicketUnsafe" />
         <item itemvalue="Application.TestDaemon" />
         <item itemvalue="Application.TestPriority" />
         <item itemvalue="Application.TestState" />
-        <item itemvalue="Application.TestJoin" />
       </list>
     </recent_temporary>
   </component>
