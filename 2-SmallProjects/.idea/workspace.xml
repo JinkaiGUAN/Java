@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AnnotationAndReflection/AnnotationAndReflection.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnnotationAndReflection/src/com/peter/testReflection/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/main/producerAndConsumer/PCFlag.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/main/producerAndConsumer/PCFlag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnnotationAndReflection/src/com/peter/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/AnnotationAndReflection/src/com/peter/testAnnotation/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/test/TestInetAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/testAnnotation/TestInetAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/test/TestInetSocketAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaNetCoding/src/com/peter/testAnnotation/TestInetSocketAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestDaemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestDaemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestLambda1.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestLambda1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestLambda2.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestLambda2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestPriority.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestPriority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestState.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestStop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread2.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestThread2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread3.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestThread3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestThread4.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestThread4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiThread/src/com/peter/test/TestYield.java" beforeDir="false" afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/testAnnotation/TestYield.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +99,7 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PCFlag">
+  <component name="RunManager" selected="Application.Test1">
     <configuration name="DeadLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.main.concurrency.DeadLock" />
       <module name="MultiThread" />
@@ -126,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WithdrawMoneySafe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.concurrency.WithdrawMoneySafe" />
-      <module name="MultiThread" />
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.testReflection.Test1" />
+      <module name="AnnotationAndReflection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.peter.main.concurrency.*" />
+          <option name="PATTERN" value="com.peter.testReflection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test1" />
         <item itemvalue="Application.PCFlag" />
         <item itemvalue="Application.PCBuffer" />
         <item itemvalue="Application.DeadLock" />
         <item itemvalue="Application.WithdrawMoneyUnsafe" />
-        <item itemvalue="Application.WithdrawMoneySafe" />
       </list>
     </recent_temporary>
   </component>

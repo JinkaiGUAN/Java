@@ -1,6 +1,4 @@
-package com.peter.test;
-
-import javax.sound.midi.Soundbank;
+package com.peter.testAnnotation;
 
 /**
  * Copyright (C), Peter GUAN

@@ -1,6 +1,4 @@
-package com.peter.test;
-
-import org.junit.internal.runners.statements.RunAfters;
+package com.peter.testAnnotation;
 
 /**
  * Copyright (C), Peter GUAN

@@ -1,4 +1,4 @@
-package com.peter.test;
+package com.peter.testAnnotation;
 
 /**
  * Copyright (C), Peter GUAN
