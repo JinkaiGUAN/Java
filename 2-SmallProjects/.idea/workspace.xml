@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/main/concurrency/DeadLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/com/peter/main/producerAndConsumer/PCBuffer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,22 +84,9 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DeadLock">
+  <component name="RunManager" selected="Application.PCBuffer">
     <configuration name="BuyTicketSafe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.main.concurrency.BuyTicketSafe" />
-      <module name="MultiThread" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.peter.main.concurrency.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BuyTicketUnsafe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.main.concurrency.BuyTicketUnsafe" />
       <module name="MultiThread" />
       <extension name="coverage">
         <pattern>
@@ -117,6 +104,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.peter.main.concurrency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PCBuffer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.main.producerAndConsumer.PCBuffer" />
+      <module name="MultiThread" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peter.main.producerAndConsumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PCBuffer" />
         <item itemvalue="Application.DeadLock" />
         <item itemvalue="Application.WithdrawMoneyUnsafe" />
         <item itemvalue="Application.WithdrawMoneySafe" />
         <item itemvalue="Application.BuyTicketSafe" />
-        <item itemvalue="Application.BuyTicketUnsafe" />
       </list>
     </recent_temporary>
   </component>
