@@ -2,17 +2,19 @@ package com.peter.main.concurrency;
 
 /**
  * Copyright (C), Peter GUAN
- * FileName: WithdrawMoneyUnsafe
+ * FileName: WithdrawMoneySafe
  * Author:   Peter
- * Date:     02/03/2022 10:17几个人同时在一个账户中发生交易
+ * Date:     02/03/2022 10:53
+ * Description: 使用synchronized方法锁住object
  * History:
  * Version:
  */
-public class WithdrawMoneyUnsafe {
+public class WithdrawMoneySafe {
+
     public static void main(String[] args) {
-        Account account = new Account(100, "John");
-        WithdrawMoney husband = new WithdrawMoney(account, 50, "husband");
-        WithdrawMoney wife = new WithdrawMoney(account, 100, "wife");
+        Account1 account = new Account1(100, "John");
+        WithdrawMoney1 husband = new WithdrawMoney1(account, 50, "husband");
+        WithdrawMoney1 wife = new WithdrawMoney1(account, 100, "wife");
 
         husband.start();
         wife.start();
@@ -20,12 +22,12 @@ public class WithdrawMoneyUnsafe {
 }
 
 
-class Account {
+class Account1 {
 
     private int balance;
     private String name;
 
-    public Account(int balance, String name) {
+    public Account1(int balance, String name) {
         this.balance = balance;
         this.name = name;
     }
@@ -47,16 +49,16 @@ class Account {
     }
 }
 
-class WithdrawMoney extends Thread {
+class WithdrawMoney1 extends Thread {
     /**
      * 不涉及多个线程操作同一个object
      */
 
-    private Account account;
+    private Account1 account;
     private int withdrawMoney;
     private int balanceInPerson;
 
-    public WithdrawMoney(Account account, int withdrawMoney, String name) {
+    public WithdrawMoney1(Account1 account, int withdrawMoney, String name) {
         super(name);
         this.account = account;
         this.withdrawMoney = withdrawMoney;
@@ -66,6 +68,8 @@ class WithdrawMoney extends Thread {
     public void run() {
 
 //        while (true) {
+        // 锁的随想涉及到增删改
+        synchronized (account) {
             if (account.getBalance() - withdrawMoney < 0) {
                 System.out.println(this.getName() + " No money!");
                 return;
@@ -81,9 +85,12 @@ class WithdrawMoney extends Thread {
                 account.setBalance(account.getBalance() - withdrawMoney);
                 // 手里的钱
                 balanceInPerson += withdrawMoney;
+
                 System.out.println(this.getName() + " balance in person: " + balanceInPerson);
+
             }
+        }
+
 //        }
     }
 }
-
