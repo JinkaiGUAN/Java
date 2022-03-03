@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63572e57-a1f1-4e81-965d-ab76fd3f0181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AnnotationAndReflection/src/com/peter/testReflection/Test5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnnotationAndReflection/src/com/peter/testReflection/Test6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-SmallProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2-SmallProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnnotationAndReflection/com/peter/testReflection/Father.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnnotationAndReflection/com/peter/testReflection/Father.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnnotationAndReflection/com/peter/testReflection/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnnotationAndReflection/com/peter/testReflection/Son.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AnnotationAndReflection/com/peter/testReflection/Test5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AnnotationAndReflection/com/peter/testReflection/Test5.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +75,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MultiThread/src/com/lib" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="D:/SoftwareAPPs/Java/JDK1_8" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -84,20 +88,7 @@
       <recent name="E:\SoftwareDevelopmentJava\2-SmallProjects\JavaNetCoding" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test5">
-    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.peter.testReflection.Test1" />
-      <module name="AnnotationAndReflection" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.peter.testReflection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test6">
     <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.peter.testReflection.Test2" />
       <module name="AnnotationAndReflection" />
@@ -150,13 +141,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.peter.testReflection.Test6" />
+      <module name="AnnotationAndReflection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.peter.testReflection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test6" />
         <item itemvalue="Application.Test5" />
         <item itemvalue="Application.Test4" />
         <item itemvalue="Application.Test3" />
         <item itemvalue="Application.Test2" />
-        <item itemvalue="Application.Test1" />
       </list>
     </recent_temporary>
   </component>
