@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/2-AlgorithmAndDataStructure.iml" filepath="$PROJECT_DIR$/.idea/2-AlgorithmAndDataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interview/Interview.iml" filepath="$PROJECT_DIR$/Interview/Interview.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringLearning/StringLearning.iml" filepath="$PROJECT_DIR$/StringLearning/StringLearning.iml" />
       <module fileurl="file://$PROJECT_DIR$/backTracking/backTracking.iml" filepath="$PROJECT_DIR$/backTracking/backTracking.iml" />
       <module fileurl="file://$PROJECT_DIR$/binaryTree/binaryTree.iml" filepath="$PROJECT_DIR$/binaryTree/binaryTree.iml" />

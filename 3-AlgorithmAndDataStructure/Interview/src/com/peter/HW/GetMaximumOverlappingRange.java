@@ -1,3 +1,5 @@
+package com.peter.HW;
+
 import java.util.*;
 
 /**
@@ -11,7 +13,7 @@ import java.util.*;
  */
 
 
-public class Main {
+public class GetMaximumOverlappingRange {
 
     public static void main(String[] args) {
         // Get data
