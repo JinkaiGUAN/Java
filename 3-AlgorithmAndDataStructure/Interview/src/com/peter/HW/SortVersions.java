@@ -57,9 +57,10 @@ public class SortVersions {
                 }
             }
 
-            //todo: sort the version, this is from low to high, we need to get from high to low
+//           sort the version, this is from low to high, we need to get from high to low
             treeMap.put(key, version);
         }
+
 
         List<String> res = new LinkedList<>();
         for (Double key : treeMap.keySet()) {
