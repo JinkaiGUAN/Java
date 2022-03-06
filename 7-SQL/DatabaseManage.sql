@@ -48,7 +48,7 @@ add constraint `FK_gradeID2` foreign key(`gradeID`) references `grade` (`gradeID
 以上增加物理外键不建议使用
 */
 
--- DML
+-- DML： Insert, update, delete
 Insert into grade (`name`) values ('Fourth year');
 
 Insert into grade (`name`) values ('third year');
@@ -83,6 +83,34 @@ select * from student3;
 update `student3` SET `name`='kusngshen' where id = 1;
 select * from student3;
 
+use school;
+show tables;
+select * from student3;
+
+delete from `student3` where id = 1; -- cannot delete all data completely
+truncate table `student3`;  -- clear all data in this table
+/*
+Truncate 会重新设置自增列， 计数器会归零； 不会影响事务。
+
+如果使用Delete
+1. Engine = INNODB， 重启数据库， 自增列会从1开始， 因为储存在内存中， 数据没了就会重新开始。
+2. ENgine == MyiSAM, 重启数据库， 会从上一个子增量开始， 因为他储存在文件中， 不会丢失。
+*/
+
+create table if not exists `student4`(
+	`id` int not null auto_increment comment 'ID',
+	`name` varchar(20) not null,
+    primary key(`id`)
+)Engine=INNODB Default Charset=utf8mb4;
+
+insert into `student4` (`name`)
+values ('John'), ('Ham'), ('Step');
+
+select * from student4;
+
+Delete from `student4`; -- would not be safe
+select * from student4;
+truncate table `student4`;
 
 
 
