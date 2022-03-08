@@ -87,4 +87,16 @@ public class AlphaController {
         return "A student";
     }
 
+    // 浏览器向服务器提交数据 - POST 请求. Get 请求也可以获取参数 但是不安全 而且参数过多时 get 无法保存
+    @RequestMapping(path = "/student", method = RequestMethod.POST)
+    @ResponseBody
+    public String saveStudentInfo(String name, int age) {
+        // 只要参数与对应表单一致 那么就可以获取
+        System.out.println("name: " + name + " age: " + age);
+        return "Success";
+    }
+
+
+
+
 }
