@@ -1,8 +1,11 @@
 package spring01.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import spring01.service.AlphaService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Copyright (C), Peter GUAN
@@ -94,6 +99,38 @@ public class AlphaController {
         // 只要参数与对应表单一致 那么就可以获取
         System.out.println("name: " + name + " age: " + age);
         return "Success";
+    }
+
+    // 相应HTML数据, 不加ResponseBody注解默认返回HTML
+    @RequestMapping(path = "/teacher", method = RequestMethod.GET)
+    public ModelAndView getTeacher() {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("name", "John");
+        mav.addObject("age", "12");
+        mav.setViewName("/demo/view"); // 在template文件夹下的文件
+
+        return mav;
+    }
+
+    @RequestMapping(path = "/school", method = RequestMethod.GET)
+    public String getSchool(Model model) {
+        // 与上面一个使用ModelAndView方法一致
+        model.addAttribute("name", "Beijing");
+        model.addAttribute("age", "12");
+
+        return "/demo/view";
+    }
+
+    // 响应JSON 数据（异步请求）
+    @RequestMapping(path = "/emp", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getMap() {
+        Map<String, Object> emp = new HashMap<>();
+        emp.put("name", "John");
+        emp.put("age", 23);
+        emp.put("salary", 8000.00);
+
+        return emp;
     }
 
 
