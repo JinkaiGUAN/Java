@@ -1,7 +1,9 @@
 package spring01.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import spring01.dao.AlphaDao;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -20,6 +22,9 @@ import javax.annotation.PreDestroy;
 //@Scope("prototype")  // 可实例化多个对象， 但是通常我们只是用单一对象
 public class AlphaService {
 
+    @Autowired
+    private AlphaDao alphaDao;
+
     public AlphaService() {
         System.out.println("Construct --- AlphaService");
     }
@@ -32,5 +37,9 @@ public class AlphaService {
     @PreDestroy // 销毁对象之前调用
     public void destroy() {
 
+    }
+
+    public String find() {
+        return alphaDao.select();
     }
 }
