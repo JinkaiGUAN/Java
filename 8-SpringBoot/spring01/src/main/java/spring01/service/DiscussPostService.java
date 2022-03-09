@@ -23,7 +23,7 @@ public class DiscussPostService {
     @Autowired
     private DiscussPostMapper discussPostMapper;
 
-    public List<DiscussPost> LinkDiscussPosts(int userId, int offset, int limit) {
+    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit) {
         return discussPostMapper.selectDiscussPosts(userId, offset, limit);
     }
 
