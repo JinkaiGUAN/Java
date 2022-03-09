@@ -1,6 +1,7 @@
 package spring01;
 
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 import spring01.dao.AlphaDao;
 import spring01.dao.AlphaDaoHibernateImpl;
 import spring01.service.AlphaService;
@@ -15,6 +17,7 @@ import spring01.service.AlphaService;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = Spring01Application.class)
 class Spring01ApplicationTests implements ApplicationContextAware {
