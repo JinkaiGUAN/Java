@@ -67,7 +67,4 @@ public class MapperTests {
         row = userMapper.updatePassword(150, "aghduqguq");
         System.out.println(row);
     }
-
-
-
 }
