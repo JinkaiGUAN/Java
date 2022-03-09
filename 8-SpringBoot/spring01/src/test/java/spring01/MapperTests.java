@@ -6,10 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import spring01.dao.DiscussPostMapper;
 import spring01.dao.UserMapper;
+import spring01.entity.DiscussPost;
 import spring01.entity.User;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Copyright (C), Peter GUAN
@@ -28,6 +31,8 @@ public class MapperTests {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private DiscussPostMapper discussPostMapper;
 
     @Test
     public void testSelectUser() {
@@ -67,4 +72,38 @@ public class MapperTests {
         row = userMapper.updatePassword(150, "aghduqguq");
         System.out.println(row);
     }
+
+    @Test
+    public void testSelectPosts() {
+        List<DiscussPost> list = discussPostMapper.selectDiscussPosts(0, 0, 10);
+        for (DiscussPost post : list){
+            System.out.println(post);
+        }
+
+        int rows = discussPostMapper.selectDiscussPostRows(0);
+        System.out.println(rows);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
