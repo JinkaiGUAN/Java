@@ -1,0 +1,5 @@
+2022-03-10 10:41:02,729 INFO [main] s.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 37192 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-10 10:41:02,731 INFO [main] s.LoggerTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-10 10:41:05,011 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-10 10:41:05,503 INFO [main] s.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 3.251 seconds (JVM running for 4.209)
+2022-03-10 10:41:05,740 INFO [main] s.LoggerTests [LoggerTests.java:33] Info log
