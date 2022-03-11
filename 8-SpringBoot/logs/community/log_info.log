@@ -1,5 +1,76 @@
-2022-03-10 10:41:02,729 INFO [main] s.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 37192 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-10 10:41:02,731 INFO [main] s.LoggerTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-10 10:41:05,011 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-10 10:41:05,503 INFO [main] s.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 3.251 seconds (JVM running for 4.209)
-2022-03-10 10:41:05,740 INFO [main] s.LoggerTests [LoggerTests.java:33] Info log
+2022-03-11 10:29:58,612 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 14216 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:29:58,618 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:30:01,434 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:30:01,937 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 3.92 seconds (JVM running for 5.263)
+2022-03-11 10:37:56,670 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 15596 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:37:56,678 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:38:00,037 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:38:00,532 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.537 seconds (JVM running for 6.213)
+2022-03-11 10:38:31,925 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 7276 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:38:31,929 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:38:35,043 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:38:35,521 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.297 seconds (JVM running for 5.814)
+2022-03-11 10:42:29,299 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 17836 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:42:29,303 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:42:32,698 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:42:33,159 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.584 seconds (JVM running for 6.297)
+2022-03-11 10:43:35,473 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 14384 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:43:35,477 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:43:38,807 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:43:39,234 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.528 seconds (JVM running for 6.167)
+2022-03-11 10:47:05,106 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 19192 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:47:05,110 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:47:08,433 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:47:08,934 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.537 seconds (JVM running for 6.059)
+2022-03-11 10:48:00,704 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 16984 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:48:00,708 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:48:03,987 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:48:04,426 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.444 seconds (JVM running for 6.0)
+2022-03-11 10:55:06,369 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 22496 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:55:06,373 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:55:09,534 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:55:10,009 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.314 seconds (JVM running for 5.843)
+2022-03-11 10:57:41,292 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 4608 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 10:57:41,292 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 10:57:44,427 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 10:57:44,915 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.357 seconds (JVM running for 5.851)
+2022-03-11 11:04:46,336 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 17792 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:04:46,336 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:04:49,626 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:04:50,116 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.47 seconds (JVM running for 6.141)
+2022-03-11 11:07:00,270 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 19752 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:07:00,274 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:07:03,655 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:07:04,122 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.572 seconds (JVM running for 6.249)
+2022-03-11 11:07:40,115 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 13220 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:07:40,119 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:07:43,310 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:07:43,778 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.372 seconds (JVM running for 5.927)
+2022-03-11 11:09:31,230 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 22100 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:09:31,234 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:09:34,561 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:09:35,095 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.578 seconds (JVM running for 6.089)
+2022-03-11 11:14:27,825 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 20220 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:14:27,829 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:14:31,127 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:14:31,554 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.47 seconds (JVM running for 6.012)
+2022-03-11 11:16:27,074 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 15816 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:16:27,078 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:16:30,260 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:16:30,723 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.346 seconds (JVM running for 5.977)
+2022-03-11 11:17:38,929 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 21252 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:17:38,933 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:17:41,995 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:17:42,476 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.296 seconds (JVM running for 5.832)
+2022-03-11 11:19:07,688 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 19476 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:19:07,692 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:19:10,879 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:19:11,410 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.381 seconds (JVM running for 5.93)
+2022-03-11 11:19:40,804 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 11124 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:19:40,808 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:19:44,201 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:19:44,811 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 4.687 seconds (JVM running for 6.232)
+2022-03-11 11:20:36,500 INFO [main] s.EmailTests [StartupInfoLogger.java:55] Starting EmailTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 20352 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-11 11:20:36,504 INFO [main] s.EmailTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-11 11:20:39,044 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-11 11:20:39,530 INFO [main] s.EmailTests [StartupInfoLogger.java:61] Started EmailTests in 3.523 seconds (JVM running for 4.654)
