@@ -19,6 +19,7 @@ public class CoinChanges {
 
         for (int i = 0; i < coins.length; i++) {
             for (int j = 0; j < dp.length; j++) {
+                // 只有  dp[j - coins[i]] 不为最大的时候才有必要采取更新， 主要是避免最大值溢出
                 if (j - coins[i] >= 0 && dp[j - coins[i]] != Integer.MAX_VALUE) {
                     dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
                 }

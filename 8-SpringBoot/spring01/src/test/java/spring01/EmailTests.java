@@ -27,7 +27,7 @@ public class EmailTests {
     @Autowired
     private MailClient mailClient;
     @Autowired
-    private TemplateEngine templateEngine; // thymeleaf 模板引擎
+    private TemplateEngine templateEngine; // thymeleaf template engine
 
     @Test
     public void testSendEmail() {
