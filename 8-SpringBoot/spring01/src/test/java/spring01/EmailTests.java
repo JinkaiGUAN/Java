@@ -37,9 +37,10 @@ public class EmailTests {
     @Test
     public void testHtmlEmail() {
         Context context = new Context();
-        context.setVariable("username", "sunday");
+        context.setVariable("username", "My baby");
         String content = templateEngine.process("/mail/demo", context);
         System.out.println(content);
-        mailClient.sendEmail("crawlerforpeter@gmail.com", "HTML test", content);
+        String to = "2225297210@qq.com";
+        mailClient.sendEmail(to, "HTML test", content);
     }
 }
