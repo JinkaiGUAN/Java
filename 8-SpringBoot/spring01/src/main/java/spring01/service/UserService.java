@@ -8,6 +8,7 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import spring01.dao.UserMapper;
 import spring01.entity.User;
+import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
 import spring01.util.MailClient;
 
@@ -25,7 +26,7 @@ import java.util.*;
  */
 
 @Service
-public class UserService {
+public class UserService implements CommunityConstant {
     // 与user有关操作
 
     @Autowired
@@ -104,6 +105,18 @@ public class UserService {
         mailClient.sendEmail(user.getEmail(), "激活账号", content);
 
         return map;
+    }
+
+    public int activation(int userId, String code) {
+        User user = userMapper.selectByID(userId);
+        if (user.getStatus() == 1) {
+            return ACTIVATION_REPEAT;
+        } else if (user.getActivationCode().equals(code)) {
+            userMapper.updateStatus(user.getId(), 1);
+            return ACTIVATION_SUCCESS;
+        } else {
+            return ACTIVATION_FAILURE;
+        }
     }
 }
 
