@@ -65,7 +65,7 @@ public class WordBreak {
         System.out.println(solution.wordBreak(s, list));
 
         // 回溯
-        Set<String> wordDict = new HashSet<>(strs);
+        Set<String> wordDict = new HashSet(list);
         int[] memory = new int[s.length()];
         System.out.println(solution.backTracking(s, wordDict, 0, memory));
 
