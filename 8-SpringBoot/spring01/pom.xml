@@ -73,6 +73,14 @@
             <version>3.9</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.github.penggle/kaptcha -->
+        <!--用来生成验证图片， 由于spring没有相关的配置 因此需要手写一个配置类存在config包下-->
+        <dependency>
+            <groupId>com.github.penggle</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -19,7 +19,7 @@ public class HouseRobber {
             return nums[0];
         }
 
-        int[] dp = new dp[nums.length]; // dp[i] 表示下标i以内 (包括i) 的房屋内， 最多可以偷窃的金额
+        int[] dp = new int[nums.length]; // dp[i] 表示下标i以内 (包括i) 的房屋内， 最多可以偷窃的金额
         // 如果rob第i间房， 那么dp[i] = dp[i-2] + nums[i], 反之dp[i] = dp[i-1], 但不一定要rob第i-1间房间
 
         dp[0] = nums[0];
