@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+import spring01.dao.LoginTicketMapper;
 import spring01.dao.UserMapper;
+import spring01.entity.LoginTicket;
 import spring01.entity.User;
 import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
@@ -43,6 +45,9 @@ public class UserService implements CommunityConstant {
 
     @Value("${server.servlet.context-path}")
     private String contextPath;
+
+    @Autowired
+    private LoginTicketMapper loginTicketMapper;
 
     public User findUserById(int id) {
         return userMapper.selectByID(id);
@@ -118,5 +123,50 @@ public class UserService implements CommunityConstant {
             return ACTIVATION_FAILURE;
         }
     }
+
+    public Map<String, Object> login(String username, String password, int expiredSeconds) {
+        // 此处password是网页输入的明文
+
+        Map<String, Object> map = new HashMap<>();
+
+        // 空值处理
+        if (StringUtils.isBlank(username)) {
+            map.put("usernameMsg", "Username cannot be blank!");
+            return map;
+        }
+        if (StringUtils.isBlank(password)) {
+            map.put("passwordMsg", "Password cannot be blank!");
+            return map;
+        }
+
+        // 验证账号， user是否存在， 是否被激活， 验证密码
+        User user = userMapper.selectByName(username);
+        if (user == null) {
+            map.put("usernameMsg", "The account does not exits!");
+            return map;
+        }
+        if (user.getStatus() == 0) {
+            map.put("usernameMsg", "The account has not bee activated!");
+            return map;
+        }
+        password = CommunityUtil.md5(password + user.getSalt());
+        if (!password.equals(user.getPassword())) {
+            map.put("passwordMsg", "The password is not correct!");
+            return map;
+        }
+
+        // 生成登录凭证
+        LoginTicket loginTicket = new LoginTicket();
+        loginTicket.setUserId(user.getId());
+        loginTicket.setTicket(CommunityUtil.generateUUID());
+        loginTicket.setStatus(0);
+        loginTicket.setExpired(new Date(System.currentTimeMillis() + 1000L * expiredSeconds));
+
+        map.put("ticket", loginTicket.getTicket());
+
+        return map;
+    }
+
+
 }
 
