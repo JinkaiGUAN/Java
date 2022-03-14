@@ -154,3 +154,33 @@
 2022-03-14 11:13:25,546 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-03-14 11:13:25,546 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
 2022-03-14 11:13:25,547 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-03-14 11:54:46,001 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 192460 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-14 11:54:46,001 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-14 11:54:46,705 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2022-03-14 11:54:46,706 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-14 11:54:46,707 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-03-14 11:54:46,707 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 11:54:46,736 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-03-14 11:54:46,737 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 729 ms
+2022-03-14 11:54:46,951 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-14 11:54:47,024 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-03-14 11:54:47,041 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2022-03-14 11:54:47,045 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2022-03-14 11:54:47,051 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.172 seconds (JVM running for 2494.076)
+2022-03-14 11:54:47,053 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2022-03-14 11:54:47,730 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 237496 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-14 11:54:47,733 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-14 11:54:50,366 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-14 11:54:50,940 INFO [main] s.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 3.711 seconds (JVM running for 5.476)
+2022-03-14 11:54:51,377 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-03-14 11:54:51,652 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-03-14 11:54:51,760 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-14 11:54:51,773 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-03-14 11:57:48,846 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 228392 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-14 11:57:48,849 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-14 11:57:52,247 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-14 11:57:52,833 INFO [main] s.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 4.765 seconds (JVM running for 6.526)
+2022-03-14 11:57:53,218 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-03-14 11:57:53,423 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-03-14 11:57:53,517 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-14 11:57:53,525 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
