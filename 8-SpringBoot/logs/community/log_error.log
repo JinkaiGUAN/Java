@@ -172,3 +172,21 @@ java.lang.IllegalArgumentException: An invalid character [32] was present in the
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
+2022-03-15 09:31:24,305 ERROR [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter [LoggingFailureAnalysisReporter.java:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in spring01.controller.HomeController required a bean of type 'spring01.service.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'spring01.service.UserService' in your configuration.
+

@@ -169,6 +169,50 @@ public class UserService implements CommunityConstant {
         return map;
     }
 
+    public void logout(String ticket) {
+        loginTicketMapper.updateStatus(ticket, 1);
+    }
+
+    /**
+     * 处理忘记密码功能
+     * @param email
+     */
+    public Map<String, Object> forget(String email, String verifiedCode, String newPassword) {
+        Map<String, Object> map = new HashMap<>();
+
+        // 空值处理
+        if (StringUtils.isBlank(email)) {
+            map.put("emailEsg", "The email cannot be blank!");
+            return map;
+        }
+        if (StringUtils.isBlank(verifiedCode)) {
+            map.put("codeMsg", "The verified code cannot be blank!");
+            return map;
+        }
+        if (StringUtils.isBlank(newPassword)) {
+            map.put("passwordMsg", "The new password cannot be blank!");
+            return map;
+        }
+
+        // 首先通过email查找是否注册过 是否被激活 如果没有注册过 直接返回错误信息
+        User user = userMapper.selectByEmail(email);
+        if (user == null) {
+            map.put("emailMsg", "The account has not registered yet!");
+            return map;
+        }
+        if (user.getStatus() == 0) {
+            map.put("emailMsg", "The email has not be activated yet!");
+            return map;
+        }
+
+        // 通过邮箱发送邮件
+        // fixme: Finish the forget password function
+
+
+
+        return map;
+    }
+
 
 }
 
