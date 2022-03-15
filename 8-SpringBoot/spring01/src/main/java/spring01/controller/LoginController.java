@@ -10,9 +10,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.thymeleaf.context.Context;
 import spring01.entity.User;
 import spring01.service.UserService;
 import spring01.util.CommunityConstant;
+import spring01.util.CommunityUtil;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.Cookie;
@@ -149,6 +151,41 @@ public class LoginController implements CommunityConstant {
         return "/site/forget";
     }
 
+    @RequestMapping(path = "/forget/code", method = RequestMethod.GET)
+    @ResponseBody
+    public String getForgetCode(String email, HttpSession session) {
+        if (StringUtils.isBlank(email)) {
+            return CommunityUtil.getJSONString(1, "Email address cannot be blank!");
+        }
+
+        // send the email
+        String code = CommunityUtil.generateUUID().substring(0, 4);
+        userService.sendVerifiedCode(email, code);
+
+        //save the verify code
+        session.setAttribute("verifyCode", code);
+
+        return CommunityUtil.getJSONString(0);
+    }
+
+    @RequestMapping(path = "/forget/password", method = RequestMethod.POST)
+    public String resetPassword(String email, String verifyCode, String password, Model model, HttpSession session) {
+        String code = (String) session.getAttribute("verifyCode");
+        if (StringUtils.isBlank(verifyCode) || StringUtils.isBlank(code) || !code.equalsIgnoreCase(verifyCode)) {
+            model.addAttribute("codeMsg", "Wrong verified code!");
+            return "/site/forget";
+        }
+
+        Map<String, Object> map = userService.resetPassword(email, password);
+        if (map.containsKey("user")) {
+            return "redirect:/login";
+        } else {
+            model.addAttribute("emailMsg", map.get("emailMsg"));
+            model.addAttribute("passwordMsg", map.get("passwordMsg"));
+            return "/site/forget";
+        }
+    }
+
     /**
      * 忘记密码视图层
      * 验证成功  重定向到登录界面 否则停留在forget界面
@@ -158,33 +195,33 @@ public class LoginController implements CommunityConstant {
      * @param session 只要用来存储验证码信息
      * @return
      */
-    @RequestMapping(path = "/forget", method = RequestMethod.POST)
-    public String forget(String email, String verifiedCode, String newPassword, HttpSession session) {
-
-
-        //Map<String, Object> map = userService.forget(email);
-        System.out.println(email);
-
-        // 发送验证码
-        String trueVerifiedCode = (String) session.getAttribute("verifiedCode");
-        userService.sendVerifiedCode(email, trueVerifiedCode);
-
-        return "/site/forget";
-    }
-
-    /**
-     * 依然通过kpatcha获取验证码 并保存在服务器种
-     * @return
-     */
-    @RequestMapping(path = "/forget/verifiedCode", method = RequestMethod.GET)
-    public String getVerifiedCode(HttpSession session) {
-        String text = kaptchaProducer.createText();
-
-        // 将验证码保存在session种
-        session.setAttribute("verifiedCode", text);
-
-        return "site/forget";
-    }
+    //@RequestMapping(path = "/forget", method = RequestMethod.POST)
+    //public String forget(String email, String verifiedCode, String newPassword, HttpSession session) {
+    //
+    //
+    //    //Map<String, Object> map = userService.forget(email);
+    //    System.out.println(email);
+    //
+    //    // 发送验证码
+    //    String trueVerifiedCode = (String) session.getAttribute("verifiedCode");
+    //    userService.sendVerifiedCode(email, trueVerifiedCode);
+    //
+    //    return "/site/forget";
+    //}
+    //
+    ///**
+    // * 依然通过kpatcha获取验证码 并保存在服务器种
+    // * @return
+    // */
+    //@RequestMapping(path = "/forget/verifiedCode", method = RequestMethod.GET)
+    //public String getVerifiedCode(HttpSession session) {
+    //    String text = kaptchaProducer.createText();
+    //
+    //    // 将验证码保存在session种
+    //    session.setAttribute("verifiedCode", text);
+    //
+    //    return "site/forget";
+    //}
 
 
 
