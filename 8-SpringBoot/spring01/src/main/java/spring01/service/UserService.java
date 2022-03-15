@@ -158,9 +158,11 @@ public class UserService implements CommunityConstant {
         // 生成登录凭证
         LoginTicket loginTicket = new LoginTicket();
         loginTicket.setUserId(user.getId());
-        loginTicket.setTicket(CommunityUtil.generateUUID());
+        loginTicket.setTicket(CommunityUtil.generateUUID().replaceAll(" ", "-"));
         loginTicket.setStatus(0);
         loginTicket.setExpired(new Date(System.currentTimeMillis() + 1000L * expiredSeconds));
+
+        loginTicketMapper.insertLoginTicket(loginTicket);
 
         map.put("ticket", loginTicket.getTicket());
 

@@ -1,9 +1,12 @@
 package spring01.controller;
 
 import com.google.code.kaptcha.Producer;
+
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +17,7 @@ import spring01.service.UserService;
 import spring01.util.CommunityConstant;
 
 import javax.imageio.ImageIO;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
@@ -41,6 +45,9 @@ public class LoginController implements CommunityConstant {
     @Autowired
     private Producer kaptchaProducer;
 
+    @Value("${server.servlet.context-path}")
+    private String contextPath;
+
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String getRegisterPage() {
         return "/site/register";
@@ -49,6 +56,33 @@ public class LoginController implements CommunityConstant {
     @RequestMapping(path = "/login", method = RequestMethod.GET)
     public String getLoginPage() {
         return "/site/login";
+    }
+
+    @RequestMapping(path = "/login", method = RequestMethod.POST)
+    public String login(String  username, String password, String code, boolean rememberMe, Model model,
+                        HttpSession session, HttpServletResponse response){
+        // 验证 验证码
+        String kaptcha = (String) session.getAttribute("kaptcha");
+        if (StringUtils.isBlank(kaptcha) || StringUtils.isBlank(code) || !code.equalsIgnoreCase(kaptcha)) {
+            model.addAttribute("codeMsg", "Verified code is not correct!");
+            return "/site/login";
+        }
+
+        // 检查账号
+        int expiredSeconds = rememberMe ? REMEMBER_EXPIRED_SECONDS : DEFAULT_EXPIRED_SECONDS;
+        Map<String, Object> map = userService.login(username, password, expiredSeconds);
+        if (map.containsKey("ticket")) {
+            Cookie cookies = new Cookie("ticket", map.get("ticket").toString());
+            cookies.setPath(contextPath);
+            cookies.setMaxAge(expiredSeconds);
+            response.addCookie(cookies);
+            return "redirect:/index";
+        } else {
+            model.addAttribute("usernameMsg", map.get("usernameMsg"));
+            model.addAttribute("passwordMsg", map.get("passwordMsg"));
+            return "/site/login";
+        }
+
     }
 
     // 浏览器像server请求
@@ -105,6 +139,7 @@ public class LoginController implements CommunityConstant {
         } catch (IOException e) {
             logger.error("响应验证失败" + e.getMessage());
         }
-
     }
+
+
 }

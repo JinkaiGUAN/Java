@@ -15,4 +15,13 @@ public interface CommunityConstant {
     int ACTIVATION_REPEAT = 1;  // 重复激活
     int ACTIVATION_FAILURE = 2;  // 激活失败
 
+    /**
+     * 默认的超时时间， 默认为12小时
+     */
+    int DEFAULT_EXPIRED_SECONDS = 3600 * 12;
+
+    /**
+     * 记录密码状态下的登录凭证超市时间
+     */
+    int REMEMBER_EXPIRED_SECONDS = 3600 * 24 * 100;
 }
