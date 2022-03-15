@@ -235,5 +235,9 @@ public class UserService implements CommunityConstant {
         String content  = templateEngine.process("/mail/error/forget", context);
         mailClient.sendEmail(email, "重置密码", content);
     }
+
+    public LoginTicket findLoginTicket(String ticket) {
+        return loginTicketMapper.selectByTicket(ticket);
+    }
 }
 
