@@ -175,9 +175,19 @@ public class UserService implements CommunityConstant {
 
     /**
      * 处理忘记密码功能
-     * @param email
+     *
+     * 开发忘记密码的功能：
+     * - 点击登录页面上的“忘记密码”链接，打开忘记密码页面。
+     * - 在表单中输入注册的邮箱，点击获取验证码按钮，服务器为该邮箱发送一份验证码。
+     * - 在表单中填写收到的验证码及新密码，点击重置密码，服务器对密码进行修改。
+     *
+     * 在用户提供邮箱之后也不需要给错误信息， 所有错误信息都在点击重置之后处理
+     * @param email 输入邮箱
+     * @param verifiedCodeSite 此处的验证码为服务器生成的验证码
+     * @param verifiedCodeSession  次数验证码为服务器验证码
      */
-    public Map<String, Object> forget(String email, String verifiedCode, String newPassword) {
+    public Map<String, Object> forget(String email, String verifiedCodeSite, String verifiedCodeSession,
+                                      String newPassword) {
         Map<String, Object> map = new HashMap<>();
 
         // 空值处理
@@ -185,7 +195,11 @@ public class UserService implements CommunityConstant {
             map.put("emailEsg", "The email cannot be blank!");
             return map;
         }
-        if (StringUtils.isBlank(verifiedCode)) {
+        // 通过邮箱发送邮件, 首先要获取验证码
+        // fixme: Finish the forget password function
+        Context context = new Context();
+
+        if (StringUtils.isBlank(verifiedCodeSite)) {
             map.put("codeMsg", "The verified code cannot be blank!");
             return map;
         }
@@ -205,14 +219,21 @@ public class UserService implements CommunityConstant {
             return map;
         }
 
-        // 通过邮箱发送邮件
-        // fixme: Finish the forget password function
-
-
-
         return map;
     }
 
+    /**
+     * 发送验证密码邮件， 通过点击发送验证码按钮触发该业务
+     * @param email 对应邮箱.
+     * @param verifiedCode 验证码
+     */
+    public void sendVerifiedCode(String email, String verifiedCode) {
+        Context context = new Context();
+        context.setVariable("email", email);
+        context.setVariable("verifiedCode", verifiedCode);
 
+        String content  = templateEngine.process("/mail/error/forget", context);
+        mailClient.sendEmail(email, "重置密码", content);
+    }
 }
 

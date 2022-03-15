@@ -92,7 +92,8 @@
 						<label for="verifycode" class="col-sm-2 col-form-label text-right">验证码:</label>
 						<div class="col-sm-6">
 							<!--name是与controller种对应方法对应的变量名-->
-							<input type="text" th:class="|form-control ${codeMsg!=null?'is-invalid':''}|"
+							<input type="text"
+								   th:class="|form-control ${codeMsg!=null?'is-invalid':''}|"
 								   id="verifycode" name="code"
 								   placeholder="请输入验证码!">
 							<div class="invalid-feedback" th:text="${codeMsg}">

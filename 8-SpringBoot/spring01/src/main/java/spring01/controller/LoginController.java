@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import spring01.entity.User;
 import spring01.service.UserService;
 import spring01.util.CommunityConstant;
@@ -60,7 +57,7 @@ public class LoginController implements CommunityConstant {
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
-    public String login(String  username, String password, String code, boolean rememberMe, Model model,
+    public String login(String username, String password, String code, boolean rememberMe, Model model,
                         HttpSession session, HttpServletResponse response){
         // 验证 验证码
         String kaptcha = (String) session.getAttribute("kaptcha");
@@ -148,16 +145,45 @@ public class LoginController implements CommunityConstant {
     }
 
     @RequestMapping(path = "/forget", method = RequestMethod.GET)
-    public String getForgetPage(String email) {
+    public String getForgetPage() {
         return "/site/forget";
     }
 
+    /**
+     * 忘记密码视图层
+     * 验证成功  重定向到登录界面 否则停留在forget界面
+     * @param email
+     * @param verifiedCode
+     * @param newPassword
+     * @param session 只要用来存储验证码信息
+     * @return
+     */
     @RequestMapping(path = "/forget", method = RequestMethod.POST)
-    public String forget(String email) {
-        //Map<String, Object> map = userService.forget(email);
+    public String forget(String email, String verifiedCode, String newPassword, HttpSession session) {
 
+
+        //Map<String, Object> map = userService.forget(email);
+        System.out.println(email);
+
+        // 发送验证码
+        String trueVerifiedCode = (String) session.getAttribute("verifiedCode");
+        userService.sendVerifiedCode(email, trueVerifiedCode);
 
         return "/site/forget";
+    }
+
+    /**
+     * 依然通过kpatcha获取验证码 并保存在服务器种
+     * @return
+     */
+    @RequestMapping(path = "/forget/verifiedCode", method = RequestMethod.GET)
+    public String getVerifiedCode(HttpSession session) {
+        String text = kaptchaProducer.createText();
+
+        // 将验证码保存在session种
+        session.setAttribute("verifiedCode", text);
+
+        return "site/forget";
     }
 
 
