@@ -186,15 +186,15 @@ public class LoginController implements CommunityConstant {
         }
     }
 
-    /**
-     * 忘记密码视图层
-     * 验证成功  重定向到登录界面 否则停留在forget界面
-     * @param email
-     * @param verifiedCode
-     * @param newPassword
-     * @param session 只要用来存储验证码信息
-     * @return
-     */
+    ///**
+    // * 忘记密码视图层
+    // * 验证成功  重定向到登录界面 否则停留在forget界面
+    // * @param email
+    // * @param verifiedCode
+    // * @param newPassword
+    // * @param session 只要用来存储验证码信息
+    // * @return
+    // */
     //@RequestMapping(path = "/forget", method = RequestMethod.POST)
     //public String forget(String email, String verifiedCode, String newPassword, HttpSession session) {
     //

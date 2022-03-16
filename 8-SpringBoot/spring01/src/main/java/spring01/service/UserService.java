@@ -232,7 +232,7 @@ public class UserService implements CommunityConstant {
         context.setVariable("email", email);
         context.setVariable("verifyCode", verifiedCode);
 
-        String content  = templateEngine.process("/mail/error/forget", context);
+        String content  = templateEngine.process("/mail/forget", context);
         mailClient.sendEmail(email, "重置密码", content);
     }
 
