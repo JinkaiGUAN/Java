@@ -28,3 +28,72 @@
 2022-03-17 17:26:28,512 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-03-17 17:26:28,513 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
 2022-03-17 17:26:28,514 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2022-03-17 17:43:43,614 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 48476 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:43:43,617 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:43:45,159 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:44:33,964 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 247480 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:44:33,966 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:44:35,418 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:44:35,520 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 247480 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:44:35,520 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:44:35,937 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:44:36,016 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 247480 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:44:36,016 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:44:36,421 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:44:36,497 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 247480 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:44:36,498 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:44:36,865 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:44:36,921 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 247480 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:44:36,922 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:44:37,251 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:44:37,315 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 247480 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:44:37,316 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:44:37,707 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:44:37,757 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 247480 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:44:37,757 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:44:38,029 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:46:19,518 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 100656 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:46:19,519 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:46:21,115 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-17 17:50:13,944 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 4624 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:50:13,946 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:50:16,404 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-17 17:50:16,859 INFO [main] s.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 3.445 seconds (JVM running for 4.384)
+2022-03-17 17:50:17,304 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-03-17 17:50:17,498 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-03-17 17:50:17,569 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-17 17:50:17,579 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-03-17 17:57:03,970 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 198540 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 17:57:03,974 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 17:57:06,959 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-17 17:57:07,474 INFO [main] s.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 4.123 seconds (JVM running for 6.022)
+2022-03-17 17:57:40,105 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-03-17 17:57:40,725 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-03-17 18:00:48,489 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-17 18:00:48,497 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-03-17 18:04:25,668 INFO [main] s.MapperTests [StartupInfoLogger.java:55] Starting MapperTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 205188 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-17 18:04:25,669 INFO [main] s.MapperTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-17 18:04:27,997 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-17 18:04:28,451 INFO [main] s.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 3.261 seconds (JVM running for 4.189)
+2022-03-17 18:04:28,796 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-03-17 18:04:28,989 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-03-17 18:04:29,035 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-17 18:04:29,044 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
