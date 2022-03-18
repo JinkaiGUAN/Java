@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+
+<p>
+    <input type="button" value="Send", onclick="send()">
+
+</p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script>
+    function send(){
+        $.post(
+            "/community/alpha/ajax",  // 访问路径
+            {"name": "John", "age": 23}, //  向服务器提交的数据， 为Json格式
+            function (data) {
+                console.log(typeof(data));
+                console.log(data);
+
+                data = $.parseJSON(data); // 转换为Json对象
+                console.log(typeof(data));
+                console.log(data.code);
+                console.log(data.msg);
+            } // 回调函数， 服务器做出响应后， 会将数据传给该函数的data， 是一个字符串
+        );
+    }
+</script>
+</body>
+</html>

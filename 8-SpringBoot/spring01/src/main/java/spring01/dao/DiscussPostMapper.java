@@ -34,4 +34,18 @@ public interface DiscussPostMapper {
      * @return
      */
     int selectDiscussPostRows(@Param("userId") int userId);
+
+    /**
+     * 插入帖子
+     * @param discussPost
+     * @return
+     */
+    int insertDiscussPost(DiscussPost discussPost);
+
+    /**
+     * 通过ID查询帖子详细信息
+     * @param id
+     * @return
+     */
+    DiscussPost selectDiscussPostById(int id);
 }
