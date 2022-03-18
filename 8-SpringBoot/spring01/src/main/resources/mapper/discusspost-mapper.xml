@@ -35,7 +35,6 @@
         select <include refid="selectFields"></include>
         from discuss_post
         where id = #{id}
-
     </select>
 
     <insert id="insertDiscussPost" parameterType="DiscussPost">

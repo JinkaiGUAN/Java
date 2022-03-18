@@ -72,8 +72,9 @@ public class DiscussPostController implements CommunityConstant {
      * 查询帖子详情
      *
      * s实体类会自动存入model中
-     * @param discussPostId
+     * @param discussPostId: 在discuss post表单中的id
      * @param model
+     * @param page: 表单页
      * @return
      */
     @RequestMapping(path = "/detail/{discussPostId}", method = RequestMethod.GET)
@@ -82,12 +83,12 @@ public class DiscussPostController implements CommunityConstant {
         DiscussPost discussPost = discussPostService.findDiscussPostById(discussPostId);
         model.addAttribute("post", discussPost); // 在页面使用${post.title} 会自动调用响应的get方法
         // 作者信息
-        User user = userService.findUserById(discussPostId);
+        User user = userService.findUserById(discussPost.getUserId());
         model.addAttribute("user", user);
 
         // 评论信息
         page.setLimit(5);
-        page.setPath("/discuss/detail" + discussPostId);
+        page.setPath("/discuss/detail/" +  discussPostId);
         page.setRows(discussPost.getCommentCount());
 
         // 评论列表
@@ -137,9 +138,5 @@ public class DiscussPostController implements CommunityConstant {
 
         return "/site/discuss-detail";
     }
-
-
-
-
 
 }
