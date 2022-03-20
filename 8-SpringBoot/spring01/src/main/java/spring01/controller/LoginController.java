@@ -87,6 +87,7 @@ public class LoginController implements CommunityConstant {
     // 浏览器像server请求
     @RequestMapping(path = "/register", method = RequestMethod.POST)
     public String register(Model model, User user) {
+        // 此处在regiester表单中可以使用user的属性， 因为spring自动装配
         Map<String, Object> map = userService.register(user);
 
         if (map == null || map.isEmpty()) {
