@@ -35,4 +35,13 @@ public interface CommentMapper {
      * @return
      */
     int selectCountByEntity(int entityType, int entityId);
+
+    /**
+     * 添加评论
+     *
+     * 注意添加评论时， 也要对回帖相关表中的内容进行修改， 保证事务的遵循ACID原则
+     * @param comment
+     * @return
+     */
+    int insertComment(Comment comment);
 }
