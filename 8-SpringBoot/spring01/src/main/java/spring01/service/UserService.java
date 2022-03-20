@@ -270,8 +270,26 @@ public class UserService implements CommunityConstant {
         return loginTicketMapper.selectByTicket(ticket);
     }
 
+    /**
+     * Update the header image for the specified id.
+     * @param userId
+     * @param headerUrl
+     * @return
+     */
     public int updateHeader(int userId, String headerUrl) {
         return userMapper.updateHeader(userId, headerUrl);
     }
+
+    /**
+     * Modify the password. The dao has implemented the SQL, namely, updatePassword.
+     * @param id : It is the id (primary key) in the user table.
+     * @param newPassword : It is the new password.
+     */
+    public int modifyPassword(int id, String newPassword) {
+        // modify the password, firstly, we need the id, then the new password. As for verifying the original
+        // password, we will do it in the controller.
+        return userMapper.updatePassword(id, newPassword);
+    }
+
 }
 
