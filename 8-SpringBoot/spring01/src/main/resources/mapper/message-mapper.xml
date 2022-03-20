@@ -33,10 +33,10 @@
     </select>
 
     <select id="selectLetters" resultType="Message">
-        select <include refid="selectFields"></include> from messgge
+        select <include refid="selectFields"></include> from message
         where status != 2
             and from_id != 1
-            and conversation_id = #{conversation_id}
+            and conversation_id = #{conversationId}
         order by id desc limit #{offset}, #{limit}
     </select>
 
@@ -45,7 +45,7 @@
         from message
         where status != 2
             and from_id != 1
-            and conversation_id = #{conversation_id}
+            and conversation_id = #{conversationId}
     </select>
 
     <select id="selectLettersUnreadCount" resultType="int">
@@ -55,7 +55,7 @@
             and from_id != 1
             and to_id = #{userId}
             <if test="conversationId!=null">
-                and conversation_id = #{conversation_id}
+                and conversation_id = #{conversationId}
             </if>
     </select>
 

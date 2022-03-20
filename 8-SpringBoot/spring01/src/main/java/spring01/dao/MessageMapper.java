@@ -56,7 +56,7 @@ public interface MessageMapper {
     /**
      *  查询未读私信的数量
      *
-     * @param userId
+     * @param userId, to_ID
      * @param conversationId
      * @return
      */

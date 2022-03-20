@@ -8,11 +8,14 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import spring01.dao.DiscussPostMapper;
 import spring01.dao.LoginTicketMapper;
+import spring01.dao.MessageMapper;
 import spring01.dao.UserMapper;
 import spring01.entity.DiscussPost;
 import spring01.entity.LoginTicket;
+import spring01.entity.Message;
 import spring01.entity.User;
 
+import java.io.FilterOutputStream;
 import java.util.Date;
 import java.util.List;
 
@@ -37,6 +40,8 @@ public class MapperTests {
     private DiscussPostMapper discussPostMapper;
     @Autowired
     private LoginTicketMapper loginTicketMapper;
+    @Autowired
+    private MessageMapper messageMapper;
 
     @Test
     public void testSelectUser() {
@@ -127,4 +132,33 @@ public class MapperTests {
         System.out.println(loginTicket);
     }
 
+    @Test
+    public void testSelectLetters() {
+        System.out.println(" ============ selectConversations ===================");
+        List<Message> messages = messageMapper.selectConversations(111, 0, 20);
+        for (Message message : messages) {
+            System.out.println(message);
+        }
+
+        System.out.println(" ============ selectConversationCount ===================");
+        int count = messageMapper.selectConversationCount(111);
+        System.out.println(count);
+
+        System.out.println(" ============ selectLetters ===================");
+        messages = messageMapper.selectLetters("111_112", 0, 20);
+        for (Message message : messages) {
+            System.out.println(message);
+        }
+
+        System.out.println(" ============ selectLettersCount( ===================");
+        count = messageMapper.selectLettersCount("111_112");
+        System.out.println(count);
+
+        System.out.println(" ============ selectLettersUnreadCount ===================");
+        //count = messageMapper.selectLettersUnreadCount(111, "");
+        //System.out.println(count);
+        count = messageMapper.selectLettersUnreadCount(131, "111_131");
+        System.out.println(count);
+
+    }
 }
