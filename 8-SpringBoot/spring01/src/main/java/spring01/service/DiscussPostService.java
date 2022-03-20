@@ -51,7 +51,16 @@ public class DiscussPostService {
     }
 
     public DiscussPost findDiscussPostById(int id) {
-        //fixme, the discuss post table got that one user_id has several records
         return discussPostMapper.selectDiscussPostById(id);
+    }
+
+    /**
+     * 更新帖子数量
+     * @param id
+     * @param commentCount
+     * @return
+     */
+    public int updateCommentCount(int id, int commentCount) {
+        return discussPostMapper.updateCommentCount(id, commentCount);
     }
 }
