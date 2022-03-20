@@ -37,7 +37,8 @@ public class CommentController {
         comment.setUserId(hostHolder.getUser().getId());
         comment.setStatus(0);
         comment.setCreateTime(new Date());
-        // todo: have not add content here?
+
+        // content 会被自动加入 因为在html页面中引用了comment.content属性
         commentService.addComment(comment);
 
         return "redirect:/discuss/detail/" + discussPostId;
