@@ -129,6 +129,51 @@ public class UserController {
                 }
             }
         }
+    }
 
+    /**
+     * This controller object is going to achieve modifying password function.
+     *
+     * Firstly, we need to get the current user, then verify the input `oldPassword` is correct or not.
+     * @return
+     */
+    @LoginRequired
+    @RequestMapping(path = "/password", method = RequestMethod.POST)
+    public String modifyPassword(Model model, String oldPassword, String newPassword, String confirmedPassword) {
+        // check the post information
+        if (StringUtils.isBlank(oldPassword)) {
+            model.addAttribute("oldPasswordMsg", "The old password cannot be blank!");
+            return "/site/setting";
+        }
+        if (StringUtils.isBlank(newPassword)) {
+            model.addAttribute("newPasswordMsg", "The new password cannot be blank!");
+            return "/site/setting";
+        }
+        if (StringUtils.isBlank(confirmedPassword)) {
+            model.addAttribute("confirmedPasswordMsg", "The confirmed password cannot be blank!");
+            return "/site/setting";
+        }
+
+        // get the current user
+        User user = hostHolder.getUser();
+
+        // verify the oldPassword
+        oldPassword = CommunityUtil.md5(oldPassword + user.getSalt());
+        if (!oldPassword.equals(user.getPassword())) {
+            model.addAttribute("oldPasswordMsg", "The old password is not correct!");
+            return "/site/setting";
+        }
+
+        // verify the new password
+        if (!newPassword.equals(confirmedPassword)) {
+            model.addAttribute("confirmedPasswordMsg", "The confirmed password is not correct!");
+            return "/site/setting";
+        }
+
+        // modify the password
+        newPassword = CommunityUtil.md5(newPassword + user.getSalt());
+        userService.modifyPassword(user.getId(), newPassword);
+
+        return "redirect:/index";
     }
 }
