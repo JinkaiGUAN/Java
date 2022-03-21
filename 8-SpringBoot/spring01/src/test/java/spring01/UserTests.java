@@ -30,11 +30,11 @@ public class UserTests {
 
     @Test
     public void testModifyPassword() {
-        User user = userService.findUserById(157);
-        String newPassword = "12345";
+        User user = userService.findUserById(111);
+        String newPassword = "aaa";
         newPassword = CommunityUtil.md5(newPassword + user.getSalt());
 
-        String passwordOnDb = "607336eeb312db9ff57f6ea2c4fea9ee";
+        String passwordOnDb = "b8ca3cbc6fd57c78736c66611a7e7044";
 
         Assert.assertEquals(newPassword, passwordOnDb);
 
