@@ -6,17 +6,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import spring01.entity.Message;
 import spring01.entity.Page;
 import spring01.entity.User;
 import spring01.service.MessageService;
 import spring01.service.UserService;
+import spring01.util.CommunityUtil;
 import spring01.util.HostHolder;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Copyright (C), Peter GUAN
@@ -109,5 +108,28 @@ public class MessageController {
         } else {
             return userService.findUserById(id0);
         }
+    }
+
+    @RequestMapping(path = "/letter/send", method = RequestMethod.POST)
+    @ResponseBody // 因为要使用ajax异步请求， 必须添加该注解, 返回数据为JSON数据
+    public String sendLetter(String toName, String content) {
+        User target = userService.findUserByName(toName);
+        if (target == null) {
+            return CommunityUtil.getJSONString(1, "The target user does not exist!");
+        }
+
+        Message message = new Message();
+        message.setFromId(hostHolder.getUser().getId());
+        message.setToId(target.getId());
+        if (message.getFromId() < message.getToId()) {
+            message.setConversationId(message.getFromId() + "_" + message.getToId());
+        } else {
+            message.setConversationId(message.getToId() + "_" + message.getFromId());
+        }
+        message.setContent(content);
+        message.setCreateTime(new Date());
+        messageService.addMessage(message);
+
+        return CommunityUtil.getJSONString(0);
     }
 }
