@@ -36,7 +36,13 @@ public interface CommunityConstant {
     int ENTITY_TYPE_COMMENT = 2;
 
     /**
+     * 消息未读
+     */
+    int MESSAGE_UNREAD = 0;
+
+    /**
      * 消息已读
      */
     int MESSAGE_READ = 1;
+
 }

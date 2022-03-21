@@ -12,6 +12,7 @@ import spring01.entity.Page;
 import spring01.entity.User;
 import spring01.service.MessageService;
 import spring01.service.UserService;
+import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
 import spring01.util.HostHolder;
 
@@ -27,7 +28,7 @@ import java.util.*;
  * Version:
  */
 @Controller
-public class MessageController {
+public class MessageController implements CommunityConstant {
 
     @Autowired
     private MessageService messageService;
@@ -82,18 +83,24 @@ public class MessageController {
         page.setRows(messageService.findLettersCount(conversationId));
 
         // 私信列表
-        List<Message> messageList = messageService.findLetters(conversationId, page.getOffset(), page.getLimit());
+        List<Message> letterList = messageService.findLetters(conversationId, page.getOffset(), page.getLimit());
         List<Map<String, Object>> letters = new ArrayList<>();
-        for (Message message : messageList) {
+        for (Message letter : letterList) {
             Map<String, Object> map = new HashMap<>();
-            map.put("letter", message);
-            map.put("fromUser", userService.findUserById(message.getFromId()));
+            map.put("letter", letter);
+            map.put("fromUser", userService.findUserById(letter.getFromId()));
             letters.add(map);
         }
         model.addAttribute("letters", letters);
 
         // 私信目标
         model.addAttribute("target", getLetterTarget(conversationId));
+
+        // 设置未读消息为已读
+        List<Integer> ids = getUnreadLetterIds(letterList);
+        if (!ids.isEmpty()) {
+            messageService.readMessage(ids);
+        }
 
         return "/site/letter-detail";
     }
@@ -108,6 +115,25 @@ public class MessageController {
         } else {
             return userService.findUserById(id0);
         }
+    }
+
+    /**
+     * 获取未读消息的id
+     * @param letterList
+     * @return
+     */
+    private List<Integer> getUnreadLetterIds(List<Message> letterList) {
+        List<Integer> ids = new ArrayList<>();
+
+        if (letterList != null) {
+            for (Message letter : letterList) {
+                if (hostHolder.getUser().getId() == letter.getToId() && letter.getStatus() == MESSAGE_UNREAD) {
+                    ids.add(letter.getId());
+                }
+            }
+        }
+
+        return ids;
     }
 
     @RequestMapping(path = "/letter/send", method = RequestMethod.POST)
