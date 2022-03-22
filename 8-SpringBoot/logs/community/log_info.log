@@ -292,3 +292,5 @@
 2022-03-22 10:27:24,261 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.MessageService.findLettersUnreadCount].
 2022-03-22 10:27:24,281 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.UserService.findUserById].
 2022-03-22 10:27:24,284 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.MessageService.findLettersUnreadCount].
+2022-03-22 10:35:12,580 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-22 10:35:12,589 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
