@@ -45,6 +45,7 @@ public class MessageController implements CommunityConstant {
      */
     @RequestMapping(path = "/letter/list", method = RequestMethod.GET)
     public String getLetterList(Model model, Page page) {
+
         User user = hostHolder.getUser();
 
         // 分页信息
@@ -139,6 +140,7 @@ public class MessageController implements CommunityConstant {
     @RequestMapping(path = "/letter/send", method = RequestMethod.POST)
     @ResponseBody // 因为要使用ajax异步请求， 必须添加该注解, 返回数据为JSON数据
     public String sendLetter(String toName, String content) {
+
         User target = userService.findUserByName(toName);
         if (target == null) {
             return CommunityUtil.getJSONString(1, "The target user does not exist!");
