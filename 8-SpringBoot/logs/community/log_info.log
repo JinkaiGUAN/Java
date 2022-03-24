@@ -1,296 +1,49 @@
-2022-03-21 08:50:05,335 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 84580 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-21 08:50:05,340 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-21 08:50:05,408 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-21 08:50:05,408 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-21 08:50:06,867 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-21 08:50:06,877 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-21 08:50:06,885 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-21 08:50:06,886 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-21 08:50:06,970 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-21 08:50:06,971 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1562 ms
-2022-03-21 08:50:07,753 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-21 08:50:07,923 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-21 08:50:07,941 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-21 08:50:07,961 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-21 08:50:07,971 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 3.351 seconds (JVM running for 5.64)
-2022-03-21 08:50:24,423 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-21 08:50:24,423 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-21 08:50:24,424 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
-2022-03-21 08:50:24,472 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-21 08:50:24,638 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-21 09:32:18,955 INFO [Thread-12] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-21 09:32:18,961 INFO [Thread-12] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
-2022-03-21 09:32:19,182 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 84580 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-21 09:32:19,183 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-21 09:32:21,955 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 84580 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-21 09:32:21,956 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-21 09:32:22,440 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-21 09:32:22,441 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-21 09:32:22,441 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-21 09:32:22,441 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-21 09:32:22,462 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-21 09:32:22,462 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 502 ms
-2022-03-21 09:32:22,640 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-21 09:32:22,678 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-21 09:32:22,687 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-21 09:32:22,697 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-21 09:32:22,700 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 0.795 seconds (JVM running for 2540.368)
-2022-03-21 09:32:22,702 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-21 09:32:33,043 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-21 09:32:33,044 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-21 09:32:33,045 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-21 09:32:33,049 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
-2022-03-21 09:32:33,056 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
-2022-03-21 09:33:36,759 INFO [Thread-18] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
-2022-03-21 09:33:36,761 INFO [Thread-18] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.
-2022-03-21 09:33:36,996 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 84580 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-21 09:33:36,996 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-21 09:33:37,485 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-21 09:33:37,486 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-21 09:33:37,486 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-21 09:33:37,487 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-21 09:33:37,520 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-21 09:33:37,520 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 519 ms
-2022-03-21 09:33:37,711 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-21 09:33:37,748 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-21 09:33:37,759 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-21 09:33:37,761 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-21 09:33:37,764 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 0.848 seconds (JVM running for 2615.432)
-2022-03-21 09:33:37,766 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-21 09:33:46,301 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-21 09:33:46,303 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-21 09:33:46,304 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-21 09:33:46,306 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-3 - Starting...
-2022-03-21 09:33:46,310 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-3 - Start completed.
-2022-03-21 09:49:22,495 INFO [Thread-24] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-3 - Shutdown initiated...
-2022-03-21 09:49:22,499 INFO [Thread-24] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-3 - Shutdown completed.
-2022-03-21 09:49:22,711 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 84580 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-21 09:49:22,712 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-21 09:49:24,343 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 84580 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-21 09:49:24,344 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-21 09:49:24,828 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-21 09:49:24,829 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-21 09:49:24,829 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-21 09:49:24,829 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-21 09:49:24,851 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-21 09:49:24,851 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 503 ms
-2022-03-21 09:49:25,029 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-21 09:49:25,067 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-21 09:49:25,076 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-21 09:49:25,078 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-21 09:49:25,081 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 0.789 seconds (JVM running for 3562.75)
-2022-03-21 09:49:25,082 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-21 09:49:37,399 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-21 09:49:37,400 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-21 09:49:37,403 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
-2022-03-21 09:49:37,408 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-4 - Starting...
-2022-03-21 09:49:37,415 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-4 - Start completed.
-2022-03-21 09:56:14,016 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-4 - Shutdown initiated...
-2022-03-21 09:56:14,017 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-4 - Shutdown completed.
-2022-03-22 08:42:03,309 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 108944 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 08:42:03,311 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 08:42:03,374 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-22 08:42:03,375 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-22 08:42:04,677 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 08:42:04,686 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 08:42:04,687 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 08:42:04,687 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 08:42:04,773 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 08:42:04,774 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1398 ms
-2022-03-22 08:42:05,447 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 08:42:05,612 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 08:42:05,631 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 08:42:05,650 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 08:42:05,661 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 2.911 seconds (JVM running for 5.163)
-2022-03-22 08:42:10,801 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-22 08:42:10,801 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-22 08:42:10,802 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-22 08:42:10,879 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-22 08:42:11,061 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-22 09:23:24,584 INFO [Thread-11] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-22 09:23:24,593 INFO [Thread-11] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
-2022-03-22 09:23:24,901 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 108944 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 09:23:24,902 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 09:23:25,698 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 09:23:25,699 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:23:25,700 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 09:23:25,700 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 09:23:25,732 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 09:23:25,733 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 822 ms
-2022-03-22 09:23:26,034 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 09:23:26,087 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 09:23:26,099 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:23:26,102 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 09:23:26,106 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.308 seconds (JVM running for 2485.608)
-2022-03-22 09:23:26,109 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-22 09:23:28,116 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 108944 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 09:23:28,117 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 09:23:28,450 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 09:23:28,451 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:23:28,451 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 09:23:28,451 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 09:23:28,475 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 09:23:28,475 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 354 ms
-2022-03-22 09:23:28,646 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 09:23:28,679 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 09:23:28,687 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:23:28,690 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 09:23:28,693 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 0.626 seconds (JVM running for 2488.195)
-2022-03-22 09:23:28,694 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-22 09:23:51,206 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-22 09:23:51,208 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-22 09:23:51,210 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-22 09:24:00,822 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
-2022-03-22 09:24:00,831 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
-2022-03-22 09:24:59,929 INFO [Thread-22] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
-2022-03-22 09:24:59,941 INFO [Thread-22] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.
-2022-03-22 09:25:00,248 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 108944 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 09:25:00,248 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 09:25:00,877 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 09:25:00,878 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:25:00,878 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 09:25:00,878 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 09:25:00,905 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 09:25:00,906 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 650 ms
-2022-03-22 09:25:01,124 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 09:25:01,169 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 09:25:01,178 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:25:01,181 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 09:25:01,186 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.034 seconds (JVM running for 2580.688)
-2022-03-22 09:25:01,188 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-22 09:25:03,254 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 108944 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 09:25:03,254 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 09:25:03,631 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 09:25:03,632 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:25:03,632 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 09:25:03,632 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 09:25:03,659 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 09:25:03,659 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 400 ms
-2022-03-22 09:25:03,820 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 09:25:03,857 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 09:25:03,867 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 09:25:03,870 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 09:25:03,875 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 0.674 seconds (JVM running for 2583.376)
-2022-03-22 09:25:03,876 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-22 09:25:09,796 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-22 09:25:09,798 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-22 09:25:09,798 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
-2022-03-22 09:25:09,801 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-3 - Starting...
-2022-03-22 09:25:09,813 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-3 - Start completed.
-2022-03-22 10:12:23,934 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-3 - Shutdown initiated...
-2022-03-22 10:12:23,938 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-3 - Shutdown completed.
-2022-03-22 10:12:41,964 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 70152 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 10:12:41,968 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 10:12:42,080 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-22 10:12:42,081 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-22 10:12:45,114 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 10:12:45,132 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:12:45,133 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 10:12:45,133 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 10:12:45,291 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 10:12:45,291 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 3208 ms
-2022-03-22 10:12:47,145 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 10:12:47,734 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 10:12:47,782 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:12:47,815 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 10:12:47,838 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 6.569 seconds (JVM running for 7.984)
-2022-03-22 10:13:02,793 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-22 10:13:02,794 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-22 10:13:02,795 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-22 10:13:02,856 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-22 10:13:03,042 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-22 10:25:46,803 INFO [Thread-18] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-22 10:25:46,810 INFO [Thread-18] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
-2022-03-22 10:25:46,985 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 70152 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 10:25:46,985 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 10:25:47,588 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 10:25:47,589 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:25:47,590 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 10:25:47,590 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 10:25:47,616 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 10:25:47,616 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 626 ms
-2022-03-22 10:25:47,838 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 10:25:47,889 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 10:25:47,897 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:25:47,900 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 10:25:47,904 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 0.982 seconds (JVM running for 788.05)
-2022-03-22 10:25:47,906 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-22 10:25:50,283 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 70152 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 10:25:50,284 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 10:25:50,820 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 10:25:50,822 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:25:50,823 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 10:25:50,824 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 10:25:50,867 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 10:25:50,867 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 576 ms
-2022-03-22 10:25:51,344 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 10:25:51,513 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 10:25:51,522 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:25:51,525 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 10:25:51,529 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.317 seconds (JVM running for 791.675)
-2022-03-22 10:25:51,531 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-22 10:26:14,458 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-22 10:26:14,460 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-22 10:26:14,462 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-22 10:26:14,472 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findLoginTicket].
-2022-03-22 10:26:14,480 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
-2022-03-22 10:26:14,489 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
-2022-03-22 10:26:14,494 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:14,506 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.DiscussPostService.findDiscussPostById].
-2022-03-22 10:26:14,515 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:14,518 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-22 10:26:14,526 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:14,528 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-22 10:26:14,530 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentCount].
-2022-03-22 10:26:14,534 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:14,538 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-22 10:26:14,541 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentCount].
-2022-03-22 10:26:14,543 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:14,546 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-22 10:26:14,548 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentCount].
-2022-03-22 10:26:14,551 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:14,556 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-22 10:26:14,558 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentCount].
-2022-03-22 10:26:14,561 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:14,563 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-22 10:26:14,564 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:14] visits [spring01.service.CommentService.findCommentCount].
-2022-03-22 10:26:23,457 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.UserService.findLoginTicket].
-2022-03-22 10:26:23,462 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:23,467 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.MessageService.findConversationCount].
-2022-03-22 10:26:23,475 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.MessageService.findConversations].
-2022-03-22 10:26:23,480 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.MessageService.findLettersCount].
-2022-03-22 10:26:23,484 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-22 10:26:23,487 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:26:23,489 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:26:23] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-22 10:26:36,340 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
-2022-03-22 10:26:36,345 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.
-2022-03-22 10:26:46,980 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 150656 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-22 10:26:46,984 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-22 10:26:47,073 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-22 10:26:47,073 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-22 10:26:49,456 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-22 10:26:49,464 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:26:49,466 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-22 10:26:49,467 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-22 10:26:49,570 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-22 10:26:49,570 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 2496 ms
-2022-03-22 10:26:50,969 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-22 10:26:51,315 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-22 10:26:51,363 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-22 10:26:51,414 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-22 10:26:51,436 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 5.295 seconds (JVM running for 7.45)
-2022-03-22 10:27:23,776 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-22 10:27:23,776 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-22 10:27:23,777 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-22 10:27:23,808 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:23] visits [spring01.service.UserService.findLoginTicket].
-2022-03-22 10:27:23,834 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-22 10:27:24,127 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-22 10:27:24,208 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:27:24,240 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.MessageService.findConversationCount].
-2022-03-22 10:27:24,249 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.MessageService.findConversations].
-2022-03-22 10:27:24,258 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.MessageService.findLettersCount].
-2022-03-22 10:27:24,261 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-22 10:27:24,281 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.UserService.findUserById].
-2022-03-22 10:27:24,284 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:45] User-[0:0:0:0:0:0:0:1], at [2022-03-22 10:27:24] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-22 10:35:12,580 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-22 10:35:12,589 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-03-24 10:48:45,128 INFO [main] s.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 157692 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-24 10:48:45,135 INFO [main] s.RedisTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 10:48:46,836 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-24 10:48:46,843 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-24 10:48:46,904 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2022-03-24 10:48:51,375 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-24 10:48:52,541 INFO [main] s.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 8.152 seconds (JVM running for 9.436)
+2022-03-24 11:00:25,199 INFO [main] s.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 42904 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-24 11:00:25,201 INFO [main] s.RedisTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:00:26,285 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-24 11:00:26,289 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-24 11:00:26,327 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2022-03-24 11:00:31,041 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-24 11:00:31,940 INFO [main] s.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 7.309 seconds (JVM running for 9.078)
+2022-03-24 11:01:37,668 INFO [main] s.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 97348 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-24 11:01:37,670 INFO [main] s.RedisTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:01:38,522 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-24 11:01:38,527 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-24 11:01:38,560 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2022-03-24 11:01:42,603 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-24 11:01:43,318 INFO [main] s.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 6.121 seconds (JVM running for 7.154)
+2022-03-24 11:02:19,171 INFO [main] s.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 181380 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-24 11:02:19,173 INFO [main] s.RedisTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:02:20,063 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-24 11:02:20,067 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-24 11:02:20,099 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2022-03-24 11:02:22,940 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-24 11:02:23,627 INFO [main] s.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.956 seconds (JVM running for 6.15)
+2022-03-24 11:04:30,198 INFO [main] s.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 180820 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-24 11:04:30,200 INFO [main] s.RedisTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:04:31,283 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-24 11:04:31,291 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-24 11:04:31,330 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2022-03-24 11:04:35,828 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-24 11:04:36,767 INFO [main] s.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 7.206 seconds (JVM running for 8.914)
+2022-03-24 11:08:39,521 INFO [main] s.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 116836 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-24 11:08:39,525 INFO [main] s.RedisTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:08:41,111 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-24 11:08:41,119 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-24 11:08:41,168 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2022-03-24 11:08:45,009 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-24 11:08:45,913 INFO [main] s.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 7.1 seconds (JVM running for 8.511)
+2022-03-24 11:16:47,903 INFO [main] s.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 1500 (started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-24 11:16:47,906 INFO [main] s.RedisTests [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:16:49,006 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-24 11:16:49,011 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-24 11:16:49,050 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2022-03-24 11:16:53,232 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-24 11:16:54,288 INFO [main] s.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 7.098 seconds (JVM running for 8.697)
