@@ -58,4 +58,39 @@ public class FollowService {
             }
         });
     }
+
+    /**
+     * 查询关注的实体数量
+     * @param userId
+     * @param entityType
+     * @return
+     */
+    public long findFolloweeCount(int userId, int entityType) {
+        String followeeKey = RedisKeyUtil.getFolloweeKey(userId, entityType);
+        return redisTemplate.opsForZSet().zCard(followeeKey);
+    }
+
+    /**
+     * 查询实体的粉丝的数量
+     * @param entityType
+     * @param entityId
+     * @return
+     */
+    public long findFollowerCount(int entityType, int entityId) {
+        String followerKey = RedisKeyUtil.getFollowerKey(entityType, entityId);
+        return redisTemplate.opsForZSet().zCard(followerKey);
+    }
+
+    /**
+     * 查询当前用户是否已关注该实体
+     * @param userId
+     * @param entityType
+     * @param entityId
+     * @return
+     */
+    public boolean hasFollowed(int userId, int entityType, int entityId) {
+        String followeeKey = RedisKeyUtil.getFolloweeKey(userId, entityType);
+
+        return redisTemplate.opsForZSet().score(followeeKey, entityId) != null;
+    }
 }
