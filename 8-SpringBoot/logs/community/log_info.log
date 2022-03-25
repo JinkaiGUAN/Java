@@ -922,3 +922,5 @@
 2022-03-25 11:26:48,059 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-25 11:26:48] visits [spring01.service.UserService.findUserById].
 2022-03-25 11:26:48,059 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-25 11:26:48] visits [spring01.service.UserService.findUserById].
 2022-03-25 11:26:48,063 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-25 11:26:48] visits [spring01.service.LikeService.findUserLikeCount].
+2022-03-25 11:28:34,412 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-25 11:28:34,436 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
