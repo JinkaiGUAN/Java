@@ -295,5 +295,6 @@ public class UserService implements CommunityConstant {
         return userMapper.selectByName(username);
     }
 
+
 }
 
