@@ -80,5 +80,11 @@ public class RedisKeyUtil {
         return PREFIX_TICKET + SPLIT + ticket;
     }
 
-
+    /**
+     * 用户
+     * @return
+     */
+    public static String getUserKey(int userId) {
+        return PREFIX_USER + SPLIT + userId;
+    }
 }

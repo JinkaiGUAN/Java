@@ -19,6 +19,7 @@ import spring01.util.RedisKeyUtil;
 
 import javax.mail.event.MailEvent;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Copyright (C), Peter GUAN
@@ -56,7 +57,13 @@ public class UserService implements CommunityConstant {
     //private LoginTicketMapper loginTicketMapper;
 
     public User findUserById(int id) {
-        return userMapper.selectByID(id);
+        //return userMapper.selectByID(id);
+        User user = getCache(id);
+        if (user == null) {
+            user = initCache(id);
+        }
+
+        return user;
     }
 
     public Map<String, Object> register(User user) {
@@ -124,6 +131,7 @@ public class UserService implements CommunityConstant {
             return ACTIVATION_REPEAT;
         } else if (user.getActivationCode().equals(code)) {
             userMapper.updateStatus(user.getId(), 1);
+            clearCache(userId);
             return ACTIVATION_SUCCESS;
         } else {
             return ACTIVATION_FAILURE;
@@ -291,7 +299,9 @@ public class UserService implements CommunityConstant {
      * @return
      */
     public int updateHeader(int userId, String headerUrl) {
-        return userMapper.updateHeader(userId, headerUrl);
+        int rows = userMapper.updateHeader(userId, headerUrl);
+        clearCache(userId);
+        return rows;
     }
 
     /**
@@ -312,10 +322,28 @@ public class UserService implements CommunityConstant {
     /**
      * 管理用户缓存
      * 1. 优先从缓存中取值
-     * 2. 娶不到时初始化缓存数据
+     * 2. 取不到时初始化缓存数据
      * 3. 数据变更时清除缓存数据
      */
+    //1. 优先从缓存中取值
+    private User getCache(int userId) {
+        String redisKey = RedisKeyUtil.getUserKey(userId);
+        return (User) redisTemplate.opsForValue().get(redisKey);
+    }
 
+    //2. 取不到时初始化缓存数据
+    private User initCache(int userId) {
+        User user = userMapper.selectByID(userId);
+        String redisKey = RedisKeyUtil.getUserKey(userId);
+        redisTemplate.opsForValue().set(redisKey, user, 3600, TimeUnit.SECONDS);
 
+        return user;
+    }
+
+    //3. 数据变更时清除缓存数据
+    private void clearCache(int userId) {
+        String redisKey = RedisKeyUtil.getUserKey(userId);
+        redisTemplate.delete(redisKey);
+    }
 }
 
