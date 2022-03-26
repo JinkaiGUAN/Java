@@ -23,6 +23,15 @@ public class CommunityUtil {
         return UUID.randomUUID().toString().replaceAll("-", " ");
     }
 
+    /**
+     * 生成cookie
+     * cookie中不能存在空格
+     * @return
+     */
+    public static String generateCookie() {
+        return UUID.randomUUID().toString().replaceAll(" ", "-");
+    }
+
     // MD5 加密
     public static String md5(String key) {
         if (StringUtils.isBlank(key)) {

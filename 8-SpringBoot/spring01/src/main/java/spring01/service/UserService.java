@@ -3,6 +3,8 @@ package spring01.service;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.cache.CacheProperties;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
@@ -13,6 +15,7 @@ import spring01.entity.User;
 import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
 import spring01.util.MailClient;
+import spring01.util.RedisKeyUtil;
 
 import javax.mail.event.MailEvent;
 import java.util.*;
@@ -40,14 +43,17 @@ public class UserService implements CommunityConstant {
     @Autowired
     private TemplateEngine templateEngine;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
     @Value("${community.path.domain}") // 因为不是bean
     private String domain;
 
     @Value("${server.servlet.context-path}")
     private String contextPath;
 
-    @Autowired
-    private LoginTicketMapper loginTicketMapper;
+    //@Autowired
+    //private LoginTicketMapper loginTicketMapper;
 
     public User findUserById(int id) {
         return userMapper.selectByID(id);
@@ -162,7 +168,10 @@ public class UserService implements CommunityConstant {
         loginTicket.setStatus(0);
         loginTicket.setExpired(new Date(System.currentTimeMillis() + 1000L * expiredSeconds));
 
-        loginTicketMapper.insertLoginTicket(loginTicket);
+        //loginTicketMapper.insertLoginTicket(loginTicket);
+
+        String redisKey = RedisKeyUtil.getTicketKey(loginTicket.getTicket());
+        redisTemplate.opsForValue().set(redisKey, loginTicket);
 
         map.put("ticket", loginTicket.getTicket());
 
@@ -170,7 +179,11 @@ public class UserService implements CommunityConstant {
     }
 
     public void logout(String ticket) {
-        loginTicketMapper.updateStatus(ticket, 1);
+        //loginTicketMapper.updateStatus(ticket, 1);
+        String redisKey = RedisKeyUtil.getTicketKey(ticket);
+        LoginTicket loginTicket = (LoginTicket) redisTemplate.opsForValue().get(redisKey);
+        loginTicket.setStatus(1);
+        redisTemplate.opsForValue().set(redisKey, loginTicket);
     }
 
     /**
@@ -265,9 +278,10 @@ public class UserService implements CommunityConstant {
         return map;
     }
 
-
     public LoginTicket findLoginTicket(String ticket) {
-        return loginTicketMapper.selectByTicket(ticket);
+        //return loginTicketMapper.selectByTicket(ticket);
+        String redisKey = RedisKeyUtil.getTicketKey(ticket);
+        return (LoginTicket) redisTemplate.opsForValue().get(redisKey);
     }
 
     /**
@@ -294,6 +308,13 @@ public class UserService implements CommunityConstant {
     public User findUserByName(String username) {
         return userMapper.selectByName(username);
     }
+
+    /**
+     * 管理用户缓存
+     * 1. 优先从缓存中取值
+     * 2. 娶不到时初始化缓存数据
+     * 3. 数据变更时清除缓存数据
+     */
 
 
 }
