@@ -63,4 +63,14 @@ public class DiscussPostService {
     public int updateCommentCount(int id, int commentCount) {
         return discussPostMapper.updateCommentCount(id, commentCount);
     }
+
+    /**
+     * 根据输入的discuss-post的id查询相应的标题
+     * @param ids
+     * @return
+     */
+    @Deprecated
+    public List<DiscussPost> findDiscussPostByIds(List<Integer> ids) {
+        return discussPostMapper.selectDiscussPostByIds(ids);
+    }
 }

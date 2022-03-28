@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import spring01.annotation.LoginRequired;
+import spring01.entity.Comment;
+import spring01.entity.DiscussPost;
+import spring01.entity.Page;
 import spring01.entity.User;
-import spring01.service.FollowService;
-import spring01.service.LikeService;
-import spring01.service.UserService;
+import spring01.service.*;
 import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
 import spring01.util.HostHolder;
@@ -25,6 +26,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Copyright (C), Peter GUAN
@@ -63,6 +68,12 @@ public class UserController implements CommunityConstant {
 
     @Autowired
     private FollowService followService;
+
+    @Autowired
+    private CommentService commentService;
+
+    @Autowired
+    private DiscussPostService discussPostService;
 
     @LoginRequired
     @RequestMapping(path = "/setting", method = RequestMethod.GET)
@@ -210,5 +221,48 @@ public class UserController implements CommunityConstant {
         model.addAttribute("hasFollowed", hasFollowed);
 
         return "/site/profile";
+    }
+
+    /**
+     * 个人页面中， 我的回复功能
+     * @param model
+     * @param page
+     * @return
+     */
+    @LoginRequired
+    @RequestMapping(path = "/myreply/{userId}", method = RequestMethod.GET)
+    public String getPostReplyPage(@PathVariable("userId") int userId, Model model, Page page) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+        model.addAttribute("user", user);
+
+        // 设置页面信息
+        page.setLimit(10);
+        page.setPath("/user/myreply/" + userId);
+        int commentCount = commentService.findCommentsCountByUserIdForPost(user.getId());
+        page.setRows(commentCount);
+        model.addAttribute("totalCommentNum", commentCount); // 回复帖子数量
+
+        // 查询当前用户的回帖信息
+        List<Comment> commentList = commentService.findCommentsByUserIdForPost(user.getId(), page.getOffset(),
+                page.getLimit());
+
+        // 利用回帖信息， 提取回帖
+        List<Map<String, Object>> replyVoList = new ArrayList<>();  // 存储每一个回复对应的信息
+        for (Comment comment : commentList) {
+            Map<String, Object> replyVo = new HashMap<>(); // 单条信息储存单元
+
+            replyVo.put("comment", comment);  // can get content and create time
+            DiscussPost discussPost = discussPostService.findDiscussPostById(comment.getEntityId());
+            replyVo.put("discussPost", discussPost);
+
+            replyVoList.add(replyVo);
+        }
+
+        model.addAttribute("replyVoList", replyVoList);
+
+        return "/site/my-reply";
     }
 }

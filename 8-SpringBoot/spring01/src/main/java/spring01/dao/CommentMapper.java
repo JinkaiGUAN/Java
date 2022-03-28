@@ -44,4 +44,17 @@ public interface CommentMapper {
      * @return
      */
     int insertComment(Comment comment);
+
+    /**
+     * 查询当前用户当前页下针对帖子的回复
+     *
+     * @param userId
+     * @param entityType : the type should be 1
+     * @param offset
+     * @param limit
+     * @return
+     */
+    List<Comment> selectCommentsByUserId(int userId, int entityType, int offset, int limit);
+
+    int selectCommentCountByUserIdAndEntityType(int userId, int entityType);
 }
