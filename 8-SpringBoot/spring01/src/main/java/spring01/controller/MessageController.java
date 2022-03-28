@@ -160,4 +160,18 @@ public class MessageController implements CommunityConstant {
 
         return CommunityUtil.getJSONString(0);
     }
+
+    @RequestMapping(path = "/letter/delete", method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteLetter(int id) {
+
+        Message message = messageService.findLetterById(id);
+        if (message == null) {
+            return CommunityUtil.getJSONString(1, "The letter does not exists!");
+        }
+
+        messageService.deleteMessage(id);
+
+        return CommunityUtil.getJSONString(0);
+    }
 }

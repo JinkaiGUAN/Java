@@ -63,6 +63,11 @@
             </if>
     </select>
 
+    <select id="selectLetterById" resultType="Message">
+        select <include refid="selectFields"></include> from message
+        where id = #{id}
+    </select>
+
     <insert id="insertMessage" parameterType="Message" keyProperty="id">
         insert into message(<include refid="insertFields"></include>)
         values(#{fromId}, #{toId}, #{conversationId}, #{content}, #{status}, #{createTime})
