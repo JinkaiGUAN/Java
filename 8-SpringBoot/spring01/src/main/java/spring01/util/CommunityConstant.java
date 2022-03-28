@@ -50,4 +50,9 @@ public interface CommunityConstant {
      */
     int MESSAGE_READ = 1;
 
+    /**
+     * 消息已删除。 本数据库支支持本人删除， 则对方的消息列表也会被删除。
+     */
+    int MESSAGE_DELETE = 2;
+
 }

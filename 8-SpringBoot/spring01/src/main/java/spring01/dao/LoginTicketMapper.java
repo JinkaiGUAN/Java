@@ -14,6 +14,7 @@ import spring01.entity.LoginTicket;
  */
 
 @Mapper
+@Deprecated
 public interface LoginTicketMapper {
 
     @Insert({
