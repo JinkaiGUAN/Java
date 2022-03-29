@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import spring01.service.*;
 import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
 import spring01.util.HostHolder;
+import spring01.util.RedisKeyUtil;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -229,7 +231,7 @@ public class UserController implements CommunityConstant {
      * @param page
      * @return
      */
-    @LoginRequired
+    //@LoginRequired
     @RequestMapping(path = "/myreply/{userId}", method = RequestMethod.GET)
     public String getPostReplyPage(@PathVariable("userId") int userId, Model model, Page page) {
         User user = userService.findUserById(userId);
@@ -264,5 +266,46 @@ public class UserController implements CommunityConstant {
         model.addAttribute("replyVoList", replyVoList);
 
         return "/site/my-reply";
+    }
+
+    /**
+     * 我的帖子页面
+     * @param userId
+     * @param model
+     * @param page
+     * @return
+     */
+    @RequestMapping(path = "/mypost/{userId}", method = RequestMethod.GET)
+    public String getMyPostPage(@PathVariable("userId") int userId, Model model, Page page) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new IllegalArgumentException("该用户不存在");
+        }
+        model.addAttribute("user", user);
+
+        // 设置页面信息
+        page.setPath("/user/mypost/" + userId);
+        page.setLimit(10);
+        int postCount = discussPostService.findDiscussPostRows(user.getId());
+        page.setRows(postCount);
+        model.addAttribute("postCount", postCount);
+
+        // 查找用户发帖信息
+        List<DiscussPost> discussPostList = discussPostService.findDiscussPosts(user.getId(), page.getOffset(),
+                page.getLimit());
+        List<Map<String, Object>> discussPostVOList = new ArrayList<>();
+        for (DiscussPost discussPost : discussPostList) {
+            Map<String, Object> discussPostVo = new HashMap<>();
+
+            discussPostVo.put("discuss", discussPost);
+            // 查询获取的赞数量
+            int postLikeCount = (int) likeService.findEntityLikeCount(ENTITY_TYPE_POST, discussPost.getId());
+            discussPostVo.put("postLikeCount", postLikeCount);
+
+            discussPostVOList.add(discussPostVo);
+        }
+        model.addAttribute("discussPostVOList", discussPostVOList);
+
+        return "/site/my-post";
     }
 }
