@@ -57,4 +57,11 @@ public interface DiscussPostMapper {
      * @return
      */
     int updateCommentCount(int id, int commentCount);
+
+    /**
+     * 查询id为对应entity id的所有discuss post实体。
+     * @param ids: 此处的ids数量应该被page的limit限制
+     * @return
+     */
+    List<DiscussPost> selectDiscussPostByIds(List<Integer> ids);
 }

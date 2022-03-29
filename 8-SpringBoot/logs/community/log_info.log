@@ -1,489 +1,202 @@
-2022-03-27 20:30:18,427 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 31224 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-27 20:30:18,433 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-27 20:30:18,493 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-27 20:30:18,493 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-27 20:30:19,930 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-27 20:30:19,934 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-27 20:30:19,990 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
-2022-03-27 20:30:21,272 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-27 20:30:21,282 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-27 20:30:21,283 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-27 20:30:21,283 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-27 20:30:21,398 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-27 20:30:21,398 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 2904 ms
-2022-03-27 20:30:23,391 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-27 20:30:23,874 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-27 20:30:23,918 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-27 20:30:23,950 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-27 20:30:23,971 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 6.254 seconds (JVM running for 8.748)
-2022-03-27 20:30:42,499 INFO [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-27 20:30:42,500 INFO [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-27 20:30:42,502 INFO [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
-2022-03-27 20:30:42,599 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:42] visits [spring01.service.DiscussPostService.findDiscussPostRows].
-2022-03-27 20:30:42,663 INFO [http-nio-8080-exec-3] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-27 20:30:42,973 INFO [http-nio-8080-exec-3] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-27 20:30:43,112 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:43] visits [spring01.service.DiscussPostService.findDiscussPosts].
-2022-03-27 20:30:43,138 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:43] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:44,936 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:44] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:44,967 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:44] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:44,975 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:44] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:44,979 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:44] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:44,988 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:44] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:44,991 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:44] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:45,001 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:45,005 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:45,102 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:45,105 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:45,108 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:45,110 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:45,113 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:45,116 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:45,121 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:45,124 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:45,126 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:45,130 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:45,132 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:45] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,286 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.login].
-2022-03-27 20:30:58,330 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:30:58,335 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,340 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.DiscussPostService.findDiscussPostRows].
-2022-03-27 20:30:58,345 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.DiscussPostService.findDiscussPosts].
-2022-03-27 20:30:58,362 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,365 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,368 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,371 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,375 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,379 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,382 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,392 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,395 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,399 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,402 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,405 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,408 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,411 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,415 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,421 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,423 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,426 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:30:58,429 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:30:58,432 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:30:58] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,380 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:31:02,384 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,395 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.DiscussPostService.findDiscussPostById].
-2022-03-27 20:31:02,401 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,403 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,405 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,409 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-27 20:31:02,428 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,436 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,438 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,441 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-27 20:31:02,445 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,452 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,454 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,457 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,460 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,463 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,465 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentCount].
-2022-03-27 20:31:02,468 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,470 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,472 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,475 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-27 20:31:02,478 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentCount].
-2022-03-27 20:31:02,481 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,488 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,489 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,492 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-27 20:31:02,496 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentCount].
-2022-03-27 20:31:02,500 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,507 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,510 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,512 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-27 20:31:02,516 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentCount].
-2022-03-27 20:31:02,518 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:02,521 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-27 20:31:02,523 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.LikeService.findEntityLikeStatus].
-2022-03-27 20:31:02,525 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentsByEntity].
-2022-03-27 20:31:02,528 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:02] visits [spring01.service.CommentService.findCommentCount].
-2022-03-27 20:31:13,480 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:31:13,484 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:13,489 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findConversationCount].
-2022-03-27 20:31:13,555 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findConversations].
-2022-03-27 20:31:13,561 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:31:13,567 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:31:13,572 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:13,575 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:31:13,578 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:31:13,582 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:13,585 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:31:13,589 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:31:13,592 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:13,599 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:31:13,603 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:31:13,608 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:13,610 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:31:13,616 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:31:13,619 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:31:13,626 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:31:13] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:36:57,484 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:36:57] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:36:57,493 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:36:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:36:57,509 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:36:57] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:36:57,511 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:36:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:00,818 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:00] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:37:00,822 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:00] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:00,826 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:00] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:37:00,829 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:00] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:15,818 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:15] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:37:15,821 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:15] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:15,824 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:15] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:37:15,828 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:15] visits [spring01.service.MessageService.findLetters].
-2022-03-27 20:37:15,832 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:15] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:15,835 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:15] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:15,837 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:15] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:57,678 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:37:57,682 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:57,685 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findConversationCount].
-2022-03-27 20:37:57,689 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findConversations].
-2022-03-27 20:37:57,693 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:37:57,696 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:37:57,701 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:57,703 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:37:57,708 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:37:57,711 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:57,714 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:37:57,717 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:37:57,721 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:57,724 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:37:57,727 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:37:57,730 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:57,732 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:37:57,735 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:37:57,741 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:37:57,744 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:37:57] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-27 20:38:04,075 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:38:04] visits [spring01.service.UserService.findLoginTicket].
-2022-03-27 20:38:04,079 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:38:04] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:38:04,082 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:38:04] visits [spring01.service.MessageService.findLettersCount].
-2022-03-27 20:38:04,085 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:38:04] visits [spring01.service.MessageService.findLetters].
-2022-03-27 20:38:04,089 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:38:04] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:38:04,092 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:38:04] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:38:04,095 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-27 20:38:04] visits [spring01.service.UserService.findUserById].
-2022-03-27 20:44:14,156 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-27 20:44:14,170 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
-2022-03-28 10:06:41,250 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 11280 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-28 10:06:41,251 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:06:41,307 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-28 10:06:41,307 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-28 10:06:42,363 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-28 10:06:42,367 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-28 10:06:42,403 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-2022-03-28 10:06:43,417 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:06:43,429 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:06:43,430 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-28 10:06:43,430 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:06:43,537 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-28 10:06:43,538 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 2230 ms
-2022-03-28 10:06:45,013 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-28 10:06:45,475 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-28 10:06:45,521 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:06:45,570 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-28 10:06:45,595 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 4.982 seconds (JVM running for 6.92)
-2022-03-28 10:07:02,714 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-28 10:07:02,714 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-28 10:07:02,716 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-28 10:07:02,798 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:02] visits [spring01.service.DiscussPostService.findDiscussPostRows].
-2022-03-28 10:07:02,897 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-28 10:07:03,093 INFO [http-nio-8080-exec-2] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-28 10:07:03,158 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:03] visits [spring01.service.DiscussPostService.findDiscussPosts].
-2022-03-28 10:07:03,174 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:03] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:04,954 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:04] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:04,975 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:04] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:04,982 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:04] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:04,984 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:04] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:04,992 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:04] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:04,994 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:04] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:05,003 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:05,005 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:05,067 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:05,070 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:05,073 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:05,075 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:05,077 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:05,079 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:05,085 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:05,086 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:05,088 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:05,090 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:05,092 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:05] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,403 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.login].
-2022-03-28 10:07:13,443 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:07:13,448 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,454 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.DiscussPostService.findDiscussPostRows].
-2022-03-28 10:07:13,457 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.DiscussPostService.findDiscussPosts].
-2022-03-28 10:07:13,472 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,476 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,478 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,481 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,483 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,486 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,488 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,494 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,496 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,499 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,501 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,503 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,506 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,508 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,511 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,514 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,516 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,518 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:13,521 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:13,524 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:13] visits [spring01.service.LikeService.findEntityLikeCount].
-2022-03-28 10:07:19,092 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:07:19,096 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:19,100 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findConversationCount].
-2022-03-28 10:07:19,108 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findConversations].
-2022-03-28 10:07:19,115 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:07:19,118 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:07:19,122 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:19,124 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:07:19,128 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:07:19,131 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:19,137 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:07:19,140 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:07:19,144 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:19,150 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:07:19,153 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:07:19,155 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:19,157 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:07:19,160 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:07:19,163 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:19,169 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:19] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:07:31,196 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:31] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:07:31,200 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:31] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:31,214 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:31] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:07:31,216 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:31] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:33,486 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:33] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:07:33,488 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:33] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:33,498 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:33] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:07:33,501 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:33] visits [spring01.service.MessageService.findLetters].
-2022-03-28 10:07:33,505 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:33] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:33,508 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:33] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:07:33,511 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:07:33] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:24:20,549 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:24:20,552 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:24:20,554 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findConversationCount].
-2022-03-28 10:24:20,557 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findConversations].
-2022-03-28 10:24:20,560 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:24:20,562 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:24:20,565 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:24:20,567 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:24:20,569 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:24:20,571 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:24:20,573 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:24:20,575 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:24:20,577 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:24:20,579 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:24:20,581 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:24:20,583 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:24:20,585 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:24:20,587 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:24:20,589 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:24:20,590 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:24:20] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:36:31,741 INFO [Thread-16] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-28 10:36:31,754 INFO [Thread-16] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
-2022-03-28 10:36:32,136 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 11280 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-28 10:36:32,137 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:36:32,824 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-28 10:36:32,824 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-28 10:36:32,846 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2022-03-28 10:36:33,206 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:36:33,207 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:36:33,208 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-28 10:36:33,209 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:36:33,248 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-28 10:36:33,248 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1105 ms
-2022-03-28 10:36:33,853 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-28 10:36:34,110 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-28 10:36:34,127 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:36:34,130 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-28 10:36:34,136 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 2.111 seconds (JVM running for 1795.462)
-2022-03-28 10:36:34,140 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-28 10:36:36,271 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 11280 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-28 10:36:36,272 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:36:36,554 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-28 10:36:36,555 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-28 10:36:36,564 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-03-28 10:36:36,690 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:36:36,690 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:36:36,691 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-28 10:36:36,691 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:36:36,714 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-28 10:36:36,714 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 437 ms
-2022-03-28 10:36:37,071 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-28 10:36:37,234 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-28 10:36:37,245 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:36:37,248 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-28 10:36:37,252 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.03 seconds (JVM running for 1798.576)
-2022-03-28 10:36:37,254 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-28 10:36:50,359 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 30896 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-28 10:36:50,361 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:36:50,433 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-28 10:36:50,434 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-28 10:36:51,700 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-28 10:36:51,704 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-28 10:36:51,758 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
-2022-03-28 10:36:53,011 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:36:53,020 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:36:53,021 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-28 10:36:53,022 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:36:53,141 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-28 10:36:53,142 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 2707 ms
-2022-03-28 10:36:54,414 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-28 10:36:54,821 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-28 10:36:54,845 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:36:54,864 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-28 10:36:54,875 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 5.333 seconds (JVM running for 7.122)
-2022-03-28 10:36:57,654 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-28 10:36:57,654 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-28 10:36:57,656 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-28 10:36:57,700 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:57] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:36:59,501 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:36:59,546 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findConversationCount].
-2022-03-28 10:36:59,583 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-28 10:36:59,798 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-28 10:36:59,868 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findConversations].
-2022-03-28 10:36:59,879 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:36:59,882 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:36:59,912 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:36:59,916 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:36:59,919 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:36:59,923 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:36:59,927 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:36:59,930 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:36:59,935 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:36:59,938 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:36:59,940 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:36:59,943 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:36:59,946 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:36:59,950 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:36:59,953 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:36:59,956 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:36:59] visits [spring01.service.MessageService.findLettersUnreadCount].
-2022-03-28 10:37:09,277 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:37:09] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:37:09,283 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:37:09] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:37:09,299 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:37:09] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:37:09,304 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:37:09] visits [spring01.service.MessageService.findLetters].
-2022-03-28 10:37:09,311 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:37:09] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:37:09,320 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:37:09] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:37:09,326 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:37:09] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:39:28,209 INFO [Thread-16] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-28 10:39:28,218 INFO [Thread-16] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
-2022-03-28 10:39:28,477 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 30896 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-28 10:39:28,478 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:39:29,022 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-28 10:39:29,023 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-28 10:39:29,044 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2022-03-28 10:39:29,366 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:39:29,367 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:39:29,367 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-28 10:39:29,368 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:39:29,413 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-28 10:39:29,414 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 931 ms
-2022-03-28 10:39:29,968 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-28 10:39:30,215 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-28 10:39:30,232 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:39:30,235 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-28 10:39:30,241 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.847 seconds (JVM running for 162.489)
-2022-03-28 10:39:30,244 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-28 10:39:32,442 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 30896 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-28 10:39:32,442 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:39:32,754 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-28 10:39:32,754 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-28 10:39:32,765 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-2022-03-28 10:39:32,885 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:39:32,886 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:39:32,886 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-28 10:39:32,886 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:39:32,931 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-28 10:39:32,931 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 484 ms
-2022-03-28 10:39:33,390 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-28 10:39:33,565 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-28 10:39:33,576 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:39:33,578 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-28 10:39:33,581 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.198 seconds (JVM running for 165.828)
-2022-03-28 10:39:33,582 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
-2022-03-28 10:39:36,874 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-28 10:39:36,876 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-28 10:39:36,877 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-28 10:39:36,882 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:39:36] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:39:36,909 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:39:36] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:39:36,921 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:39:36] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:39:36,924 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
-2022-03-28 10:39:36,931 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
-2022-03-28 10:39:36,934 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:39:36] visits [spring01.service.MessageService.findLetters].
-2022-03-28 10:39:36,937 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:39:36] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:39:36,939 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:39:36] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:39:36,941 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:39:36] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:42:14,487 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:14] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:42:14,491 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:14] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:42:14,494 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:14] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:42:14,498 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:14] visits [spring01.service.MessageService.findLetters].
-2022-03-28 10:42:14,501 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:14] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:42:14,503 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:14] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:42:14,506 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:14] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:42:17,711 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:17] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:42:17,714 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:17] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:42:17,717 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:17] visits [spring01.service.MessageService.findLetterById].
-2022-03-28 10:42:30,715 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:42:30] visits [spring01.service.MessageService.deleteMessage].
-2022-03-28 10:43:12,497 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:12] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:43:12,503 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:12] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:12,509 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:12] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:43:12,514 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:12] visits [spring01.service.MessageService.findLetters].
-2022-03-28 10:43:12,521 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:12] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:12,527 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:12] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:13,494 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
-2022-03-28 10:43:13,499 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.
-2022-03-28 10:43:26,834 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 8716 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
-2022-03-28 10:43:26,836 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
-2022-03-28 10:43:26,899 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-03-28 10:43:26,900 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-03-28 10:43:28,011 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-28 10:43:28,017 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-28 10:43:28,070 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
-2022-03-28 10:43:29,159 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
-2022-03-28 10:43:29,169 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:43:29,170 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
-2022-03-28 10:43:29,171 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-28 10:43:29,287 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
-2022-03-28 10:43:29,287 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 2386 ms
-2022-03-28 10:43:30,542 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-03-28 10:43:30,991 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
-2022-03-28 10:43:31,011 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
-2022-03-28 10:43:31,026 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
-2022-03-28 10:43:31,036 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 4.893 seconds (JVM running for 6.635)
-2022-03-28 10:43:37,620 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-28 10:43:37,621 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
-2022-03-28 10:43:37,623 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
-2022-03-28 10:43:37,658 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:37] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:43:39,411 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:39] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:39,458 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:39] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:43:39,484 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-03-28 10:43:39,674 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-03-28 10:43:39,746 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:39] visits [spring01.service.MessageService.findLetters].
-2022-03-28 10:43:39,752 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:39] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:39,755 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:39] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:47,084 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:47] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:43:47,089 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:47] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:54,720 INFO [http-nio-8080-exec-8] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:54] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:43:54,725 INFO [http-nio-8080-exec-8] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:54] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:43:58,114 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:58] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:43:58,118 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:43:58] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:44:00,634 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:44:00] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:44:00,637 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:44:00] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:44:00,639 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:44:00] visits [spring01.service.MessageService.findLettersCount].
-2022-03-28 10:44:00,644 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:44:00] visits [spring01.service.MessageService.findLetters].
-2022-03-28 10:44:00,667 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:44:00] visits [spring01.service.UserService.findLoginTicket].
-2022-03-28 10:44:00,670 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-28 10:44:00] visits [spring01.service.UserService.findUserById].
-2022-03-28 10:44:09,927 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-03-28 10:44:09,958 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-03-29 07:55:33,636 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 35096 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-29 07:55:33,648 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-29 07:55:33,742 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-29 07:55:33,742 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-29 07:55:35,062 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-29 07:55:35,067 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-29 07:55:35,105 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2022-03-29 07:55:36,083 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2022-03-29 07:55:36,093 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-29 07:55:36,094 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-03-29 07:55:36,094 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-29 07:55:36,176 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-03-29 07:55:36,177 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 2434 ms
+2022-03-29 07:55:37,586 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-29 07:55:38,117 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-03-29 07:55:38,167 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2022-03-29 07:55:38,211 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2022-03-29 07:55:38,239 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 5.258 seconds (JVM running for 7.206)
+2022-03-29 07:55:48,461 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-29 07:55:48,461 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-03-29 07:55:48,463 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2022-03-29 07:55:48,558 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:48] visits [spring01.service.DiscussPostService.findDiscussPostRows].
+2022-03-29 07:55:48,650 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-03-29 07:55:48,895 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-03-29 07:55:48,968 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:48] visits [spring01.service.DiscussPostService.findDiscussPosts].
+2022-03-29 07:55:48,984 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:48] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,781 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,792 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,801 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,809 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,818 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,821 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,830 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,835 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,925 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,928 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,931 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,933 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,937 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,939 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,945 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,947 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,950 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:55:50,952 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:55:50,954 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:55:50] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:10,999 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:10] visits [spring01.service.UserService.login].
+2022-03-29 07:56:11,046 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:11,051 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,057 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.DiscussPostService.findDiscussPostRows].
+2022-03-29 07:56:11,062 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.DiscussPostService.findDiscussPosts].
+2022-03-29 07:56:11,077 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,081 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,083 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,086 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,089 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,093 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,096 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,104 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,107 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,110 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,112 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,115 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,118 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,121 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,124 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,129 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,132 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,135 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:11,137 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:11,140 INFO [http-nio-8080-exec-6] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:11] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:14,746 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:14] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:14,750 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:14] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:14,753 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:14] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:14,756 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:14] visits [spring01.service.LikeService.findUserLikeCount].
+2022-03-29 07:56:14,758 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:14] visits [spring01.service.FollowService.findFolloweeCount].
+2022-03-29 07:56:14,767 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:14] visits [spring01.service.FollowService.findFollowerCount].
+2022-03-29 07:56:14,769 INFO [http-nio-8080-exec-7] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:14] visits [spring01.service.FollowService.hasFollowed].
+2022-03-29 07:56:18,058 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:18,062 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:18,073 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:18,077 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.CommentService.findCommentsCountByUserIdForPost].
+2022-03-29 07:56:18,088 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.CommentService.findCommentsByUserIdForPost].
+2022-03-29 07:56:18,095 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,099 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,102 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,106 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,110 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,113 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,117 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,122 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,127 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:18,130 INFO [http-nio-8080-exec-4] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:18] visits [spring01.service.DiscussPostService.findDiscussPostById].
+2022-03-29 07:56:19,135 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:19,137 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:19,140 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:19,141 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.DiscussPostService.findDiscussPostRows].
+2022-03-29 07:56:19,150 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.DiscussPostService.findDiscussPosts].
+2022-03-29 07:56:19,154 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,156 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,157 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,158 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,160 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,162 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,164 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,166 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,168 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:19,170 INFO [http-nio-8080-exec-3] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:19] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:56:32,566 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:32] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:32,569 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:32] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:32,584 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:32] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:32,586 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:32] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:51,394 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:51] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:51,397 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:51] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:56:51,411 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:51] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:56:51,413 INFO [http-nio-8080-exec-9] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:56:51] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:26,062 INFO [Thread-16] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-03-29 07:57:26,073 INFO [Thread-16] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-03-29 07:57:26,380 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 35096 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-29 07:57:26,381 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-29 07:57:27,042 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-29 07:57:27,042 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-29 07:57:27,063 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2022-03-29 07:57:27,391 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2022-03-29 07:57:27,393 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-29 07:57:27,393 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-03-29 07:57:27,394 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-29 07:57:27,449 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-03-29 07:57:27,449 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1061 ms
+2022-03-29 07:57:27,962 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-29 07:57:28,192 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-03-29 07:57:28,205 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2022-03-29 07:57:28,208 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2022-03-29 07:57:28,213 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.931 seconds (JVM running for 117.181)
+2022-03-29 07:57:28,215 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2022-03-29 07:57:30,357 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:55] Starting Spring01Application using Java 1.8.0_322 on LAPTOP-2SKG1DTD with PID 35096 (E:\SoftwareDevelopmentJava\8-SpringBoot\spring01\target\classes started by Peter in E:\SoftwareDevelopmentJava\8-SpringBoot\spring01)
+2022-03-29 07:57:30,358 INFO [restartedMain] s.Spring01Application [SpringApplication.java:640] No active profile set, falling back to 1 default profile: "default"
+2022-03-29 07:57:30,657 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-29 07:57:30,657 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-29 07:57:30,667 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-03-29 07:57:30,819 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2022-03-29 07:57:30,819 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-29 07:57:30,819 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-03-29 07:57:30,820 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-29 07:57:30,838 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-03-29 07:57:30,839 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 473 ms
+2022-03-29 07:57:31,235 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-03-29 07:57:31,393 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-03-29 07:57:31,402 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2022-03-29 07:57:31,404 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2022-03-29 07:57:31,407 INFO [restartedMain] s.Spring01Application [StartupInfoLogger.java:61] Started Spring01Application in 1.111 seconds (JVM running for 120.375)
+2022-03-29 07:57:31,409 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2022-03-29 07:57:34,354 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-29 07:57:34,355 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-03-29 07:57:34,356 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2022-03-29 07:57:34,362 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:57:34,389 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:34,400 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:34,402 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.DiscussPostService.findDiscussPostRows].
+2022-03-29 07:57:34,411 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
+2022-03-29 07:57:34,426 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
+2022-03-29 07:57:34,429 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.DiscussPostService.findDiscussPosts].
+2022-03-29 07:57:34,433 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,438 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,440 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,442 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,444 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,446 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,448 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,450 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,452 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:34,453 INFO [http-nio-8080-exec-1] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:34] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,207 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:57:36,209 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:36,211 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:36,213 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.DiscussPostService.findDiscussPostRows].
+2022-03-29 07:57:36,216 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.DiscussPostService.findDiscussPosts].
+2022-03-29 07:57:36,222 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,224 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,225 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,226 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,227 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,229 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,231 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,232 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,233 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:36,234 INFO [http-nio-8080-exec-5] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:36] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:42,300 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:57:42,304 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:42,307 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:42,309 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.DiscussPostService.findDiscussPostRows].
+2022-03-29 07:57:42,312 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.DiscussPostService.findDiscussPosts].
+2022-03-29 07:57:42,317 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:42,319 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:42,322 INFO [http-nio-8080-exec-10] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:42] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:43,961 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.UserService.findLoginTicket].
+2022-03-29 07:57:43,963 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:43,965 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.UserService.findUserById].
+2022-03-29 07:57:43,966 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.DiscussPostService.findDiscussPostRows].
+2022-03-29 07:57:43,969 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.DiscussPostService.findDiscussPosts].
+2022-03-29 07:57:43,972 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:43,973 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.LikeService.findEntityLikeCount].
+2022-03-29 07:57:43,974 INFO [http-nio-8080-exec-2] s.a.ServiceLogAspect [ServiceLogAspect.java:46] User-[0:0:0:0:0:0:0:1], at [2022-03-29 07:57:43] visits [spring01.service.LikeService.findEntityLikeCount].
