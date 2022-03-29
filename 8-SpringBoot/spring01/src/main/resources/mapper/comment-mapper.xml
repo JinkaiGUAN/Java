@@ -29,6 +29,19 @@
           and entity_id = #{entityId}
     </select>
 
+    <select id="selectCommentsByUserId" resultType="Comment">
+        select <include refid="selectFields"></include>
+        from comment
+        where user_id = #{userId} and entity_type = #{entityType}
+        order by create_time desc
+        limit #{offset}, #{limit}
+    </select>
+
+    <select id="selectCommentCountByUserIdAndEntityType" resultType="int">
+        select count(id) from comment
+        where user_id = #{userId} and entity_type = #{entityType}
+    </select>
+
     <insert id="insertComment" parameterType="Comment"  useGeneratedKeys="true" keyProperty="id">
         insert into comment(<include refid="insertFields"></include>)
         values(#{userId}, #{entityType}, #{entityId}, #{targetId}, #{content}, #{status}, #{createTime})

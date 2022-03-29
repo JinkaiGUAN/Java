@@ -70,4 +70,21 @@ public class CommentService implements CommunityConstant {
 
         return rows;
     }
+
+    /**
+     * 更具用户id查询回复帖子的评论信息
+     * @return
+     */
+    public List<Comment> findCommentsByUserIdForPost(int userId, int offset, int limit) {
+        return commentMapper.selectCommentsByUserId(userId, ENTITY_TYPE_POST, offset, limit);
+    }
+
+    /**
+     * 根据用户查询回复帖子的数量
+     * @param userId
+     * @return
+     */
+    public int findCommentsCountByUserIdForPost(int userId) {
+        return commentMapper.selectCommentCountByUserIdAndEntityType(userId, ENTITY_TYPE_POST);
+    }
 }
