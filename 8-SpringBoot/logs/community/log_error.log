@@ -158,3 +158,6 @@ Caused by: java.lang.IllegalArgumentException: '3000 ' is not a valid duration
 	at org.springframework.boot.convert.StringToDurationConverter.convert(StringToDurationConverter.java:49)
 	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41)
 	... 116 common frames omitted
+2022-03-30 23:41:29,451 ERROR [kafka-producer-network-thread | producer-1] o.s.k.s.LoggingProducerListener [LogAccessor.java:261] Exception thrown when sending a message with key='null' and payload='{"data":{"postId":"234"},"entityId":234,"entityType":1,"entityUserid":111,"topic":"comment","userId"...' to topic comment:
+org.apache.kafka.common.errors.TimeoutException: Expiring 1 record(s) for comment-0:142118 ms has passed since batch creation
+2022-03-30 23:41:29,489 ERROR [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator [ConsumerCoordinator.java:1188] [Consumer clientId=consumer-test-consumer-group-1, groupId=test-consumer-group] Offset commit failed on partition like-0 at offset 0: The coordinator is not aware of this member.

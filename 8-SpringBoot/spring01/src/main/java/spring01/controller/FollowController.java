@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import spring01.annotation.LoginRequired;
+import spring01.entity.Event;
 import spring01.entity.Page;
 import spring01.entity.User;
+import spring01.event.EventProducer;
 import spring01.service.FollowService;
 import spring01.service.UserService;
 import spring01.util.CommunityConstant;
@@ -41,13 +43,26 @@ public class FollowController implements CommunityConstant {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
     @LoginRequired
     @RequestMapping(path ="/follow", method = RequestMethod.POST)
     @ResponseBody
     public String follow(int entityTYpe, int entityId) {
+        //fixme: the typo here
         User user = hostHolder.getUser();
 
         followService.follow(user.getId(), entityTYpe, entityId);
+
+        // 触发关注事件
+        Event event = new Event()
+                .setTopic(TOPIC_FOLLOW)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(entityTYpe)
+                .setEntityId(entityId)
+                .setEntityUserid(entityId);
+        eventProducer.fireEvent(event);
 
         return CommunityUtil.getJSONString(0, "已关注！");
     }

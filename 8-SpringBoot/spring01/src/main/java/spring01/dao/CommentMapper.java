@@ -57,4 +57,11 @@ public interface CommentMapper {
     List<Comment> selectCommentsByUserId(int userId, int entityType, int offset, int limit);
 
     int selectCommentCountByUserIdAndEntityType(int userId, int entityType);
+
+    /**
+     * 根据id查找相关评论
+     * @param id
+     * @return
+     */
+    Comment selectCommentById(int id);
 }
