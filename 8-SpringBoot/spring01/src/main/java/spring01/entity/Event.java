@@ -16,7 +16,7 @@ public class Event {
 
     // 时间主题
     private String topic;
-    private int userId;
+    private int userId;  // 当前事件触发对象
     private int entityType;
     private int entityId;
     private int entityUserid;  // 事件的发帖人
