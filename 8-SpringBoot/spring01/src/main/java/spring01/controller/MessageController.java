@@ -208,8 +208,10 @@ public class MessageController implements CommunityConstant {
     }
 
     private Map<String, Object> getMessageVo(User user, Message message, String topic) {
-        Map<String, Object> messageVo = new HashMap<>();
+
         if (message != null) {
+            Map<String, Object> messageVo = new HashMap<>();
+
             messageVo.put("message", message);
 
             String content = HtmlUtils.htmlUnescape(message.getContent());
@@ -226,9 +228,11 @@ public class MessageController implements CommunityConstant {
 
             int unread = messageService.findNoticeUnreadCount(user.getId(), topic);
             messageVo.put("unread", unread);
-        }
 
-        return messageVo;
+            return messageVo;
+        } else{
+            return null;
+        }
     }
 
     @RequestMapping(path = "/notice/detail/{topic}", method = RequestMethod.GET)
