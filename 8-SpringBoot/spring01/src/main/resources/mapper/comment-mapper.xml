@@ -42,6 +42,12 @@
         where user_id = #{userId} and entity_type = #{entityType}
     </select>
 
+    <select id="selectCommentById" resultType="Comment">
+        select <include refid="selectFields"></include>
+        from comment
+        where id = #{id}
+    </select>
+
     <insert id="insertComment" parameterType="Comment"  useGeneratedKeys="true" keyProperty="id">
         insert into comment(<include refid="insertFields"></include>)
         values(#{userId}, #{entityType}, #{entityId}, #{targetId}, #{content}, #{status}, #{createTime})

@@ -2,6 +2,7 @@ package spring01.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import spring01.entity.Comment;
+import spring01.entity.Message;
 
 import java.util.List;
 
@@ -57,4 +58,11 @@ public interface CommentMapper {
     List<Comment> selectCommentsByUserId(int userId, int entityType, int offset, int limit);
 
     int selectCommentCountByUserIdAndEntityType(int userId, int entityType);
+
+    /**
+     * 根据id查找相关评论
+     * @param id
+     * @return
+     */
+    Comment selectCommentById(int id);
 }

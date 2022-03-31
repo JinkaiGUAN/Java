@@ -4,10 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import spring01.annotation.LoginRequiredInterceptor;
-import spring01.controller.interceptor.AlphaInterceptor;
+import spring01.controller.interceptor.LoginRequiredInterceptor;
 import spring01.controller.interceptor.LoginTicketInterceptor;
-import spring01.dao.LoginTicketMapper;
+import spring01.controller.interceptor.MessageInterceptor;
 
 /**
  * Copyright (C), Peter GUAN
@@ -31,6 +30,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private LoginRequiredInterceptor loginRequiredInterceptor;
 
+    @Autowired
+    private MessageInterceptor messageInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //registry.addInterceptor(alphaInterceptor)
@@ -43,6 +45,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginRequiredInterceptor)
                 .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*/.jpeg"); // 静态资源不需要拦截，
         // 节省网络开销
+
+        registry.addInterceptor(messageInterceptor)
+                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*/.jpeg");
+
     }
 
 
