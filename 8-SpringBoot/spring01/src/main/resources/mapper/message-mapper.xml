@@ -83,7 +83,7 @@
 
     <select id="selectNoticeUnreadCount" resultType="int">
         select count(id) from message
-        where status == 0 and from_id = 1 and to_id = #{userId}
+        where status = 0 and from_id = 1 and to_id = #{userId}
         <if test="topic!=null">
             and conversation_id = #{topic}
         </if>
