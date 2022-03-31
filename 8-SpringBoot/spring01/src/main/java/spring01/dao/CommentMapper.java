@@ -2,6 +2,7 @@ package spring01.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import spring01.entity.Comment;
+import spring01.entity.Message;
 
 import java.util.List;
 
