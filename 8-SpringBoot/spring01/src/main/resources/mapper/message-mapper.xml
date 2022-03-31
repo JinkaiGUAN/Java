@@ -102,8 +102,7 @@
     </insert>
 
     <update id="updateStatus">
-        update message
-        set status = #{status}
+        update message set status = #{status}
         where id in
         <foreach collection="ids" item="id" open="(" separator="," close=")">
             #{id}

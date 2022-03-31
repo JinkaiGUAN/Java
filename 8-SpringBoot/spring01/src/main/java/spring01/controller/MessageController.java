@@ -230,4 +230,46 @@ public class MessageController implements CommunityConstant {
 
         return messageVo;
     }
+
+    @RequestMapping(path = "/notice/detail/{topic}", method = RequestMethod.GET)
+    public String getNoticeDetail(@PathVariable("topic") String topic, Model model, Page page) {
+        User user = hostHolder.getUser();
+
+        page.setLimit(5);
+        page.setPath("/notice/detail/" + topic);
+        page.setRows(messageService.findNoticeCount(user.getId(), topic));
+
+        List<Message> noticeList = messageService.findNotices(user.getId(), topic, page.getOffset(), page.getLimit());
+        List<Map<String, Object>> noticeVoList = new ArrayList<>();
+        if (noticeList != null) {
+            for (Message notice : noticeList) {
+                Map<String, Object> noticeVo = new HashMap<>();
+
+                //通知
+                noticeVo.put("notice", notice);
+                // 内容
+                String content = HtmlUtils.htmlUnescape(notice.getContent());
+                Map<String, Object> data = JSONObject.parseObject(content, HashMap.class);
+                noticeVo.put("user", userService.findUserById((Integer) data.get("userId")));
+                noticeVo.put("entityType", data.get("entityType"));
+                noticeVo.put("entityId", data.get("entityId"));
+                noticeVo.put("postId", data.get("postId"));
+                // 通知作者
+                noticeVo.put("fromUser", userService.findUserById(notice.getFromId()));
+
+                noticeVoList.add(noticeVo);
+            }
+        }
+
+        model.addAttribute("noticeVoList", noticeVoList);
+
+        // 设置已读
+        // fixme: the noticeList is not empty, but the notice all has been readed
+        List<Integer> ids = getUnreadLetterIds(noticeList);
+        if (!ids.isEmpty()) {
+            messageService.readMessage(ids);
+        }
+
+        return "/site/notice-detail";
+    }
 }
