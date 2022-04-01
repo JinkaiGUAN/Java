@@ -11,9 +11,20 @@ package spring01.util;
  */
 public interface CommunityConstant {
 
-    int ACTIVATION_SUCCESS = 0; // 激活成功
-    int ACTIVATION_REPEAT = 1;  // 重复激活
-    int ACTIVATION_FAILURE = 2;  // 激活失败
+    /**
+     * 激活成功
+     */
+    int ACTIVATION_SUCCESS = 0;
+
+    /**
+     * 重复激活
+     */
+    int ACTIVATION_REPEAT = 1;
+
+    /**
+     * 激活失败
+     */
+    int ACTIVATION_FAILURE = 2;
 
     /**
      * 默认的超时时间， 默认为12小时
@@ -70,6 +81,11 @@ public interface CommunityConstant {
      * 主题： 关注
      */
     String TOPIC_FOLLOW = "follow";
+
+    /**
+     * 主题： 发布
+     */
+    String TOPIC_PUBLISH = "publish";
 
     /**
      * 系统用户iD

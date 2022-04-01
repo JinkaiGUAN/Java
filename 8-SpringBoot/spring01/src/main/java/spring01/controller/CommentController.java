@@ -43,7 +43,7 @@ public class CommentController implements CommunityConstant {
     private EventProducer eventProducer;
 
     @RequestMapping(path = "/add/{discussPostId}", method = RequestMethod.POST)
-    public String addComment(@PathVariable("discussPostId") String discussPostId, Comment comment) {
+    public String addComment(@PathVariable("discussPostId") int discussPostId, Comment comment) {
         //fixme: 用户未登录 不能访问
         comment.setUserId(hostHolder.getUser().getId());
         comment.setStatus(0);
@@ -66,8 +66,17 @@ public class CommentController implements CommunityConstant {
             Comment target = commentService.findCommentById(comment.getEntityId());
             event.setEntityUserid(target.getUserId());
         }
-
         eventProducer.fireEvent(event);
+
+        // 触发发布事件
+        if (comment.getEntityType() == ENTITY_TYPE_POST) {
+            event = new Event()
+                    .setTopic(TOPIC_PUBLISH)
+                    .setUserId(comment.getUserId())
+                    .setEntityType(ENTITY_TYPE_POST)
+                    .setEntityId(discussPostId);
+            eventProducer.fireEvent(event);
+        }
 
         return "redirect:/discuss/detail/" + discussPostId;
     }
