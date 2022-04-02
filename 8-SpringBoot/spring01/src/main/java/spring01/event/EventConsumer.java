@@ -43,6 +43,10 @@ public class EventConsumer implements CommunityConstant {
     @Autowired
     private ElasticsearchService elasticsearchService;
 
+    /**
+     * x消息队列消费传入的点赞， 评论， 关注事件： 也即将这些事件的信息存入message表单中。
+     * @param record
+     */
     @KafkaListener(topics = {TOPIC_COMMENT, TOPIC_LIKE, TOPIC_FOLLOW})
     public void handleCommentMessage(ConsumerRecord record) {
         if (record == null || record.value() == null) {
@@ -59,7 +63,8 @@ public class EventConsumer implements CommunityConstant {
         // 发送站内通知
         Message  message = new Message();
         message.setFromId(SYSTEM_USER_ID);
-        message.setToId(event.getEntityId());
+        // fixme: the id is not correct
+        message.setToId(event.getEntityUserid());
         message.setConversationId(event.getTopic());
         message.setCreateTime(new Date());
 

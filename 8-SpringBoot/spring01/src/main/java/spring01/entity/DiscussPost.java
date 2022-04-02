@@ -18,7 +18,8 @@ import java.util.Date;
  */
 
 //@Document(indexName = "discusspost")
-@Document(indexName = "${elasticsearch.reponame}")
+//@Document(indexName = "${elasticsearch.reponame}")
+@Document(indexName = "discusspost")
 public class DiscussPost {
 
     @Id

@@ -148,6 +148,7 @@ public class ElasticsearchTest {
 
         List<DiscussPost> list = new LinkedList<>();
         SearchHits hits = searchResponse.getHits();
+        long total = hits.getTotalHits().value;
         for (SearchHit hit : searchResponse.getHits()) {
             DiscussPost discussPost = JSONObject.parseObject(hit.getSourceAsString(), DiscussPost.class);
 
