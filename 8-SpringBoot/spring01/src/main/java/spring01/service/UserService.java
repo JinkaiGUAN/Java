@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
@@ -325,13 +326,23 @@ public class UserService implements CommunityConstant {
      * 2. 取不到时初始化缓存数据
      * 3. 数据变更时清除缓存数据
      */
-    //1. 优先从缓存中取值
+
+    /**
+     * 1. 优先从缓存中取值
+     * @param userId
+     * @return
+     */
     private User getCache(int userId) {
         String redisKey = RedisKeyUtil.getUserKey(userId);
         return (User) redisTemplate.opsForValue().get(redisKey);
     }
 
-    //2. 取不到时初始化缓存数据
+
+    /**
+     * 取不到时初始化缓存数据
+     * @param userId
+     * @return
+     */
     private User initCache(int userId) {
         User user = userMapper.selectByID(userId);
         String redisKey = RedisKeyUtil.getUserKey(userId);
@@ -340,10 +351,34 @@ public class UserService implements CommunityConstant {
         return user;
     }
 
-    //3. 数据变更时清除缓存数据
+    /**
+     *  数据变更时清除缓存数据
+     * @param userId
+     */
     private void clearCache(int userId) {
         String redisKey = RedisKeyUtil.getUserKey(userId);
         redisTemplate.delete(redisKey);
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities(int userId) {
+        User user = this.findUserById(userId);
+
+        List<GrantedAuthority> list = new ArrayList<>();
+        list.add(new GrantedAuthority() {
+            @Override
+            public String getAuthority() {
+                switch (user.getType()) {
+                    case 1:
+                        return AUTHORITY_ADMIN;
+                    case 2:
+                        return AUTHORITY_MODERATOR;
+                    default:
+                        return AUTHORITY_USER;
+                }
+            }
+        });
+
+        return list;
     }
 }
 

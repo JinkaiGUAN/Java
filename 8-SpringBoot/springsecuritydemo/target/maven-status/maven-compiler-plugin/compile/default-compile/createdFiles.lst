@@ -1,0 +1,4 @@
+com\nowcoder\community\dao\UserMapper.class
+com\nowcoder\community\controller\HomeController.class
+com\nowcoder\community\entity\User.class
+com\nowcoder\community\CommunityApplication.class

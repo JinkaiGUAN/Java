@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+    <h1>社区首页</h1>
+    <p th:if="${loginUser != null}">
+        欢迎你<span th:text="${loginUser.username}"></span>
+    </p>
+    <ul>
+        <li><a th:href="@{/discuss}">帖子详情</a></li>
+        <li><a th:href="@{/letter}">私信列表</a></li>
+        <li><a th:href="@{/loginpage}">登录</a></li>
+        <!--<li><a th:href="@{/loginpage}">退出</a></li>-->
+        <li>
+            <form method="post" th:action="@{/logout}">
+                <a href="javascript:document.forms[0].submit();">
+                    退出
+                </a>
+            </form>
+        </li>
+    </ul>
+
+</body>
+</html>
