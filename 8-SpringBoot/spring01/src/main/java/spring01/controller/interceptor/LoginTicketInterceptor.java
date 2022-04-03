@@ -26,6 +26,7 @@ import java.util.Date;
  * Description:
  * History:
  * Version:
+ * @author Peter
  */
 @Component
 public class LoginTicketInterceptor implements HandlerInterceptor {

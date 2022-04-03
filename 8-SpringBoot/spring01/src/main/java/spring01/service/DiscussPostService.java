@@ -73,4 +73,24 @@ public class DiscussPostService {
     public List<DiscussPost> findDiscussPostByIds(List<Integer> ids) {
         return discussPostMapper.selectDiscussPostByIds(ids);
     }
+
+    /**
+     * 根据实体ID更改type。
+     * @param entityId
+     * @param type
+     * @return
+     */
+    public int updateType(int entityId, int type) {
+        return discussPostMapper.updateType(entityId, type);
+    }
+
+    /**
+     * 根据实体ID更改状态
+     * @param entityId
+     * @param type
+     * @return
+     */
+    public int updateStatus(int entityId, int type) {
+        return discussPostMapper.updateStatus(entityId, type);
+    }
 }

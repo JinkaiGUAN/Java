@@ -14,6 +14,7 @@ import java.util.List;
  * Description: Discuss post 表单mapper
  * History:
  * Version:
+ * @author Peter
  */
 
 @Mapper
@@ -64,4 +65,20 @@ public interface DiscussPostMapper {
      * @return
      */
     List<DiscussPost> selectDiscussPostByIds(List<Integer> ids);
+
+    /**
+     * 根据实体ID更改type。
+     * @param id
+     * @param type
+     * @return
+     */
+    int updateType(int id, int type);
+
+    /**
+     * 根据实体ID更改状态
+     * @param id
+     * @param status
+     * @return
+     */
+    int updateStatus(int id, int status);
 }

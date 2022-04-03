@@ -27,6 +27,7 @@ import java.util.Map;
  * Description: 出发是将， 向message表单中添加数据
  * History:
  * Version:
+ * @author Peter
  */
 
 @Component
@@ -49,21 +50,14 @@ public class EventConsumer implements CommunityConstant {
      */
     @KafkaListener(topics = {TOPIC_COMMENT, TOPIC_LIKE, TOPIC_FOLLOW})
     public void handleCommentMessage(ConsumerRecord record) {
-        if (record == null || record.value() == null) {
-            logger.error("消息内容为空");
-            return;
-        }
-
-        Event event = JSONObject.parseObject(record.value().toString(), Event.class);
+        Event event = checkRecordStatus(record);
         if (event == null) {
-            logger.error("消息格式错误");
             return;
         }
 
         // 发送站内通知
         Message  message = new Message();
         message.setFromId(SYSTEM_USER_ID);
-        // fixme: the id is not correct
         message.setToId(event.getEntityUserid());
         message.setConversationId(event.getTopic());
         message.setCreateTime(new Date());
@@ -89,18 +83,45 @@ public class EventConsumer implements CommunityConstant {
      */
     @KafkaListener(topics = {TOPIC_PUBLISH})
     public void handlePublishMessage(ConsumerRecord record) {
-        if (record == null || record.value() == null) {
-            logger.error("消息内容为空");
-            return;
-        }
-
-        Event event = JSONObject.parseObject(record.value().toString(), Event.class);
+        Event event = checkRecordStatus(record);
         if (event == null) {
-            logger.error("消息格式错误");
             return;
         }
 
         DiscussPost discussPost = discussPostService.findDiscussPostById(event.getEntityId());
         elasticsearchService.saveDiscussPost(discussPost);
+    }
+
+    /**
+     * 消费删帖事件
+     * @param record
+     */
+    @KafkaListener(topics = {TOPIC_DELETE})
+    public void handleDeleteMessage(ConsumerRecord record) {
+        Event event = checkRecordStatus(record);
+        if (event == null) {
+            return;
+        }
+
+        elasticsearchService.deleteDiscussPost(event.getEntityId());
+    }
+
+    /**
+     * 检查接收的record是否能返回真实的事件对象
+     * @param record
+     */
+    private Event checkRecordStatus(ConsumerRecord record) {
+        if (record == null || record.value() == null) {
+            logger.error("消息内容为空");
+            return null;
+        }
+
+        Event event = JSONObject.parseObject(record.value().toString(), Event.class);
+        if (event == null) {
+            logger.error("消息格式错误");
+            return null;
+        }
+
+        return event;
     }
 }

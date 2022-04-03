@@ -360,6 +360,11 @@ public class UserService implements CommunityConstant {
         redisTemplate.delete(redisKey);
     }
 
+    /**
+     * 获取用户权限
+     * @param userId
+     * @return
+     */
     public Collection<? extends GrantedAuthority> getAuthorities(int userId) {
         User user = this.findUserById(userId);
 

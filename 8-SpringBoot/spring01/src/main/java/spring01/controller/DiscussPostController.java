@@ -177,4 +177,72 @@ public class DiscussPostController implements CommunityConstant {
         return "/site/discuss-detail";
     }
 
+    /**
+     * 设置置顶。
+     *
+     * 需要从页面传数据， 而且页面整体不刷新， 所以使用POST
+     * @param id
+     * @return
+     */
+    @RequestMapping(path = "/top", method = RequestMethod.POST)
+    @ResponseBody
+    public String setTop(int id){
+        discussPostService.updateType(id, DISCUSS_TYPE_TOP);
+
+        // 在更新完帖子状态之后， ES中也要进行更新， 因此得触发发帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return CommunityUtil.getJSONString(0);
+    }
+
+    /**
+     * 设置精华帖。
+     *
+     * 需要从页面传数据， 而且页面整体不刷新， 所以使用POST
+     * @param id
+     * @return
+     */
+    @RequestMapping(path = "/wonderful", method = RequestMethod.POST)
+    @ResponseBody
+    public String setWonderful(int id){
+        discussPostService.updateStatus(id, DISCUSS_STATUS_WONDERFUL);
+
+        // 在更新完帖子状态之后， ES中也要进行更新， 因此得触发发帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return CommunityUtil.getJSONString(0);
+    }
+
+    /**
+     * 删除帖子。
+     *
+     * 需要从页面传数据， 而且页面整体不刷新， 所以使用POST
+     * @param id
+     * @return
+     */
+    @RequestMapping(path = "/delete", method = RequestMethod.POST)
+    @ResponseBody
+    public String setDelete(int id){
+        discussPostService.updateStatus(id, DISCUSS_STATUS_BLOCK);
+
+        // 设置拉黑（删除）之后， ES中不应该存在该贴信息， 所以要触发删帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_DELETE)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return CommunityUtil.getJSONString(0);
+    }
 }

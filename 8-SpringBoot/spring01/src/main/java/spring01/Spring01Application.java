@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 
+/**
+ * @author Peter
+ */
 @SpringBootApplication
 public class Spring01Application {
 
