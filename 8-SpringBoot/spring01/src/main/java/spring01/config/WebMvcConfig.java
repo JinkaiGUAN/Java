@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import spring01.controller.interceptor.DataStatisticsInterceptor;
 import spring01.controller.interceptor.LoginRequiredInterceptor;
 import spring01.controller.interceptor.LoginTicketInterceptor;
 import spring01.controller.interceptor.MessageInterceptor;
@@ -33,6 +34,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private MessageInterceptor messageInterceptor;
 
+    @Autowired
+    private DataStatisticsInterceptor dataStatisticsInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //registry.addInterceptor(alphaInterceptor)
@@ -47,6 +51,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
         // 节省网络开销
 
         registry.addInterceptor(messageInterceptor)
+                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*/.jpeg");
+
+        registry.addInterceptor(dataStatisticsInterceptor)
                 .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*/.jpeg");
 
     }

@@ -19,6 +19,8 @@ public class RedisKeyUtil {
     private static final String PREFIX_KAPTCHA = "kaptcha";
     private static final String PREFIX_TICKET = "ticket";
     private static final String PREFIX_USER = "user";
+    private static final String PREFIX_UV = "uv";
+    private static final String PREFIX_DAV = "dav";
 
     /**
      * 某个实体的赞
@@ -86,5 +88,43 @@ public class RedisKeyUtil {
      */
     public static String getUserKey(int userId) {
         return PREFIX_USER + SPLIT + userId;
+    }
+
+    /**
+     * 单日独立访客 （UV）
+     * @param date
+     * @return
+     */
+    public static String getUVKey(String date) {
+        return PREFIX_UV + SPLIT + date;
+    }
+
+    /**
+     * 区间独立访客（UV）
+     * @param startDate
+     * @param endDate
+     * @return
+     */
+    public static String getUVKet(String startDate, String endDate) {
+        return PREFIX_UV + SPLIT + startDate + SPLIT + endDate;
+    }
+
+    /**
+     * 单日活跃用户 （DAU）
+     * @param date
+     * @return
+     */
+    public static String getDAUKey(String date) {
+        return PREFIX_DAV + SPLIT + date;
+    }
+
+    /**
+     * 区间活跃用户 （DAU）
+     * @param startDate
+     * @param endDate
+     * @return
+     */
+    public static String getDAUKey(String startDate, String endDate) {
+        return PREFIX_DAV + SPLIT + startDate + SPLIT + endDate;
     }
 }
