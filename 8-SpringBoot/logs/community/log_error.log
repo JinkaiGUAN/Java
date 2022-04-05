@@ -252,3 +252,21 @@ java.lang.ClassCastException: java.io.ObjectStreamClass cannot be cast to java.l
 2022-04-04 11:53:22,658 ERROR [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.i.ConsumerCoordinator [ConsumerCoordinator.java:1188] [Consumer clientId=consumer-test-consumer-group-3, groupId=test-consumer-group] Offset commit failed on partition publish-0 at offset 11: The coordinator is not aware of this member.
 2022-04-04 11:53:22,658 ERROR [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator [ConsumerCoordinator.java:1188] [Consumer clientId=consumer-test-consumer-group-2, groupId=test-consumer-group] Offset commit failed on partition delete-0 at offset 0: The coordinator is not aware of this member.
 2022-04-04 11:53:22,658 ERROR [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.i.ConsumerCoordinator [ConsumerCoordinator.java:1188] [Consumer clientId=consumer-test-consumer-group-1, groupId=test-consumer-group] Offset commit failed on partition like-0 at offset 5: The coordinator is not aware of this member.
+2022-04-05 10:06:57,596 ERROR [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter [LoggingFailureAnalysisReporter.java:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field discussPostMapper in spring01.service.AlphaService required a bean of type 'spring01.dao.DiscussPostMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'spring01.dao.DiscussPostMapper' in your configuration.
+

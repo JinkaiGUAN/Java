@@ -291,8 +291,9 @@ public class UserController implements CommunityConstant {
         model.addAttribute("postCount", postCount);
 
         // 查找用户发帖信息
+        // fixme: check the ordermode
         List<DiscussPost> discussPostList = discussPostService.findDiscussPosts(user.getId(), page.getOffset(),
-                page.getLimit());
+                page.getLimit(), 0);
         List<Map<String, Object>> discussPostVOList = new ArrayList<>();
         for (DiscussPost discussPost : discussPostList) {
             Map<String, Object> discussPostVo = new HashMap<>();

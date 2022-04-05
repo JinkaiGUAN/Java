@@ -25,9 +25,10 @@ public interface DiscussPostMapper {
      * @param userId 用户名
      * @param offset 起始行行号
      * @param limit 每页展示的数据量
+     * @param orderMode 默认为0，如果为1 则是按照热度
      * @return 所有post的数组
      */
-    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit);
+    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit, int orderMode);
 
     /**
      * 动态编写sql并且再If中使用 且该方法只有一个输入参数， 纳闷我们就要使用注解 Param， 用来给参数取别名。

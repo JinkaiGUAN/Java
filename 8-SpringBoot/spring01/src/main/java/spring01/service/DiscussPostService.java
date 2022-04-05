@@ -27,8 +27,16 @@ public class DiscussPostService {
     @Autowired
     private SensitiveFilter sensitiveFilter;
 
-    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit) {
-        return discussPostMapper.selectDiscussPosts(userId, offset, limit);
+    /**
+     * 查询帖子
+     * @param userId
+     * @param offset
+     * @param limit
+     * @param orderMode，提供两种方式进行排序， 0为默认按照type和时间， 1增加了按照score排序。
+     * @return
+     */
+    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit, int orderMode ) {
+        return discussPostMapper.selectDiscussPosts(userId, offset, limit, orderMode);
     }
 
     public int findDiscussPostRows(int userId) {
