@@ -5,6 +5,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import spring01.entity.DiscussPost;
@@ -15,6 +16,7 @@ import spring01.service.ElasticsearchService;
 import spring01.service.MessageService;
 import spring01.util.CommunityConstant;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,6 +36,12 @@ import java.util.Map;
 public class EventConsumer implements CommunityConstant {
 
     private static final Logger logger = LoggerFactory.getLogger(EventConsumer.class);
+
+    @Value("${wk.image.storage}")
+    private String wkImageStorage;
+
+    @Value("${wk.image.command}")
+    private String wkImageCommand;
 
     @Autowired
     private MessageService messageService;
@@ -104,6 +112,30 @@ public class EventConsumer implements CommunityConstant {
         }
 
         elasticsearchService.deleteDiscussPost(event.getEntityId());
+    }
+
+    /**
+     * 消费分享事件
+     * @param record
+     */
+    @KafkaListener(topics = {TOPIC_SHARE})
+    public void handleShareMessage(ConsumerRecord record) {
+        Event event = checkRecordStatus(record);
+        if (event == null) {
+            return;
+        }
+
+        String htmlUrl = (String) event.getData().get("htmlUrl");
+        String filename = (String) event.getData().get("filename");
+        String suffix = (String) event.getData().get("suffix");
+
+        String cmd = wkImageCommand + " --quality 75 " + htmlUrl + " " + wkImageStorage + "/" + filename + suffix;
+        try {
+            Runtime.getRuntime().exec(cmd);
+            logger.info("生成长图成功： " + cmd);
+        } catch (IOException e) {
+            logger.error("生成长图失败： " + e.getMessage());
+        }
     }
 
     /**

@@ -270,3 +270,7 @@ Action:
 
 Consider defining a bean of type 'spring01.dao.DiscussPostMapper' in your configuration.
 
+2022-04-05 15:19:36,101 ERROR [http-nio-8080-exec-9] s.c.ShareController [ShareController.java:95] 获取长图失败： E:\SoftwareDevelopmentJava\8-SpringBoot\data\wk_images\eb557fc6 11aa 498e b574 19109e6bd8d7.png (The system cannot find the file specified)
+2022-04-05 15:20:47,061 ERROR [http-nio-8080-exec-10] s.c.ShareController [ShareController.java:95] 获取长图失败： E:\SoftwareDevelopmentJava\8-SpringBoot\data\wk_images\66a46e4b 68bd 4d7e 982b 9637a8af9365.png (The system cannot find the file specified)
+2022-04-05 15:20:50,183 ERROR [http-nio-8080-exec-1] s.c.ShareController [ShareController.java:95] 获取长图失败： E:\SoftwareDevelopmentJava\8-SpringBoot\data\wk_images\66a46e4b 68bd 4d7e 982b 9637a8af9365.png (The system cannot find the file specified)
+2022-04-05 15:22:28,817 ERROR [http-nio-8080-exec-2] s.c.ShareController [ShareController.java:95] 获取长图失败： E:\SoftwareDevelopmentJava\8-SpringBoot\data\wk_images\00ab8b99 7dca 45f7 a3cc 749cd3466406.png (The system cannot find the file specified)
