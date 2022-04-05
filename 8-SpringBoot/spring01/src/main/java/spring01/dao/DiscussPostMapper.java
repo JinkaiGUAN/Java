@@ -81,4 +81,12 @@ public interface DiscussPostMapper {
      * @return
      */
     int updateStatus(int id, int status);
+
+    /**
+     * 根据实体ID更改评分
+     * @param id
+     * @param score
+     * @return
+     */
+    int updateScore(int id, double score);
 }

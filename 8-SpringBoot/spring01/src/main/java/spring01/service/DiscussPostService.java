@@ -93,4 +93,14 @@ public class DiscussPostService {
     public int updateStatus(int entityId, int type) {
         return discussPostMapper.updateStatus(entityId, type);
     }
+
+    /**
+     * 根据实体ID更改评分
+     * @param id
+     * @param score
+     * @return
+     */
+    public int updateScore(int id, double score) {
+        return discussPostMapper.updateScore(id, score);
+    }
 }
