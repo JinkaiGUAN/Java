@@ -8,6 +8,8 @@ import spring01.entity.Message;
 import spring01.util.CommunityConstant;
 import spring01.util.SensitiveFilter;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -62,5 +64,39 @@ public class MessageService implements CommunityConstant {
      */
     public int readMessage(List<Integer> ids) {
         return messageMapper.updateStatus(ids, MESSAGE_READ);
+    }
+
+    /**
+     * 删除多条消息， 但是在调用的时候一般是一条。
+     * @param id
+     * @return
+     */
+    public int deleteMessage(int id) {
+        return messageMapper.updateStatus(Arrays.asList(new Integer[]{id}), MESSAGE_DELETE);
+    }
+
+    /**
+     * 根据id查询回话
+     * @param id
+     * @return
+     */
+    public Message findLetterById(int id) {
+        return messageMapper.selectLetterById(id);
+    }
+
+    public Message findLatestNotice(int userId, String topic) {
+        return messageMapper.selectLatestNotice(userId, topic);
+    }
+
+    public int findNoticeCount(int userId, String topic) {
+        return messageMapper.selectNoticeCount(userId, topic);
+    }
+
+    public int findNoticeUnreadCount(int userId, String topic) {
+        return messageMapper.selectNoticeUnreadCount(userId, topic);
+    }
+
+    public List<Message> findNotices(int userId, String topic, int  offset, int limit) {
+        return messageMapper.selectNotices(userId, topic, offset, limit);
     }
 }

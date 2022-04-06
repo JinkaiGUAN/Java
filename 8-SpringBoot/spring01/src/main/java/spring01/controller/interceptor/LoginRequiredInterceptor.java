@@ -1,9 +1,10 @@
-package spring01.annotation;
+package spring01.controller.interceptor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
+import spring01.annotation.LoginRequired;
 import spring01.util.HostHolder;
 
 import javax.servlet.http.HttpServletRequest;

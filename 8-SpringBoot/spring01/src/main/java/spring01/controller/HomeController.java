@@ -9,7 +9,9 @@ import spring01.entity.DiscussPost;
 import spring01.entity.Page;
 import spring01.entity.User;
 import spring01.service.DiscussPostService;
+import spring01.service.LikeService;
 import spring01.service.UserService;
+import spring01.util.CommunityConstant;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,12 +29,14 @@ import java.util.Map;
  */
 
 @Controller
-public class HomeController {
+public class HomeController implements CommunityConstant {
 
     @Autowired
     private DiscussPostService discussPostService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private LikeService likeService;
 
     @RequestMapping(path = "/index", method = RequestMethod.GET)
     public String getIndexPage(Model model, Page page) {
@@ -50,6 +54,9 @@ public class HomeController {
                 map.put("post", post);
                 User user = userService.findUserById(post.getUserId());
                 map.put("user", user);
+
+                long likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, post.getId());
+                map.put("likeCount", likeCount);
 
                 discussPosts.add(map);
             }

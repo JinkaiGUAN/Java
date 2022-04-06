@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,16 +13,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import spring01.annotation.LoginRequired;
+import spring01.entity.Comment;
+import spring01.entity.DiscussPost;
+import spring01.entity.Page;
 import spring01.entity.User;
-import spring01.service.UserService;
+import spring01.service.*;
+import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
 import spring01.util.HostHolder;
+import spring01.util.RedisKeyUtil;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Copyright (C), Peter GUAN
@@ -35,7 +45,7 @@ import java.io.OutputStream;
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController implements CommunityConstant {
 
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -54,6 +64,18 @@ public class UserController {
 
     @Autowired
     private HostHolder hostHolder;
+
+    @Autowired
+    private LikeService likeService;
+
+    @Autowired
+    private FollowService followService;
+
+    @Autowired
+    private CommentService commentService;
+
+    @Autowired
+    private DiscussPostService discussPostService;
 
     @LoginRequired
     @RequestMapping(path = "/setting", method = RequestMethod.GET)
@@ -175,5 +197,115 @@ public class UserController {
         userService.modifyPassword(user.getId(), newPassword);
 
         return "redirect:/index";
+    }
+
+    @RequestMapping(path = "/profile/{userId}", method = RequestMethod.GET)
+    public String getProfilePage(@PathVariable("userId") int userId, Model model) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在");
+        }
+
+        // 用户基本信息
+        model.addAttribute("user", user);
+        // like count
+        int likeCount = likeService.findUserLikeCount(userId);
+        model.addAttribute("likeCount", likeCount);
+        // 粉丝和关注人数量
+        long followeeCount = followService.findFolloweeCount(userId, ENTITY_TYPE_USER);
+        model.addAttribute("followeeCount", followeeCount);
+        long followerCount = followService.findFollowerCount(ENTITY_TYPE_USER, userId);
+        model.addAttribute("followerCount", followerCount);
+        boolean hasFollowed = false;
+        if (hostHolder.getUser() != null) {
+            hasFollowed = followService.hasFollowed(hostHolder.getUser().getId(), ENTITY_TYPE_USER, userId);
+        }
+        model.addAttribute("hasFollowed", hasFollowed);
+
+        return "/site/profile";
+    }
+
+    /**
+     * 个人页面中， 我的回复功能
+     * @param model
+     * @param page
+     * @return
+     */
+    //@LoginRequired
+    @RequestMapping(path = "/myreply/{userId}", method = RequestMethod.GET)
+    public String getPostReplyPage(@PathVariable("userId") int userId, Model model, Page page) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+        model.addAttribute("user", user);
+
+        // 设置页面信息
+        page.setLimit(10);
+        page.setPath("/user/myreply/" + userId);
+        int commentCount = commentService.findCommentsCountByUserIdForPost(user.getId());
+        page.setRows(commentCount);
+        model.addAttribute("totalCommentNum", commentCount); // 回复帖子数量
+
+        // 查询当前用户的回帖信息
+        List<Comment> commentList = commentService.findCommentsByUserIdForPost(user.getId(), page.getOffset(),
+                page.getLimit());
+
+        // 利用回帖信息， 提取回帖
+        List<Map<String, Object>> replyVoList = new ArrayList<>();  // 存储每一个回复对应的信息
+        for (Comment comment : commentList) {
+            Map<String, Object> replyVo = new HashMap<>(); // 单条信息储存单元
+
+            replyVo.put("comment", comment);  // can get content and create time
+            DiscussPost discussPost = discussPostService.findDiscussPostById(comment.getEntityId());
+            replyVo.put("discussPost", discussPost);
+
+            replyVoList.add(replyVo);
+        }
+
+        model.addAttribute("replyVoList", replyVoList);
+
+        return "/site/my-reply";
+    }
+
+    /**
+     * 我的帖子页面
+     * @param userId
+     * @param model
+     * @param page
+     * @return
+     */
+    @RequestMapping(path = "/mypost/{userId}", method = RequestMethod.GET)
+    public String getMyPostPage(@PathVariable("userId") int userId, Model model, Page page) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new IllegalArgumentException("该用户不存在");
+        }
+        model.addAttribute("user", user);
+
+        // 设置页面信息
+        page.setPath("/user/mypost/" + userId);
+        page.setLimit(10);
+        int postCount = discussPostService.findDiscussPostRows(user.getId());
+        page.setRows(postCount);
+        model.addAttribute("postCount", postCount);
+
+        // 查找用户发帖信息
+        List<DiscussPost> discussPostList = discussPostService.findDiscussPosts(user.getId(), page.getOffset(),
+                page.getLimit());
+        List<Map<String, Object>> discussPostVOList = new ArrayList<>();
+        for (DiscussPost discussPost : discussPostList) {
+            Map<String, Object> discussPostVo = new HashMap<>();
+
+            discussPostVo.put("discuss", discussPost);
+            // 查询获取的赞数量
+            int postLikeCount = (int) likeService.findEntityLikeCount(ENTITY_TYPE_POST, discussPost.getId());
+            discussPostVo.put("postLikeCount", postLikeCount);
+
+            discussPostVOList.add(discussPostVo);
+        }
+        model.addAttribute("discussPostVOList", discussPostVOList);
+
+        return "/site/my-post";
     }
 }

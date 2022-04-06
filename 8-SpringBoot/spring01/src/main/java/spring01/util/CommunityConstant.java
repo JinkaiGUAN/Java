@@ -36,6 +36,11 @@ public interface CommunityConstant {
     int ENTITY_TYPE_COMMENT = 2;
 
     /**
+     * 实体类型： 人
+     */
+    int ENTITY_TYPE_USER = 3;
+
+    /**
      * 消息未读
      */
     int MESSAGE_UNREAD = 0;
@@ -45,4 +50,29 @@ public interface CommunityConstant {
      */
     int MESSAGE_READ = 1;
 
+    /**
+     * 消息已删除。 本数据库支支持本人删除， 则对方的消息列表也会被删除。
+     */
+    int MESSAGE_DELETE = 2;
+
+
+    /**
+     * 主题： 评论
+     */
+    String TOPIC_COMMENT = "comment";
+
+    /**
+     * 主题： 点赞
+     */
+    String TOPIC_LIKE = "like";
+
+    /**
+     * 主题： 关注
+     */
+    String TOPIC_FOLLOW = "follow";
+
+    /**
+     * 系统用户iD
+     */
+    int  SYSTEM_USER_ID = 1;
 }
