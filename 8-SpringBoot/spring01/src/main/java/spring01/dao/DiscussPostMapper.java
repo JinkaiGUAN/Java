@@ -14,6 +14,7 @@ import java.util.List;
  * Description: Discuss post 表单mapper
  * History:
  * Version:
+ * @author Peter
  */
 
 @Mapper
@@ -24,9 +25,10 @@ public interface DiscussPostMapper {
      * @param userId 用户名
      * @param offset 起始行行号
      * @param limit 每页展示的数据量
+     * @param orderMode 默认为0，如果为1 则是按照热度
      * @return 所有post的数组
      */
-    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit);
+    List<DiscussPost> selectDiscussPosts(int userId, int offset, int limit, int orderMode);
 
     /**
      * 动态编写sql并且再If中使用 且该方法只有一个输入参数， 纳闷我们就要使用注解 Param， 用来给参数取别名。
@@ -64,4 +66,28 @@ public interface DiscussPostMapper {
      * @return
      */
     List<DiscussPost> selectDiscussPostByIds(List<Integer> ids);
+
+    /**
+     * 根据实体ID更改type。
+     * @param id
+     * @param type
+     * @return
+     */
+    int updateType(int id, int type);
+
+    /**
+     * 根据实体ID更改状态
+     * @param id
+     * @param status
+     * @return
+     */
+    int updateStatus(int id, int status);
+
+    /**
+     * 根据实体ID更改评分
+     * @param id
+     * @param score
+     * @return
+     */
+    int updateScore(int id, double score);
 }

@@ -1,5 +1,7 @@
 package spring01.controller;
 
+import com.qiniu.util.Auth;
+import com.qiniu.util.StringMap;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import spring01.annotation.LoginRequired;
 import spring01.entity.Comment;
@@ -59,6 +62,18 @@ public class UserController implements CommunityConstant {
     @Value("${server.servlet.context-path}")
     private String contextPath;
 
+    @Value("${qiniu.key.access}")
+    private String accessKey;
+
+    @Value("${qiniu.key.security}")
+    private String securityKey;
+
+    @Value("${qiniu.bucket.header.name}")
+    private String headerBucketName;
+
+    @Value("${qiniu.bucket.header.url}")
+    private String headerBucketUrl;
+
     @Autowired
     private UserService userService;
 
@@ -79,10 +94,38 @@ public class UserController implements CommunityConstant {
 
     @LoginRequired
     @RequestMapping(path = "/setting", method = RequestMethod.GET)
-    public String getSettingPage() {
+    public String getSettingPage(Model model) {
+        // 使用七牛云服务器之后需要增加用户配置, 提交方式为异步
+        // 上传文件
+        String filename = CommunityUtil.generateUUID().replaceAll(" ", "-");
+        // 设置响应信息
+        StringMap policy = new StringMap();
+        policy.put("returnBody", CommunityUtil.getJSONString(0));
+        // 生成上传凭证
+        Auth auth = Auth.create(accessKey, securityKey);
+        String uploadToken = auth.uploadToken(headerBucketName, filename, 3600, policy);
+
+        model.addAttribute("uploadToken", uploadToken);
+        model.addAttribute("filename", filename);
+
         return "/site/setting";
     }
 
+    @RequestMapping(path = "/header/url", method = RequestMethod.POST)
+    @ResponseBody
+    public String updateHeaderUrl(String filename) {
+        if (StringUtils.isBlank(filename)) {
+            return CommunityUtil.getJSONString(1, "文件名不能为空");
+        }
+
+        // fixme: we might need to change the url in the webserver
+        String url = headerBucketUrl + "/" + filename;
+        userService.updateHeader(hostHolder.getUser().getId(), url);
+
+        return CommunityUtil.getJSONString(0);
+    }
+
+    @Deprecated
     @LoginRequired
     @RequestMapping(path = "/upload", method = RequestMethod.POST)
     public String uploadHeader(MultipartFile headerImage, Model model) {
@@ -101,7 +144,8 @@ public class UserController implements CommunityConstant {
 
         // 生成随机文件名
         filename = CommunityUtil.generateUUID() + suffix;
-        File dest = new File(uploadPath + "/" + filename); // 文件存放路径
+        // 文件存放路径
+        File dest = new File(uploadPath + "/" + filename);
         try {
             headerImage.transferTo(dest);
         } catch (IOException e) {
@@ -123,6 +167,7 @@ public class UserController implements CommunityConstant {
      * @param filename
      * @param response
      */
+    @Deprecated
     @RequestMapping(path = "/header/{filename}", method = RequestMethod.GET)
     public void getHeader(@PathVariable("filename") String filename, HttpServletResponse response) {
         // 服务器存放路径
@@ -245,18 +290,22 @@ public class UserController implements CommunityConstant {
         page.setPath("/user/myreply/" + userId);
         int commentCount = commentService.findCommentsCountByUserIdForPost(user.getId());
         page.setRows(commentCount);
-        model.addAttribute("totalCommentNum", commentCount); // 回复帖子数量
+        // 回复帖子数量
+        model.addAttribute("totalCommentNum", commentCount);
 
         // 查询当前用户的回帖信息
         List<Comment> commentList = commentService.findCommentsByUserIdForPost(user.getId(), page.getOffset(),
                 page.getLimit());
 
         // 利用回帖信息， 提取回帖
-        List<Map<String, Object>> replyVoList = new ArrayList<>();  // 存储每一个回复对应的信息
+        // 存储每一个回复对应的信息
+        List<Map<String, Object>> replyVoList = new ArrayList<>();
         for (Comment comment : commentList) {
-            Map<String, Object> replyVo = new HashMap<>(); // 单条信息储存单元
+            // 单条信息储存单元
+            Map<String, Object> replyVo = new HashMap<>();
 
-            replyVo.put("comment", comment);  // can get content and create time
+            // can get content and create time
+            replyVo.put("comment", comment);
             DiscussPost discussPost = discussPostService.findDiscussPostById(comment.getEntityId());
             replyVo.put("discussPost", discussPost);
 
@@ -291,8 +340,9 @@ public class UserController implements CommunityConstant {
         model.addAttribute("postCount", postCount);
 
         // 查找用户发帖信息
+        // fixme: check the ordermode
         List<DiscussPost> discussPostList = discussPostService.findDiscussPosts(user.getId(), page.getOffset(),
-                page.getLimit());
+                page.getLimit(), 0);
         List<Map<String, Object>> discussPostVOList = new ArrayList<>();
         for (DiscussPost discussPost : discussPostList) {
             Map<String, Object> discussPostVo = new HashMap<>();

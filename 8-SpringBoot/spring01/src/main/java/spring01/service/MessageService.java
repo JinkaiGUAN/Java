@@ -27,6 +27,7 @@ public class MessageService implements CommunityConstant {
 
     @Autowired
     private MessageMapper messageMapper;
+
     @Autowired
     private SensitiveFilter sensitiveFilter;
 

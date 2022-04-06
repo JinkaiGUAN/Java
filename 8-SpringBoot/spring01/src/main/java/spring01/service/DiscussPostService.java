@@ -27,8 +27,16 @@ public class DiscussPostService {
     @Autowired
     private SensitiveFilter sensitiveFilter;
 
-    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit) {
-        return discussPostMapper.selectDiscussPosts(userId, offset, limit);
+    /**
+     * 查询帖子
+     * @param userId
+     * @param offset
+     * @param limit
+     * @param orderMode，提供两种方式进行排序， 0为默认按照type和时间， 1增加了按照score排序。
+     * @return
+     */
+    public List<DiscussPost> findDiscussPosts(int userId, int offset, int limit, int orderMode ) {
+        return discussPostMapper.selectDiscussPosts(userId, offset, limit, orderMode);
     }
 
     public int findDiscussPostRows(int userId) {
@@ -72,5 +80,35 @@ public class DiscussPostService {
     @Deprecated
     public List<DiscussPost> findDiscussPostByIds(List<Integer> ids) {
         return discussPostMapper.selectDiscussPostByIds(ids);
+    }
+
+    /**
+     * 根据实体ID更改type。
+     * @param entityId
+     * @param type
+     * @return
+     */
+    public int updateType(int entityId, int type) {
+        return discussPostMapper.updateType(entityId, type);
+    }
+
+    /**
+     * 根据实体ID更改状态
+     * @param entityId
+     * @param type
+     * @return
+     */
+    public int updateStatus(int entityId, int type) {
+        return discussPostMapper.updateStatus(entityId, type);
+    }
+
+    /**
+     * 根据实体ID更改评分
+     * @param id
+     * @param score
+     * @return
+     */
+    public int updateScore(int id, double score) {
+        return discussPostMapper.updateScore(id, score);
     }
 }

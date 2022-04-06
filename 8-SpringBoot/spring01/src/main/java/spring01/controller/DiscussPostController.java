@@ -1,13 +1,12 @@
 package spring01.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import spring01.entity.Comment;
-import spring01.entity.DiscussPost;
-import spring01.entity.Page;
-import spring01.entity.User;
+import spring01.entity.*;
+import spring01.event.EventProducer;
 import spring01.service.CommentService;
 import spring01.service.DiscussPostService;
 import spring01.service.LikeService;
@@ -15,6 +14,7 @@ import spring01.service.UserService;
 import spring01.util.CommunityConstant;
 import spring01.util.CommunityUtil;
 import spring01.util.HostHolder;
+import spring01.util.RedisKeyUtil;
 
 import java.util.*;
 
@@ -34,8 +34,13 @@ public class DiscussPostController implements CommunityConstant {
 
     @Autowired
     private DiscussPostService discussPostService;
+
+    /**
+     * 获取当前用户
+     */
     @Autowired
-    private HostHolder hostHolder; // 获取当前用户
+    private HostHolder hostHolder;
+
     @Autowired
     private UserService userService;
 
@@ -44,6 +49,12 @@ public class DiscussPostController implements CommunityConstant {
 
     @Autowired
     private LikeService likeService;
+
+    @Autowired
+    private EventProducer eventProducer;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * 发布帖子
@@ -66,7 +77,17 @@ public class DiscussPostController implements CommunityConstant {
         discussPost.setCreateTime(new Date());
         discussPostService.addDiscussPost(discussPost);
 
-        System.out.println("请求成功");
+        // 触发发帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(user.getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(discussPost.getId());
+        eventProducer.fireEvent(event);
+
+        // 计算帖子分数
+        String redisKey = RedisKeyUtil.getPostScoreKey();
+        redisTemplate.opsForSet().add(redisKey, discussPost.getId());
 
         // 报错的情况 将来统一处理
         return CommunityUtil.getJSONString(0, "发布成功！");
@@ -85,7 +106,8 @@ public class DiscussPostController implements CommunityConstant {
     public String getDiscussPost(@PathVariable("discussPostId") int discussPostId, Model model, Page page) {
         // 查询帖子信息
         DiscussPost discussPost = discussPostService.findDiscussPostById(discussPostId);
-        model.addAttribute("post", discussPost); // 在页面使用${post.title} 会自动调用响应的get方法
+        // 在页面使用${post.title} 会自动调用响应的get方法
+        model.addAttribute("post", discussPost);
         // 作者信息
         User user = userService.findUserById(discussPost.getUserId());
         model.addAttribute("user", user);
@@ -164,4 +186,76 @@ public class DiscussPostController implements CommunityConstant {
         return "/site/discuss-detail";
     }
 
+    /**
+     * 设置置顶。
+     *
+     * 需要从页面传数据， 而且页面整体不刷新， 所以使用POST
+     * @param id
+     * @return
+     */
+    @RequestMapping(path = "/top", method = RequestMethod.POST)
+    @ResponseBody
+    public String setTop(int id){
+        discussPostService.updateType(id, DISCUSS_TYPE_TOP);
+
+        // 在更新完帖子状态之后， ES中也要进行更新， 因此得触发发帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return CommunityUtil.getJSONString(0);
+    }
+
+    /**
+     * 设置精华帖。
+     *
+     * 需要从页面传数据， 而且页面整体不刷新， 所以使用POST
+     * @param id
+     * @return
+     */
+    @RequestMapping(path = "/wonderful", method = RequestMethod.POST)
+    @ResponseBody
+    public String setWonderful(int id){
+        discussPostService.updateStatus(id, DISCUSS_STATUS_WONDERFUL);
+
+        // 在更新完帖子状态之后， ES中也要进行更新， 因此得触发发帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        // 计算帖子分数
+        String redisKey = RedisKeyUtil.getPostScoreKey();
+        redisTemplate.opsForSet().add(redisKey, id);
+
+        return CommunityUtil.getJSONString(0);
+    }
+
+    /**
+     * 删除帖子。
+     *
+     * 需要从页面传数据， 而且页面整体不刷新， 所以使用POST
+     * @param id
+     * @return
+     */
+    @RequestMapping(path = "/delete", method = RequestMethod.POST)
+    @ResponseBody
+    public String setDelete(int id){
+        discussPostService.updateStatus(id, DISCUSS_STATUS_BLOCK);
+
+        // 设置拉黑（删除）之后， ES中不应该存在该贴信息， 所以要触发删帖事件
+        Event event = new Event()
+                .setTopic(TOPIC_DELETE)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(id);
+        eventProducer.fireEvent(event);
+
+        return CommunityUtil.getJSONString(0);
+    }
 }
