@@ -10,7 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/doublePointer/doublePointer.iml" filepath="$PROJECT_DIR$/doublePointer/doublePointer.iml" />
       <module fileurl="file://$PROJECT_DIR$/dymamicProgramming/dymamicProgramming.iml" filepath="$PROJECT_DIR$/dymamicProgramming/dymamicProgramming.iml" />
       <module fileurl="file://$PROJECT_DIR$/greedyAlgo/greedyAlgo.iml" filepath="$PROJECT_DIR$/greedyAlgo/greedyAlgo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/monotone.stack/monotone.stack.iml" filepath="$PROJECT_DIR$/monotone.stack/monotone.stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monotone_stack/monotone_stack.iml" filepath="$PROJECT_DIR$/monotone_stack/monotone_stack.iml" />
     </modules>
   </component>
 </project>
