@@ -64,8 +64,8 @@ public class EventConsumer implements CommunityConstant {
     @Value("${qiniu.bucket.share.name}")
     private String shareBucketName;
 
-    @Autowired
-    private ThreadPoolTaskScheduler threadPoolTaskScheduler;
+    //@Autowired
+    //private ThreadPoolTaskScheduler threadPoolTaskScheduler;
 
     @Autowired
     private MessageService messageService;
@@ -166,9 +166,9 @@ public class EventConsumer implements CommunityConstant {
         }
 
         // 启用定时器， 监视该图片， 一旦生成了， 则上传至七牛云
-        UploadTask uploadTask = new UploadTask(filename, suffix);
-        Future future = threadPoolTaskScheduler.scheduleAtFixedRate(uploadTask, 500);
-        uploadTask.setFuture(future);
+        //UploadTask uploadTask = new UploadTask(filename, suffix);
+        //Future future = threadPoolTaskScheduler.scheduleAtFixedRate(uploadTask, 500);
+        //uploadTask.setFuture(future);
     }
 
     /**
