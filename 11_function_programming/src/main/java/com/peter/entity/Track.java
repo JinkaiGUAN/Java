@@ -19,6 +19,10 @@ public class Track {
         this.length = length;
     }
 
+    public Track copy() {
+        return new Track(name, length);
+    }
+
     public String getName() {
         return name;
     }
