@@ -36,6 +36,7 @@ public class T01_HowToCreateThread {
     public static void main(String[] args) {
         // 1st method
         new MyThread().start();
+        Thread.currentThread();
 
         // 2nd method
         new Thread(new MyThread()).start();
