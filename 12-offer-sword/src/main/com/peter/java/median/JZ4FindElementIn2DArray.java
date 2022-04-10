@@ -43,4 +43,39 @@ public class JZ4FindElementIn2DArray {
 
         return false;
     }
+
+    /**
+     * In this question, we can also use binary searching method.
+     *
+     * Firstly, We assign the right upper element, then compare it with the target value, if it is larger than the target,
+     * then we move left. If the element smaller than the target, we move the element pointer down.
+     *
+     * @param target
+     * @param array
+     * @return
+     */
+    public boolean FindByBinarySearch(int target, int [][] array) {
+        if (array == null || array.length == 0 || (array.length == 1 && array[0].length == 0)) {
+            return false;
+        }
+
+        int m = array.length;
+        int n = array[0].length;
+
+        int r = 0;
+        int c = n - 1;
+
+        while (r <= m && c >=  0) {
+            if (target == array[r][c]) {
+                return true;
+            } else if (target > array[r][c]) {
+                r++;
+            } else {
+                c--;
+            }
+        }
+
+        return false;
+
+    }
 }
