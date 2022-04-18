@@ -28,6 +28,7 @@ import java.util.*;
  * Description:
  * History:
  * Version:
+ * @author Peter
  */
 @Controller
 public class MessageController implements CommunityConstant {
@@ -65,7 +66,8 @@ public class MessageController implements CommunityConstant {
             map.put("letterCount", messageService.findLettersCount(message.getConversationId()));
             map.put("unreadCount", messageService.findLettersUnreadCount(user.getId(), message.getConversationId()));
             int targetId = user.getId() == message.getFromId() ? message.getToId() : message.getFromId();
-            map.put("target", userService.findUserById(targetId)); // get the target Id to gain the header url
+            // get the target Id to gain the header url
+            map.put("target", userService.findUserById(targetId));
 
             conversations.add(map);
         }
@@ -210,7 +212,7 @@ public class MessageController implements CommunityConstant {
     private Map<String, Object> getMessageVo(User user, Message message, String topic) {
 
         if (message != null) {
-            Map<String, Object> messageVo = new HashMap<>();
+            Map<String, Object> messageVo = new HashMap<>(16);
 
             messageVo.put("message", message);
 
@@ -221,7 +223,8 @@ public class MessageController implements CommunityConstant {
             messageVo.put("user", userService.findUserById((Integer) data.get("userId")));
             messageVo.put("entityType", data.get("entityType"));
             messageVo.put("entityId", data.get("entityId"));
-            messageVo.put("postId", data.get("postId"));  // 关注时 此数据为空
+            // 关注时 此数据为空
+            messageVo.put("postId", data.get("postId"));
 
             int count = messageService.findNoticeCount(user.getId(), topic);
             messageVo.put("count", count);
@@ -268,7 +271,6 @@ public class MessageController implements CommunityConstant {
         model.addAttribute("noticeVoList", noticeVoList);
 
         // 设置已读
-        // fixme: the noticeList is not empty, but the notice all has been readed
         List<Integer> ids = getUnreadLetterIds(noticeList);
         if (!ids.isEmpty()) {
             messageService.readMessage(ids);

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+
+    <h1>登录社区</h1>
+
+    <form method="post" th:action="@{/login}">
+        <p style="color:red;" th:text="${error}">
+            <!--提示信息-->
+        </p>
+        <p>
+            账号：<input type="text" name="username" th:name="${param.username}">
+        </p>
+        <p>
+            密码：<input type="password" name="password" th:name="${param.password}">
+        </p>
+        <p>
+            验证码：<input type="text" >
+        </p>
+        <p>
+            <input type="submit" value="登录">
+        </p>
+    </form>
+
+</body>
+</html>

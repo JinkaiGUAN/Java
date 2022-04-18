@@ -1,6 +1,7 @@
 package spring01.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import spring01.service.CommentService;
 import spring01.service.DiscussPostService;
 import spring01.util.CommunityConstant;
 import spring01.util.HostHolder;
+import spring01.util.RedisKeyUtil;
 
 import java.util.Date;
 
@@ -42,8 +44,11 @@ public class CommentController implements CommunityConstant {
     @Autowired
     private EventProducer eventProducer;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
     @RequestMapping(path = "/add/{discussPostId}", method = RequestMethod.POST)
-    public String addComment(@PathVariable("discussPostId") String discussPostId, Comment comment) {
+    public String addComment(@PathVariable("discussPostId") int discussPostId, Comment comment) {
         //fixme: 用户未登录 不能访问
         comment.setUserId(hostHolder.getUser().getId());
         comment.setStatus(0);
@@ -66,8 +71,23 @@ public class CommentController implements CommunityConstant {
             Comment target = commentService.findCommentById(comment.getEntityId());
             event.setEntityUserid(target.getUserId());
         }
-
         eventProducer.fireEvent(event);
+
+        // 触发发布事件
+        if (comment.getEntityType() == ENTITY_TYPE_POST) {
+            event = new Event()
+                    .setTopic(TOPIC_PUBLISH)
+                    .setUserId(comment.getUserId())
+                    .setEntityType(ENTITY_TYPE_POST)
+                    .setEntityId(discussPostId);
+            eventProducer.fireEvent(event);
+
+            // 计算帖子分数
+            String redisKey = RedisKeyUtil.getPostScoreKey();
+            redisTemplate.opsForSet().add(redisKey, discussPostId);
+        }
+
+
 
         return "redirect:/discuss/detail/" + discussPostId;
     }

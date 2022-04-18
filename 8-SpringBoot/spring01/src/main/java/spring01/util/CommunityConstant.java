@@ -8,12 +8,24 @@ package spring01.util;
  * Description:
  * History:
  * Version:
+ * @author Peter
  */
 public interface CommunityConstant {
 
-    int ACTIVATION_SUCCESS = 0; // 激活成功
-    int ACTIVATION_REPEAT = 1;  // 重复激活
-    int ACTIVATION_FAILURE = 2;  // 激活失败
+    /**
+     * 激活成功
+     */
+    int ACTIVATION_SUCCESS = 0;
+
+    /**
+     * 重复激活
+     */
+    int ACTIVATION_REPEAT = 1;
+
+    /**
+     * 激活失败
+     */
+    int ACTIVATION_FAILURE = 2;
 
     /**
      * 默认的超时时间， 默认为12小时
@@ -55,7 +67,6 @@ public interface CommunityConstant {
      */
     int MESSAGE_DELETE = 2;
 
-
     /**
      * 主题： 评论
      */
@@ -72,7 +83,69 @@ public interface CommunityConstant {
     String TOPIC_FOLLOW = "follow";
 
     /**
+     * 主题： 发布
+     */
+    String TOPIC_PUBLISH = "publish";
+
+    /**
+     * 主题： 删除
+     */
+    String TOPIC_DELETE = "delete";
+
+    /**
+     * 主题： 分享
+     */
+    String TOPIC_SHARE = "share";
+
+    /**
      * 系统用户iD
      */
     int  SYSTEM_USER_ID = 1;
+
+    /**
+     * 权限： 普通用户
+     *
+     * user 表中type为0
+     */
+    String AUTHORITY_USER = "user";
+
+    /**
+     * 权限： 管理员
+     *
+     * user 表中type为1。 该信息由User实体进行对应。
+     */
+    String AUTHORITY_ADMIN = "admin";
+
+    /**
+     * 权限： 版主
+     *
+     * user 表中type为2
+     */
+    String AUTHORITY_MODERATOR = "moderator";
+
+    /**
+     * 帖子的类型：普通
+      */
+    int DISCUSS_TYPE_NORMAL = 0;
+
+    /**
+     * 帖子类型： 置顶
+     */
+    int DISCUSS_TYPE_TOP = 1;
+
+    /**
+     * 帖子状态： 正常
+     */
+    int DISCUSS_STATUS_NORMAL = 0;
+
+    /**
+     * 帖子状态: 精华
+     */
+    int DISCUSS_STATUS_WONDERFUL = 1;
+
+    /**
+     * 帖子状态： 拉黑
+     */
+    int DISCUSS_STATUS_BLOCK = 2;
+
 }

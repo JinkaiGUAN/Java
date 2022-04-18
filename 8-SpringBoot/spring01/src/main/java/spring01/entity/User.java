@@ -10,6 +10,7 @@ import java.util.Date;
  * Description: 与数据库表中的user表相对应
  * History:
  * Version:
+ * @author Peter
  */
 
 public class User {

@@ -23,6 +23,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27WpcKkXBJwtxmGTKy33RVHs2RF" />
+  <component name="ProjectId" id="27Q68UEgXh18Iz9gbTbQlO7h2iF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,10 +71,30 @@
       <option name="MAIN_CLASS_NAME" value="main.java.com.peter.T03_stream.T01BasicOperationTest" />
       <option name="METHOD_NAME" value="testReduce" />
       <option name="TEST_OBJECT" value="method" />
+  </component>
+  <component name="RunManager" selected="Application.T01_HowToCreateThread (1)">
+    <configuration name="T01_HowToCreateThread (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaLearning.multiprocessLearning.T01_HowToCreateThread" />
+      <module name="10-Multiprocess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaLearning.multiprocessLearning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="T01_HowToCreateThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java.multiprocess.T01_HowToCreateThread" />
+      <module name="10-Multiprocess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java.multiprocess.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="11_function_programming" />
       <method v="2">
@@ -89,6 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.T01_HowToCreateThread (1)" />
+        <item itemvalue="Application.T01_HowToCreateThread" />
         <item itemvalue="JUnit.T01BasicOperationTest.testReduce" />
         <item itemvalue="JUnit.T01BasicOperationTest.testMaxMin" />
       </list>
@@ -97,6 +120,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="4aa66aab-3973-47d2-9c33-12110886324b" name="Changes" comment="" />
+      <created>1649239802996</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649239802996</updated>
+      <workItem from="1649239804170" duration="1522000" />
+      <workItem from="1649262661270" duration="44000" />
       <changelist id="cee7167e-39f9-43e5-adf5-a4705e268f58" name="Changes" comment="" />
       <created>1649445780164</created>
       <option name="number" value="Default" />
