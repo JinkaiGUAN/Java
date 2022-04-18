@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d5c7688-d4a6-4a0e-88ea-a34ab63ebceb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/javaLearning/multiprocessLearning/T02_FutureTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/10-Multiprocess.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/out/production/10-Multiprocess/javaLearning/multiprocessLearning/T01_HowToCreateThread$MyRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/out/production/10-Multiprocess/javaLearning/multiprocessLearning/T01_HowToCreateThread$MyThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/out/production/10-Multiprocess/javaLearning/multiprocessLearning/T01_HowToCreateThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-/src/javaLearning/multiprocessLearning/T01_HowToCreateThread.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27SkZE0eD9k550HdG0lxv31NhRV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="T02_FutureTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaLearning.multiprocessLearning.T02_FutureTask" />
+      <module name="10-Multiprocess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaLearning.multiprocessLearning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.T02_FutureTask" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d5c7688-d4a6-4a0e-88ea-a34ab63ebceb" name="Changes" comment="" />
+      <created>1649320930760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649320930760</updated>
+      <workItem from="1649320933515" duration="1480000" />
+      <workItem from="1649324390459" duration="1634000" />
+      <workItem from="1649404019100" duration="5024000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
