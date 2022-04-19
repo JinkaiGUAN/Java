@@ -47,4 +47,19 @@ public class JZ18DeleteNodeInLinkedList {
 
         return originalHead;
     }
+
+    public ListNode deleteNode2 (ListNode head, int val) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode node = dummy;
+        while(node.next!=null){
+            if(node.next.val==val){
+                node.next = node.next.next;
+                break;
+            }
+            node = node.next;
+        }
+        return dummy.next;
+    }
+
 }
