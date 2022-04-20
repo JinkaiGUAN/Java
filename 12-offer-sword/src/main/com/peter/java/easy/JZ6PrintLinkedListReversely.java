@@ -1,5 +1,7 @@
 package main.com.peter.java.easy;
 
+import main.com.peter.java.entity.ListNode;
+
 import java.util.Collections;
 import java.util.ArrayList;
 
@@ -33,15 +35,5 @@ public class JZ6PrintLinkedListReversely {
         node1.next = node2;
 
         System.out.println(printListFromTailToHead(node1));
-    }
-}
-
-
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    public ListNode(int val) {
-        this.val = val;
     }
 }

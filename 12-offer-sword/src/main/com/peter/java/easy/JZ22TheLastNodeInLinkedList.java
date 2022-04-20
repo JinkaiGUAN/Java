@@ -1,5 +1,7 @@
 package main.com.peter.java.easy;
 
+import main.com.peter.java.entity.ListNode;
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: JZ22TheLastNodeInLinkedList
