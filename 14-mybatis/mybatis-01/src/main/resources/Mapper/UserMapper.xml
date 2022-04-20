@@ -10,4 +10,20 @@
         select * from user;
     </select>
 
+    <select id="getUserById" resultType="com.peter.pojo.User">
+        select * from user where id = #{id}
+    </select>
+
+    <!--对象中的属性可以直接获取-->
+    <insert id="insertUser" parameterType="com.peter.pojo.User">
+        insert into user (id, name, password) values(#{id}, #{name}, #{password})
+    </insert>
+
+    <update id="updateUser" parameterType="com.peter.pojo.User">
+        update user set name=#{name}, password=#{password} where id=#{id}
+    </update>
+
+    <delete id="deleteUser">
+        delete from user where id=#{id}
+    </delete>
 </mapper>

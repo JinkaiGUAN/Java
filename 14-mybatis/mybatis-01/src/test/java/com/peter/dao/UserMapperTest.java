@@ -36,4 +36,64 @@ public class UserMapperTest {
             sqlSession.close();
         }
     }
+
+    @Test
+    public void testGetUserById() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User user = mapper.getUserById(1);
+        System.out.println(user);
+
+
+        sqlSession.close();
+    }
+
+    @Test
+    public void testInsertUser() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User user = new User();
+        user.setId(4);
+        user.setName("Tom");
+        user.setPassword("12345678");
+        int res = mapper.insertUser(user);
+        if (res > 0) {
+            System.out.println("Insert successfully");
+        }
+
+        // 提交事务
+        sqlSession.commit();
+
+        sqlSession.close();
+    }
+
+    @Test
+    public void testUpdateUser() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+
+        UserMapper mapper  = sqlSession.getMapper(UserMapper.class);
+        User user = new User();
+        user.setId(4);
+        user.setName("Tom1");
+        user.setPassword("12345678!");
+        mapper.updateUser(user);
+
+        sqlSession.commit();
+
+        sqlSession.close();
+    }
+
+    @Test
+    public void testDeleteUser() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        mapper.deleteUser(4);
+
+        sqlSession.commit();
+
+        sqlSession.close();
+    }
 }
