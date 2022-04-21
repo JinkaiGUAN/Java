@@ -6,7 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Copyright (C), Peter GUAN
@@ -44,6 +46,22 @@ public class UserMapperTest {
         logger.info("进入Log4j.");
         logger.debug("进入debug");
         logger.error("进入error");
+    }
+
+    @Test
+    public void tesGetUsersByLimit() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        Map<String, Integer> map = new HashMap<>();
+        map.put("startIdx", 0);
+        map.put("pageSize", 10);
+        List<User> users = mapper.getUsersByLimit(map);
+        for (User user : users) {
+            System.out.println(user);
+        }
+
+        sqlSession.close();
     }
 
     @Test

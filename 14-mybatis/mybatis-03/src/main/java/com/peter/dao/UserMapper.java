@@ -3,6 +3,7 @@ package com.peter.dao;
 import com.peter.pojo.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Copyright (C), Peter GUAN
@@ -16,6 +17,8 @@ import java.util.List;
 public interface UserMapper {
 
     List<User> getUserList();
+
+    List<User> getUsersByLimit(Map<String, Integer> map);
 
     User getUserById(int id);
 

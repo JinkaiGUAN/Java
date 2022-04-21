@@ -10,6 +10,10 @@
         select * from user;
     </select>
 
+    <select id="getUsersByLimit" parameterType="map" resultType="User">
+        select * from user limit #{startIdx}, #{pageSize}
+    </select>
+
     <select id="getUserById" resultType="com.peter.pojo.User">
         select * from user where id = #{id}
     </select>
