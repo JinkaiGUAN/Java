@@ -1,0 +1,33 @@
+[DEBUG] 2022-04-21 15:25:42,333(0) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-21 15:25:42,341(8) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-21 15:25:42,384(51) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:25:42,384(51) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:25:42,385(52) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:25:42,385(52) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:25:42,530(197) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:136): Opening JDBC Connection  
+[DEBUG] 2022-04-21 15:25:43,982(1649) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:405): Created connection 1325124186.  
+[DEBUG] 2022-04-21 15:25:43,982(1649) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:100): Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4efbca5a]  
+[DEBUG] 2022-04-21 15:25:43,989(1656) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==>  Preparing: select * from user;   
+[DEBUG] 2022-04-21 15:25:44,037(1704) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==> Parameters:   
+[DEBUG] 2022-04-21 15:25:44,082(1749) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): <==      Total: 3  
+[DEBUG] 2022-04-21 15:25:44,085(1752) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit(JdbcTransaction.java:122): Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4efbca5a]  
+[DEBUG] 2022-04-21 15:25:44,086(1753) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.close(JdbcTransaction.java:90): Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4efbca5a]  
+[DEBUG] 2022-04-21 15:25:44,087(1754) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:362): Returned connection 1325124186 to pool.  
+[DEBUG] 2022-04-21 15:26:24,435(0) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-21 15:26:24,442(7) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-21 15:26:24,484(49) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:26:24,485(50) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:26:24,486(51) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:26:24,486(51) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-21 15:26:24,606(171) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:136): Opening JDBC Connection  
+[DEBUG] 2022-04-21 15:26:26,033(1598) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:405): Created connection 1617550160.  
+[DEBUG] 2022-04-21 15:26:26,034(1599) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:100): Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6069db50]  
+[DEBUG] 2022-04-21 15:26:26,041(1606) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==>  Preparing: select * from user;   
+[DEBUG] 2022-04-21 15:26:26,093(1658) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==> Parameters:   
+[DEBUG] 2022-04-21 15:26:26,134(1699) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): <==      Total: 3  
+[DEBUG] 2022-04-21 15:26:26,137(1702) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit(JdbcTransaction.java:122): Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6069db50]  
+[DEBUG] 2022-04-21 15:26:26,138(1703) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.close(JdbcTransaction.java:90): Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6069db50]  
+[DEBUG] 2022-04-21 15:26:26,140(1705) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:362): Returned connection 1617550160 to pool.  
+[INFO ] 2022-04-21 15:34:32,968(0) --> [main] com.peter.dao.UserMapperTest.testLog4j(UserMapperTest.java:44): 进入Log4j.  
+[DEBUG] 2022-04-21 15:34:32,974(6) --> [main] com.peter.dao.UserMapperTest.testLog4j(UserMapperTest.java:45): 进入debug  
+[ERROR] 2022-04-21 15:34:32,974(6) --> [main] com.peter.dao.UserMapperTest.testLog4j(UserMapperTest.java:46): 进入error  
