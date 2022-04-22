@@ -14,6 +14,7 @@
         <module>mybatis-01-copy</module>
         <module>mybatis-02</module>
         <module>mybatis-03</module>
+        <module>mybatis-04</module>
     </modules>
 
     <properties>
@@ -46,6 +47,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
 
     </dependencies>
 
