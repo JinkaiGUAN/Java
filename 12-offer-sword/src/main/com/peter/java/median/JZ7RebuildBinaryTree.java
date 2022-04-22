@@ -1,5 +1,7 @@
 package main.com.peter.java.median;
 
+import main.com.peter.java.entity.TreeNode;
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: JZ7RebuildBinaryTree
@@ -67,12 +69,3 @@ public class JZ7RebuildBinaryTree {
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    public TreeNode(int val) {
-        this.val = val;
-    }
-}
