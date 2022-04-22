@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e9844ae-07a6-406a-b0b8-612f0716a0fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/1-mybatis-config.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/peter/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/peter/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/peter/util/MyBatisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/Mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/test/java/com/peter/dao/UserMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-offer-sword/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-offer-sword/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-offer-sword/src/main/com/peter/java/easy/JZ18DeleteNodeInLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12-offer-sword/src/main/com/peter/java/easy/JZ18DeleteNodeInLinkedList.java" afterDir="false" />
-    </list>
+    <list default="true" id="6e9844ae-07a6-406a-b0b8-612f0716a0fe" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
