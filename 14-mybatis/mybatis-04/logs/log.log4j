@@ -1,0 +1,23 @@
+[DEBUG] 2022-04-22 17:12:45,318(0) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-22 17:12:45,325(7) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-22 17:12:45,362(44) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:12:45,363(45) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:12:45,363(45) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:12:45,364(46) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:18:18,075(0) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-22 17:18:18,081(6) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-22 17:18:18,115(40) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:18:18,116(41) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:18:18,116(41) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:18:18,116(41) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:20:08,834(0) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-22 17:20:08,840(6) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-22 17:20:08,872(38) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:20:08,872(38) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:20:08,873(39) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:20:08,873(39) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-22 17:20:08,958(124) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:136): Opening JDBC Connection  
+[DEBUG] 2022-04-22 17:20:10,360(1526) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:405): Created connection 1664439369.  
+[DEBUG] 2022-04-22 17:20:10,368(1534) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==>  Preparing: select * from user   
+[DEBUG] 2022-04-22 17:20:10,425(1591) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==> Parameters:   
+[DEBUG] 2022-04-22 17:20:10,474(1640) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): <==      Total: 3  

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--核心配置， 其中的配置具有一定顺序-->
+<configuration>
+    <!--引入外部配置文件, 优先使用外部配置文件-->
+    <properties resource="db.properties"></properties>
+
+    <typeAliases>
+        <!--单标签书写-->
+        <typeAlias type="com.peter.pojo.User" alias="User"/>
+        <!--或者可以直接扫描包， alias为类名的首字母小写-->
+        <!--<package name="com.peter.pojo"/>-->
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url"
+                          value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--每一个mapper.xml都需要在Mybatis核心配置文件中注册-->
+        <mapper resource="Mapper/UserMapper.xml"></mapper>
+    </mappers>
+
+
+</configuration>
