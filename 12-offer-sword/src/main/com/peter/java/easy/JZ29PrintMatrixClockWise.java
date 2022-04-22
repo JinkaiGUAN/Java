@@ -14,7 +14,70 @@ import java.util.ArrayList;
  * Version:
  */
 public class JZ29PrintMatrixClockWise {
-    public ArrayList<Integer> printMatrix(int [][] matrix) {
+    /**
+     * Transpose the matrix
+     * @param matrix
+     * @return
+     */
+    public ArrayList<Integer> printMatrix(int[][] matrix) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        int count = 0;
+        while (true) {
+            if (count != 0) {
+                matrix = rotateMatrix(matrix);
+            }
+
+            for (int i = 0; i < matrix[0].length; i++) {
+                list.add(matrix[0][i]);
+            }
+
+            count++;
+            if (matrix.length == 1) {
+                break;
+            }
+        }
+
+        return list;
+    }
+
+    /**
+     * Rotate the matrix
+     */
+    private int[][] rotateMatrix(int[][] matrix) {
+        int row = matrix.length;
+        int column = matrix[0].length;
+
+        // if the column is 1, simply transforming is enough
+        if (column == 1) {
+            int[][] res = new int[1][row - 1];
+            for (int i = 1; i < row; i++) {
+                res[0][i - 1] = matrix[i][0];
+            }
+
+            return res;
+        }
+
+        int[][] res = new int[column][row - 1];
+        int res_i = 0;
+        int res_j = 0;
+        for (int i = column - 1; i >= 0; --i) {
+            res_j = 0;
+            for (int j = 1; j < row; j++) {
+                res[res_i][res_j++] = matrix[j][i];
+            }
+            res_i++;
+        }
+
+        return res;
+    }
+
+    /**
+     * Brute force
+     * @param matrix
+     * @return
+     */
+    public ArrayList<Integer> printMatrix2(int [][] matrix) {
         ArrayList<Integer> list = new ArrayList<>();
 
         if (matrix == null || matrix.length == 0 ||(matrix != null && matrix[0] == null)) {
