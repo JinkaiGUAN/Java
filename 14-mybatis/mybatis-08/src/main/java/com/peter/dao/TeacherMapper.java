@@ -1,8 +1,8 @@
 package com.peter.dao;
 
 import com.peter.pojo.Teacher;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
  * Copyright (C), Peter GUAN
@@ -15,6 +15,5 @@ import org.apache.ibatis.annotations.Select;
  */
 public interface TeacherMapper {
 
-
-    Teacher selectTeacherById(@Param("id") int id);
+    List<Teacher> selectTeachers();
 }

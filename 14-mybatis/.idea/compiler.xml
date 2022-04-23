@@ -14,7 +14,7 @@
         <module name="mybatis-01" />
         <module name="mybatis-01-copy" />
         <module name="mybatis-06" />
-        <module name="mybatis-07" />
+        <module name="mybatis-08" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

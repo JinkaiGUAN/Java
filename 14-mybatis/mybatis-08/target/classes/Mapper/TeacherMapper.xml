@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--绑定一个对应的dao接口-->
+<mapper namespace="com.peter.dao.TeacherMapper">
+
+    <select id="selectTeachers" resultType="Teacher">
+        select * from teacher
+    </select>
+</mapper>
