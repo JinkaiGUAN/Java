@@ -14,7 +14,11 @@
         <module name="mybatis-01" />
         <module name="mybatis-01-copy" />
         <module name="mybatis-06" />
+        <module name="mybatis-07" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-07" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
