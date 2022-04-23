@@ -39,10 +39,10 @@
 
     <mappers>
         <!--每一个mapper.xml都需要在Mybatis核心配置文件中注册-->
-        <!--<mapper resource="Mapper/StudentMapper.xml"/>-->
-        <!--<mapper resource="Mapper/TeacherMapper.xml"/>-->
-        <mapper class="com.peter.dao.StudentMapper"/>
-        <mapper class="com.peter.dao.TeacherMapper"/>
+        <mapper resource="Mapper/StudentMapper.xml"/>
+        <mapper resource="Mapper/TeacherMapper.xml"/>
+        <!--<mapper class="com.peter.dao.StudentMapper"/>-->
+        <!--<mapper class="com.peter.dao.TeacherMapper"/>-->
     </mappers>
 
 

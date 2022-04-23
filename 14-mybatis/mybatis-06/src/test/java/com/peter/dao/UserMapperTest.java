@@ -1,5 +1,6 @@
 package com.peter.dao;
 
+import com.peter.pojo.Student;
 import com.peter.pojo.Teacher;
 import com.peter.util.MyBatisUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -23,12 +24,25 @@ public class UserMapperTest {
     private static Logger logger = Logger.getLogger(UserMapperTest.class);
 
     @Test
-    public void testSelectTeacherById() {
+    public void testSelectStudents() {
         SqlSession sqlSession = MyBatisUtil.getSqlSession();
 
-        TeacherMapper mapper = sqlSession.getMapper(TeacherMapper.class);
-        Teacher teacher = mapper.selectTeacherById(1);
-        System.out.println(teacher);
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+        List<Student> students = mapper.selectStudents();
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
+
+    @Test
+    public void testSelectStudents2() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+        List<Student> students = mapper.selectStudents2();
+        for (Student student : students) {
+            System.out.println(student);
+        }
     }
 
 }

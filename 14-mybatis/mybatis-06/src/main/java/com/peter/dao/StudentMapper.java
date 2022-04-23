@@ -1,5 +1,9 @@
 package com.peter.dao;
 
+import com.peter.pojo.Student;
+
+import java.util.List;
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: StudentMapper
@@ -10,4 +14,9 @@ package com.peter.dao;
  * Version:
  */
 public interface StudentMapper {
+
+    List<Student> selectStudents();
+
+    List<Student> selectStudents2();
+
 }
