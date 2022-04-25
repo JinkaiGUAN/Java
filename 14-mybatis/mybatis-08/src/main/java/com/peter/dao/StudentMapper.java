@@ -1,6 +1,9 @@
 package com.peter.dao;
 
 
+import com.peter.pojo.Student;
+import org.apache.ibatis.annotations.Param;
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: StudentMapper
@@ -12,4 +15,5 @@ package com.peter.dao;
  */
 public interface StudentMapper {
 
+    Student selectStudentById(@Param("id") int id);
 }
