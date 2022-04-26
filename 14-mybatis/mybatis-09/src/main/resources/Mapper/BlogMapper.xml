@@ -8,5 +8,10 @@
     <select id="selectBlogs" resultType="Blog">
         select * from blog
     </select>
+    
+    <insert id="insertBlog" parameterType="Blog">
+        insert into blog(id, title, author, create_time, views)
+        values(#{id}, #{title}, #{author}, #{createTime}, #{views})
+    </insert>
 
 </mapper>

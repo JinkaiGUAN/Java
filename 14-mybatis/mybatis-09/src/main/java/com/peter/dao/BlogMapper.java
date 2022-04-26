@@ -16,4 +16,6 @@ import java.util.List;
 public interface BlogMapper {
 
     List<Blog> selectBlogs();
+
+    int insertBlog(Blog blog);
 }

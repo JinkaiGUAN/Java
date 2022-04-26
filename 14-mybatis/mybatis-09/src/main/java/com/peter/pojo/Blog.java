@@ -1,6 +1,8 @@
 package com.peter.pojo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Date;
@@ -17,6 +19,8 @@ import java.util.Date;
 
 @Data
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class Blog {
 
     private String id;
