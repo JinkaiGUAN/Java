@@ -1,0 +1,11 @@
+[DEBUG] 2022-04-26 08:27:00,527(0) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-26 08:27:00,531(4) --> [main] org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:105): Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.  
+[DEBUG] 2022-04-26 08:27:00,556(29) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-26 08:27:00,557(30) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-26 08:27:00,557(30) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-26 08:27:00,558(31) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:334): PooledDataSource forcefully closed/removed all connections.  
+[DEBUG] 2022-04-26 08:27:00,642(115) --> [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:136): Opening JDBC Connection  
+[DEBUG] 2022-04-26 08:27:01,407(880) --> [main] org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:405): Created connection 1546908073.  
+[DEBUG] 2022-04-26 08:27:01,411(884) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==>  Preparing: select * from blog   
+[DEBUG] 2022-04-26 08:27:01,439(912) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): ==> Parameters:   
+[DEBUG] 2022-04-26 08:27:01,465(938) --> [main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143): <==      Total: 0  
