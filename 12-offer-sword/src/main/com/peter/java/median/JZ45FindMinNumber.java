@@ -38,4 +38,8 @@ public class JZ45FindMinNumber {
 
         return res.toString();
     }
+
+    public static void main(String[] args) {
+        String.parseInt("23");
+    }
 }
