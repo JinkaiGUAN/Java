@@ -1,11 +1,9 @@
 package com.peter.dao;
 
 import com.peter.pojo.Blog;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
-
 
 /**
  * Copyright (C), Peter GUAN
@@ -20,8 +18,13 @@ public interface BlogMapper {
 
     List<Blog> selectBlogs();
 
-    Blog selectBlogById(@Param("id") String id);
+    int insertBlog(Blog blog);
+
+    List<Blog> queryBlogIf(Map map);
 
     int updateBlog(Map map);
 
+    List<Blog> queryBlogChoose(Map map);
+
+    List<Blog> queryBlogForeach(Map map);
 }

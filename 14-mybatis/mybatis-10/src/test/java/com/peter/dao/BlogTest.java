@@ -2,7 +2,6 @@ package com.peter.dao;
 
 
 import com.peter.pojo.Blog;
-import com.peter.pojo.Employee;
 import com.peter.util.IdUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;

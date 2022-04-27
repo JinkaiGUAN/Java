@@ -8,64 +8,22 @@
     <select id="selectBlogs" resultType="Blog">
         select * from blog
     </select>
-    
-    <insert id="insertBlog" parameterType="Blog">
-        insert into blog(id, title, author, create_time, views)
-        values(#{id}, #{title}, #{author}, #{createTime}, #{views})
-    </insert>
 
-    <select id="queryBlogIf" parameterType="map" resultType="Blog">
-        select * from blog
-        <where>
-            <if test="title != null">
-                title = #{title}
-            </if>
-            <if test="author != null">
-                and author = #{author}
-            </if>
-        </where>
+    <select id="selectBlogById" parameterType="string" resultType="Blog">
+        select * from blog where id=#{id}
     </select>
 
     <update id="updateBlog" parameterType="map">
         update blog
         <set>
             <if test="title != null">
-                title = #{title}
-            </if>
-            <if test="author != author">
-                authour = #{author}
+                title  = #{title}
             </if>
         </set>
         where id = #{id}
     </update>
 
-    <select id="queryBlogChoose" parameterType="map" resultType="Blog">
-        select * from blog
-        <where>
---             用来设置满足其中一个条件即可
-            <choose>
-                <when test="title != null">
-                    title = #{title}
-                </when>
-                <when test="author != null">
-                    and author = #{author}
-                </when>
-                <otherwise>
-                    and views = #{views}
-                </otherwise>
-            </choose>
-        </where>
-    </select>
-
-    <!--select * from blog where 1=1 and (id=1 or id=2 or id=3)-->
-    <select id="queryBlogForeach" parameterType="map" resultType="Blog">
-        select * from blog
-        <where>
-            1 = 1
-            <foreach collection="ids" item="id" open="and (" close=")" separator="or">
-                id=#{id}
-            </foreach>
-        </where>
-    </select>
-
+    <!--设置global cache-->
+    <cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true"/>
 </mapper>
+

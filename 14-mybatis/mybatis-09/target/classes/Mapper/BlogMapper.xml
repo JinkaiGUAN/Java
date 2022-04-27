@@ -8,10 +8,22 @@
     <select id="selectBlogs" resultType="Blog">
         select * from blog
     </select>
-    
-    <insert id="insertBlog" parameterType="Blog">
-        insert into blog(id, title, author, create_time, views)
-        values(#{id}, #{title}, #{author}, #{createTime}, #{views})
-    </insert>
 
+    <select id="selectBlogById" parameterType="string" resultType="Blog">
+        select * from blog where id=#{id}
+    </select>
+
+    <update id="updateBlog" parameterType="map">
+        update blog
+        <set>
+            <if test="title != null">
+                title  = #{title}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--设置global cache-->
+    <cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true"/>
 </mapper>
+

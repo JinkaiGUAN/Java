@@ -11,6 +11,8 @@
     <settings>
         <setting name="logImpl" value="LOG4J"/>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--开启全局缓存 - 二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
     </settings>
     
     <typeAliases>
