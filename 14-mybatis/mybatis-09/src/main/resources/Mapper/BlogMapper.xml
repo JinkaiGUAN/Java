@@ -23,7 +23,11 @@
         where id = #{id}
     </update>
 
-    <!--设置global cache-->
-    <cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true"/>
+    <!--&lt;!&ndash;设置global cache&ndash;&gt;-->
+    <!--<cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true"/>-->
+
+    <!--设置外部缓存管理器-->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
 </mapper>
 
