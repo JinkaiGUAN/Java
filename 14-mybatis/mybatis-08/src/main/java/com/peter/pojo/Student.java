@@ -1,5 +1,8 @@
 package com.peter.pojo;
 
+import lombok.Data;
+import lombok.ToString;
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: Student
@@ -10,6 +13,9 @@ package com.peter.pojo;
  * Version:
  * @author Peter
  */
+
+@Data
+@ToString
 public class Student {
     private int id;
     private String name;

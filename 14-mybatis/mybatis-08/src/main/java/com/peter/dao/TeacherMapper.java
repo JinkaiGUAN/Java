@@ -1,6 +1,7 @@
 package com.peter.dao;
 
 import com.peter.pojo.Teacher;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,4 +17,13 @@ import java.util.List;
 public interface TeacherMapper {
 
     List<Teacher> selectTeachers();
+
+    /**
+     * 获取指定老师下的所有学生及老师信息
+     */
+    Teacher selectTeacherById(@Param("id") int id);
+
+
+    Teacher selectTeacherById2(@Param("id") int id);
+
 }

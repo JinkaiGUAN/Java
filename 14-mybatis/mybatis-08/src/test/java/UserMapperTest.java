@@ -28,9 +28,22 @@ public class UserMapperTest {
         for (Teacher teacher : teachers) {
             System.out.println(teacher);
         }
-
     }
 
+    @Test
+    public void testSelectTeacherById() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
 
+        TeacherMapper mapper = sqlSession.getMapper(TeacherMapper.class);
+        System.out.println(mapper.selectTeacherById(1));
+    }
+
+    @Test
+    public void testSelectTeacherById2() {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+
+        TeacherMapper mapper = sqlSession.getMapper(TeacherMapper.class);
+        System.out.println(mapper.selectTeacherById2(1));
+    }
 
 }
