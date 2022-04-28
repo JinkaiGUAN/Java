@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/1-spring-IOC/1-spring-IOC.iml" filepath="$PROJECT_DIR$/1-spring-IOC/1-spring-IOC.iml" />
       <module fileurl="file://$PROJECT_DIR$/17-spring.iml" filepath="$PROJECT_DIR$/17-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2-spring-hello/2-spring-hello.iml" filepath="$PROJECT_DIR$/2-spring-hello/2-spring-hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3-spring-IOC-2/3-spring-IOC-2.iml" filepath="$PROJECT_DIR$/3-spring-IOC-2/3-spring-IOC-2.iml" />
     </modules>
   </component>
 </project>
