@@ -12,15 +12,26 @@ import java.io.Serializable;
  * Version:
  */
 public class Person implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String name;
-    private int age;
+    /**
+     * 静态不能背序列化
+     */
+    private static int age;
+
+    private transient int score;
+
+    private int id;
 
     public Person() {
     }
 
-    public Person(String name, int age) {
+    public Person(String name, int age, int score, int id) {
         this.name = name;
-        this.age = age;
+        Person.age = age;
+        this.score = score;
+        this.id = id;
     }
 
     public String getName() {
@@ -35,15 +46,21 @@ public class Person implements Serializable {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
+                ", score=" + score +
+                ", age=" + Person.age +
+                ", id=" + id +
                 '}';
     }
 }

@@ -14,7 +14,8 @@ import java.io.Serializable;
 public class Student implements Serializable {
 
     private String name;
-    private Integer age;
+
+    private static Integer age;
     private Integer score;
 
     public String getName() {

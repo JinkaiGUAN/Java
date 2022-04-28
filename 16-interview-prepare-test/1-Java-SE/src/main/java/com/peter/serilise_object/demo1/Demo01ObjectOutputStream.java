@@ -26,7 +26,7 @@ public class Demo01ObjectOutputStream {
      */
     public static void main(String[] args) throws IOException {
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.txt"));
-        oos.writeObject(new Person("Tome", 12));
+        oos.writeObject(new Person("Tome", 12, 98, 1));
         oos.close();
     }
 }
