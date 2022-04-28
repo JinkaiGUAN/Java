@@ -107,3 +107,58 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 采用XML方式配置Bean的时候，Bean的定义信息是和实现分离的，而采用注解的方式可以把两者合为一体，Bean的定义信息直接以注解的形式定义在实现类中，从而达到了零配置的目的。
 
 **控制反转是一种通过描述（XML或注解）并通过第三方去生产或获取特定对象的方式。在Spring中实现控制反转的是IoC容器，其实现方法是依赖注入（Dep**endency Injection,DI）。
+
+# Spring 配置
+
+## 别名
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="User" class="com.peter.pojo.User">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="name" value="Spring"/>
+    </bean>
+    
+    <!--别名-->
+    <alias name="User" alias="user"/>
+
+</beans>
+```
+
+## Bean 的配置
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    id：Bean的唯一标识符， 相当于对象名
+    class： Bean对象所对应的全限定名， 包名 + 类型
+    name： 即别名
+    -->
+    <bean id="User" class="com.peter.pojo.User" name="u2">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="name" value="Spring"/>
+    </bean>
+</beans>
+```
+## import
+一般用于团队开发， 可以将多个配置文件导入合并为一个。
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+        <import resource="beans.xml"/>
+        <import resource="beans2.xml"/>
+</beans>
+```

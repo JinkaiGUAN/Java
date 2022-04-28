@@ -11,6 +11,7 @@
     <modules>
         <module>1-spring-IOC</module>
         <module>2-spring-hello</module>
+        <module>3-spring-IOC-2</module>
     </modules>
 
     <properties>
