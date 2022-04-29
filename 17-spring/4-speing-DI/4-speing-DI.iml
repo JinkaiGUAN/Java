@@ -2,21 +2,37 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Beans" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Beans1" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans1.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Beans Array" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans-array.xml</file>
+        </fileset>
+        <fileset id="fileset4" name="Beans List" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans-list.xml</file>
+        </fileset>
+        <fileset id="fileset5" name="Beans Map" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans-map.xml</file>
+        </fileset>
+        <fileset id="fileset6" name="Beans Set" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans-set.xml</file>
+        </fileset>
+        <fileset id="fileset7" name="Beans Null" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans-null.xml</file>
+        </fileset>
+        <fileset id="fileset8" name="Beans Properties" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/beans-properties.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/target" />
-    </content>
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
-    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
@@ -25,6 +41,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.0.RELEASE" level="project" />
