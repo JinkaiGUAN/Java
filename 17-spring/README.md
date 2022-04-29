@@ -108,6 +108,32 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 
 **控制反转是一种通过描述（XML或注解）并通过第三方去生产或获取特定对象的方式。在Spring中实现控制反转的是IoC容器，其实现方法是依赖注入（Dep**endency Injection,DI）。
 
+## 2.1 IoC 创建对象方式
+在使用 `getBean()` 的时候 Spring 就已经通过无参构造函数为我们创建了一个 Bean 对象。 实际情况是， 在配置文件加载的时候， 其中管理的对象就已经开始初始化。
+
+当然我们还可以使用有参构造函数来创建， 但是在 xml 文件中必须指定相应参数的值。
+
+```xml
+<!-- 第一种根据index参数下标设置 -->
+<bean id="userT" class="com.kuang.pojo.UserT">
+    <!-- index指构造方法 , 下标从0开始 -->
+    <constructor-arg index="0" value="kuangshen2"/>
+</bean>
+
+        <!-- 第二种根据参数名字设置 -->
+<bean id="userT" class="com.kuang.pojo.UserT">
+    <!-- name指参数名 -->
+    <constructor-arg name="name" value="kuangshen2"/>
+</bean>
+        
+        <!-- 第三种根据参数类型设置 -->
+<bean id="userT" class="com.kuang.pojo.UserT">
+    <constructor-arg type="java.lang.String" value="kuangshen2"/>
+</bean>
+```
+
+
+
 # Spring 配置
 
 ## 别名

@@ -4,11 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="User" class="com.peter.pojo.User">
-        <!-- collaborators and configuration for this bean go here -->
-        <property name="name" value="Spring"/>
-    </bean>
 
-    <!--<alias name="User" alias="user"/>-->
 
 </beans>
