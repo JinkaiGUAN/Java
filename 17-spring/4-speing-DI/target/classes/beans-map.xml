@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="Address" class="com.peter.pojo.Address">
+        <property name="address" value="London"/>
+    </bean>
+
+    <bean id="Student" class="com.peter.pojo.Student">
+        <property name="name" value="Tom"/>
+        <property name="address" ref="Address"/>
+        <property name="books">
+            <array>
+                <value>水浒</value>
+                <value>红楼</value>
+                <value>西游</value>
+            </array>
+        </property>
+        <property name="hobbies">
+            <list>
+                <value>Play the piano</value>
+                <value>Cooking</value>
+            </list>
+        </property>
+        <!--map 注入-->
+        <property name="card">
+            <map>
+                <entry key="China postOffice" value="14512211"/>
+                <entry key="Construction" value="1326466"/>
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

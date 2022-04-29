@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="4-speing-DI" />
+        <module name="3-spring-IOC-2" />
         <module name="2-spring-hello" />
         <module name="1-spring-IOC" />
-        <module name="3-spring-IOC-2" />
       </profile>
     </annotationProcessing>
   </component>

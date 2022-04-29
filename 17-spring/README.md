@@ -188,3 +188,110 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
         <import resource="beans2.xml"/>
 </beans>
 ```
+
+# 依赖注入 （DI）
+
+- Dependency injection
+- 依赖： Bean 对象的创建依赖于容器， Bean 对象的依赖资源。
+- 注入： 指 Bean 对象所依赖的资源， 由容器来设置和装配。
+
+## 构造器注入
+即上文中提到的使用在xml文件中配置构造器参数来生成Bean对象。
+
+## Set 注入
+这里 Set 是指使用set方法， 即 `set + 属性首字母大写`. 如果属性是 boolean， 我们将 set 替换为 is。
+### 常量 注入
+```xml
+ <bean id="student" class="com.kuang.pojo.Student">
+     <property name="name" value="小明"/>
+ </bean>
+```
+
+### Beans 注入
+```xml
+<bean id="Address" class="com.peter.pojo.Address">
+        <property name="address" value="London"/>
+</bean>
+
+<bean id="Student" class="com.peter.pojo.Student">
+    <property name="name" value="Tom"/>
+    <!--Bean 注入 注意这里使用 ref-->
+    <property name="address" ref="Address"/>
+</bean>
+```
+
+### 数组 注入
+
+```xml
+<bean id="Student" class="com.peter.pojo.Student">
+    <property name="name" value="Tom"/>
+    <property name="address" ref="Address"/>
+    <!--数组注入-->
+    <property name="books">
+        <array>
+            <value>水浒</value>
+            <value>红楼</value>
+            <value>西游</value>
+        </array>
+    </property>
+</bean>
+
+```
+
+### List 注入
+```xml
+<!--list 注入-->
+<property name="hobbies">
+    <list>
+        <value>Play the piano</value>
+        <value>Cooking</value>
+    </list>
+</property>
+
+```
+
+
+### Map 注入
+
+```xml
+<!--map 注入-->
+<property name="card">
+    <map>
+        <entry key="China postOffice" value="14512211"/>
+        <entry key="Construction" value="1326466"/>
+    </map>
+</property>
+```
+
+### Set 注入
+
+```xml
+<!--Set 注入-->
+<property name="games">
+    <set>
+        <value>LoL</value>
+        <value>Bob</value>
+    </set>
+</property>
+```
+
+
+### Null 注入
+
+```xml
+<!--null 注入-->
+<property name="wife"><null></null></property>
+```
+
+### Properties 注入
+```xml
+<!--properties 注入-->
+<property name="info">
+    <props>
+        <prop key="Id">2021165</prop>
+        <prop key="Gender">Male</prop>
+        <prop key="Name">Tom</prop>
+    </props>
+</property>
+```
+

@@ -12,6 +12,7 @@
         <module>1-spring-IOC</module>
         <module>2-spring-hello</module>
         <module>3-spring-IOC-2</module>
+        <module>4-speing-DI</module>
     </modules>
 
     <properties>

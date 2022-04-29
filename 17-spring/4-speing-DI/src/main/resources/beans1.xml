@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="Address" class="com.peter.pojo.Address">
+        <property name="address" value="London"/>
+    </bean>
+
+    <bean id="Student" class="com.peter.pojo.Student">
+        <property name="name" value="Tom"/>
+        <!--Bean 注入 注意这里使用 ref-->
+        <property name="address" ref="Address"/>
+    </bean>
+
+
+</beans>
