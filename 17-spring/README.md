@@ -429,8 +429,152 @@ JDk 1.5 和 spring 2.5 开始就支持注解。
 - @Autoweired:
   - 直接在属性上使用即可， 也可以在set方法上使用。
   - 使用 @Autoweired  可以不用编写set方法， 前提是自动装配的属性在IOC容器中存在， 且符合命名byName规范。
+  - @Qualifier() 注解可以指定配置文件中的bean
 
 
 # 6. 使用注解开发
 
 Spring 在 4 之后需要导入 aop 依赖
+ 
+
+## 6.1 Bean 的实现
+在使用之前需要在xml配置文件中引入一个上文中出现的context约束。 同时我们还需要设定扫描包的路径
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--指定注解扫描包-->
+    <context:component-scan base-package="com.peter.pojo"/>
+    <context:annotation-config/>
+
+</beans>
+```
+
+在指定类下添加注解
+```java
+// 相当于xml配置文件中 <bean id="user", class="com.peter.pojo.User"/>
+@Component("user")
+public class User {
+    public String name = "Tom";
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+```
+
+## 6.2 属性注入
+可以不使用set方法， 直接在属性名上添加 @Value() 注解
+
+```java
+@Component("user")
+public class User {
+    
+    @Value("Tom")
+    public String name;
+}
+```
+如果提供了set方法， 则可以在set方法上添加 @Value() 注解。
+
+## 6.3 @Component 衍生注解
+- @Controller: web layer
+- @Service: service layer
+- Repository: Dao layer
+
+## 6.4 Scope 作用域
+
+使用注解 @Scope 用来指定Bean的作用域：
+- singleton：默认的，Spring会采用单例模式创建这个对象。关闭工厂 ，所有的对象都会销毁。
+- prototype：多例模式。关闭工厂 ，所有的对象不会销毁。内部的垃圾回收机制会回收
+
+```java
+@Component
+@Scope("prototype")
+public class User {
+
+  @Value("Tome")
+  public String name;
+}
+```
+
+## 6.5 小结
+
+XML与注解比较
+- XML可以适用任何场景 ，结构清晰，维护方便
+- 注解不是自己提供的类使用不了，开发简单方便
+
+xml与注解整合开发 ：推荐最佳实践
+- xml管理Bean
+- 注解完成属性注入
+- 使用过程中， 可以不用扫描，扫描是为了类上的注解
+
+`<context:annotation-config/>`作用：
+- 进行注解驱动注册，从而使注解生效
+- 用于激活那些已经在spring容器里注册过的bean上面的注解，也就是显示的向Spring注册
+- 如果不扫描包，就需要手动配置bean
+- 如果不加注解驱动，则注入的值为null！
+
+## 6.6 基于Java类进行配置
+JavaConfig 原来是 Spring 的一个子项目，它通过 Java 类的方式提供 Bean 的定义信息，在 Spring4 的版本， JavaConfig 已正式成为
+Spring4 的核心功能.
+
+
+实体：
+```java
+@Component
+public class Dog {
+    public String name = "dog";
+}
+```
+
+编写配置类：
+```java
+@Configuration //代表这是一个配置类
+@Import(MyConfig2.class) // //导入合并其他配置类，类似于配置文件中的 inculde 标签
+public class MyConfig {
+
+    @Bean //通过方法注册一个bean，这里的返回值就Bean的类型，方法名就是bean的id！
+    public Dog dog() {
+        return new Dog();
+    }
+}
+```
+
+另外一个配置类
+```java
+@Configuration
+public class MyConfig2 {
+}
+```
+
+Test:
+```java
+public class MyTest {
+
+    @Test
+    public void testJavaConfig() {
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MyConfig.class);
+        Dog dog = applicationContext.getBean("dog", Dog.class);
+        System.out.println(dog.name);
+    }
+}
+
+```

@@ -14,6 +14,7 @@
         <module>3-spring-IOC-2</module>
         <module>4-speing-DI</module>
         <module>5-spring-autoweired</module>
+        <module>6-spring-annotation</module>
     </modules>
 
     <properties>
