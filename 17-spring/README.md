@@ -134,9 +134,9 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 
 
 
-# Spring 配置
+# 3. Spring 配置
 
-## 别名
+## 3.1 别名
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -156,7 +156,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 </beans>
 ```
 
-## Bean 的配置
+## 3.2 Bean 的配置
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -174,7 +174,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
     </bean>
 </beans>
 ```
-## import
+## 3.3 import
 一般用于团队开发， 可以将多个配置文件导入合并为一个。
 
 ```xml
@@ -189,25 +189,25 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 </beans>
 ```
 
-# 依赖注入 （DI）
+# 4.依赖注入 （DI）
 
 - Dependency injection
 - 依赖： Bean 对象的创建依赖于容器， Bean 对象的依赖资源。
 - 注入： 指 Bean 对象所依赖的资源， 由容器来设置和装配。
 
-## 构造器注入
+## 4.1 构造器注入
 即上文中提到的使用在xml文件中配置构造器参数来生成Bean对象。
 
-## Set 注入
+## 4.2 Set 注入
 这里 Set 是指使用set方法， 即 `set + 属性首字母大写`. 如果属性是 boolean， 我们将 set 替换为 is。
-### 常量 注入
+### 4.2.1 常量 注入
 ```xml
  <bean id="student" class="com.kuang.pojo.Student">
      <property name="name" value="小明"/>
  </bean>
 ```
 
-### Beans 注入
+### 4.2.2 Beans 注入
 ```xml
 <bean id="Address" class="com.peter.pojo.Address">
         <property name="address" value="London"/>
@@ -220,7 +220,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 </bean>
 ```
 
-### 数组 注入
+### 4.2.3 数组 注入
 
 ```xml
 <bean id="Student" class="com.peter.pojo.Student">
@@ -238,7 +238,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 
 ```
 
-### List 注入
+### 4.2.4 List 注入
 ```xml
 <!--list 注入-->
 <property name="hobbies">
@@ -251,7 +251,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 ```
 
 
-### Map 注入
+### 4.2.5 Map 注入
 
 ```xml
 <!--map 注入-->
@@ -263,7 +263,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 </property>
 ```
 
-### Set 注入
+### 4.2.6 Set 注入
 
 ```xml
 <!--Set 注入-->
@@ -276,14 +276,14 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 ```
 
 
-### Null 注入
+### 4.2.7 Null 注入
 
 ```xml
 <!--null 注入-->
 <property name="wife"><null></null></property>
 ```
 
-### Properties 注入
+### 4.2.8 Properties 注入
 ```xml
 <!--properties 注入-->
 <property name="info">
@@ -295,7 +295,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 </property>
 ```
 
-## p-namespace 和 c-namespace 注入
+## 4.3 p-namespace 和 c-namespace 注入
 
 注意：
 - 这两种方式都是利用 pojo 类的构造器进行注入。 其中 `p-namespace` 利用无参构造器， `c-namepsace` 利用有参构造器。
@@ -307,7 +307,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
     xmlns:c="http://www.springframework.org/schema/c"
 ```
 
-### 书写格式
+### 4.3.1 书写格式
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -325,20 +325,20 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
     <bean id="user2" class="com.peter.pojo.User" c:name="Tom2" c:age="20"/>
 </beans>
 ```
-## Bean 作用域
+## 4.4 Bean 作用域
 
 ![img.png](3_beans_scope.png/img.png)
 
 - 一般单线程种使用 singleton 较多， 多线程使用 prototype 较多。
 - request、session、 application、websocket 作用域仅在基于web的应用中使用（不必关心你所采用的是什么web应用框架），只能用在基于web的Spring ApplicationContext环境。
 
-### Singleton 
+### 4.4.1 Singleton 
 当一个bean的作用域为Singleton，那么Spring IoC容器中只会存在一个共享的bean实例，并且所有对bean的请求，只要id与该bean定义相匹配，则只会返回bean的同一实例。Singleton是单例类型，就是在创建起容器时就同时自动创建了一个bean的对象，不管你是否使用，他都存在了，每次获取到的对象都是同一个对象。注意，Singleton作用域是Spring中的缺省作用域。要在XML中将bean定义成singleton，可以这样配置：
 ```xml
  <bean id="user" class="com.peter.pojo.User" p:name="Tom" p:age="18" scope="singleton"/>
 ```
 
-### Prototype
+### 4.4.2  Prototype
 当一个bean的作用域为Prototype，表示一个bean定义对应多个对象实例。Prototype作用域的bean会导致在每次对该bean请求（将其注入到另一个bean中，
 或者以程序的方式调用容器的getBean()方法）时都会创建一个新的bean实例。Prototype是原型类型，它在我们创建容器的时候并没有实例化，而是当我们获取bean
 的时候才会去创建一个对象，而且我们每次获取到的对象都不是同一个对象。根据经验，对有状态的bean应该使用prototype作用域，而对无状态的bean则应该使用
@@ -347,7 +347,7 @@ singleton作用域。在XML中将bean定义成prototype，可以这样配置：
  <bean id="user" class="com.peter.pojo.User" p:name="Tom" p:age="18" scope="prototype"/>
 ```
 
-### Request
+### 4.4.3 Request
 当一个bean的作用域为Request，表示在一次HTTP请求中，一个bean定义对应一个实例；即每个HTTP请求都会有各自的bean实例，它们依据某个bean定义创建而成。
 该作用域仅在基于web的Spring ApplicationContext情形下有效。考虑下面bean定义：
 ```xml
@@ -356,7 +356,7 @@ singleton作用域。在XML中将bean定义成prototype，可以这样配置：
 针对每次HTTP请求，Spring容器会根据loginAction bean的定义创建一个全新的LoginAction bean实例，且该loginAction bean实例仅在当前HTTP 
 request内有效，因此可以根据需要放心的更改所建实例的内部状态，而其他请求中根据loginAction bean定义创建的实例，将不会看到这些特定于某个请求的状态变化。当处理请求结束，request作用域的bean实例将被销毁。
 
-### Session
+### 4.4.4 Session
 当一个bean的作用域为Session，表示在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。
 考虑下面bean定义：
 ```xml
@@ -367,3 +367,70 @@ request内有效，因此可以根据需要放心的更改所建实例的内部�
 Session中根据userPreferences创建的实例，将不会看到这些特定于某个HTTP Session的状态变化。当HTTP 
 Session最终被废弃的时候，在该HTTP Session作用域内的bean也会被废弃掉。
 
+# 5 Bean 的自动装配
+
+- 自动装配是 Spring 满足Bean 依赖的一种方式
+- Spring 会在上下文中自动寻找， 并自动给 bean 装配属性
+
+装配方式：
+- 在 xml 中配置
+- 在 java 中显式配置
+- 隐式的自动装配 【Important】
+
+## 5.1 ByName 自动装配
+
+```xml
+<!--
+<bean id="person" class="com.peter.pojo.Person" autowire="byName">
+    <property name="name" value="Tome"/>
+</bean>
+```
+
+## 5.2 ByType 自动装配
+
+```xml
+<bean id="person" class="com.peter.pojo.Person" autowire="byType">
+        <property name="name" value="Tome"/>
+</bean>
+
+```
+
+总结：
+
+- byName 的时候， 需要保证所有的bean 的id 唯一 ， 并且这个bean需要和自定注入的属性的set 方法的值一致！
+- byType 的时候， 需要保证所有 bean 的 class 唯一， 并且这个bean 需要和自动注入的属性的类型一致！
+
+## 5.3 使用注解实现自动装配
+
+JDk 1.5 和 spring 2.5 开始就支持注解。
+
+
+使用注解须知：
+- 使用 context 约束
+- 配置注解支持
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--配置注解支持-->
+    <context:annotation-config/>
+
+</beans>
+```
+`<context:annotation-config/>` 会自动实现如下的后处理
+
+- @Autoweired:
+  - 直接在属性上使用即可， 也可以在set方法上使用。
+  - 使用 @Autoweired  可以不用编写set方法， 前提是自动装配的属性在IOC容器中存在， 且符合命名byName规范。
+
+
+# 6. 使用注解开发
+
+Spring 在 4 之后需要导入 aop 依赖

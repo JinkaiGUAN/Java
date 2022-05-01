@@ -13,6 +13,7 @@
         <module>2-spring-hello</module>
         <module>3-spring-IOC-2</module>
         <module>4-speing-DI</module>
+        <module>5-spring-autoweired</module>
     </modules>
 
     <properties>
