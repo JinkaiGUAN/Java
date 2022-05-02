@@ -14,5 +14,9 @@
         <module name="1-spring-IOC" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="1-spring-IOC" target="8" />
+      <module name="17-spring" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
