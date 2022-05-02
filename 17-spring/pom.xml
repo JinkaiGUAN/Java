@@ -15,6 +15,7 @@
         <module>4-speing-DI</module>
         <module>5-spring-autoweired</module>
         <module>6-spring-annotation</module>
+        <module>7-spring-proxy</module>
     </modules>
 
     <properties>

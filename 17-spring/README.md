@@ -578,3 +578,6 @@ public class MyTest {
 }
 
 ```
+
+# 7. 代理模式
+

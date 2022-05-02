@@ -9,9 +9,10 @@
         <module name="4-speing-DI" />
         <module name="3-spring-IOC-2" />
         <module name="6-spring-annotation" />
-        <module name="2-spring-hello" />
         <module name="5-spring-autoweired" />
         <module name="1-spring-IOC" />
+        <module name="7-spring-proxy" />
+        <module name="2-spring-hello" />
       </profile>
     </annotationProcessing>
   </component>
