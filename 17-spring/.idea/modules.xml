@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/2-spring-hello/2-spring-hello.iml" filepath="$PROJECT_DIR$/2-spring-hello/2-spring-hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-spring-IOC-2/3-spring-IOC-2.iml" filepath="$PROJECT_DIR$/3-spring-IOC-2/3-spring-IOC-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-speing-DI/4-speing-DI.iml" filepath="$PROJECT_DIR$/4-speing-DI/4-speing-DI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5-spring-autoweired/5-spring-autoweired.iml" filepath="$PROJECT_DIR$/5-spring-autoweired/5-spring-autoweired.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6-spring-annotation/6-spring-annotation.iml" filepath="$PROJECT_DIR$/6-spring-annotation/6-spring-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7-spring-proxy/7-spring-proxy.iml" filepath="$PROJECT_DIR$/7-spring-proxy/7-spring-proxy.iml" />
     </modules>
   </component>
 </project>
