@@ -13,6 +13,7 @@
         <module name="1-spring-IOC" />
         <module name="7-spring-proxy" />
         <module name="2-spring-hello" />
+        <module name="8-spring-aop" />
       </profile>
     </annotationProcessing>
   </component>

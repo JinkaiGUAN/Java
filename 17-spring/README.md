@@ -327,7 +327,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 ```
 ## 4.4 Bean 作用域
 
-![img.png](3_beans_scope.png/img.png)
+![img.png](./asserts/3_beans_scope.png)
 
 - 一般单线程种使用 singleton 较多， 多线程使用 prototype 较多。
 - request、session、 application、websocket 作用域仅在基于web的应用中使用（不必关心你所采用的是什么web应用框架），只能用在基于web的Spring ApplicationContext环境。
@@ -622,3 +622,42 @@ JDK 动态代理：
 - 公共业务发生扩展时变得更加集中和方便 .
 - 一个动态代理 , 一般代理某一类业务
 - 一个动态代理可以代理多个类，代理的是接口！
+
+
+# 8. AOP 
+
+## 8.1 原理
+
+AOP (Aspect Oriented Programming)： 面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，
+是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，
+从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
+
+## 8.2 AOP 在 Spring 中的应用
+
+- 横切关注点：跨越应用程序多个模块的方法或功能。即是，与我们业务逻辑无关的，但是我们需要关注的部分，就是横切关注点。如日志 , 安全 , 缓存 , 事务等等 ....
+- 切面（ASPECT）：横切关注点 被模块化 的特殊对象。即，它是一个类。
+- 通知（Advice）：切面必须要完成的工作。即，它是类中的一个方法。
+- 目标（Target）：被通知对象。
+- 代理（Proxy）：向目标对象应用通知之后创建的对象。
+- 切入点（PointCut）：切面通知 执行的 “地点”的定义。
+- 连接点（JointPoint）：与切入点匹配的执行点。
+
+![img.png](./asserts/4_aop_concept.png)
+
+Spring AOP 中， 通过 Advice 定义横切逻辑， Spring中支持5种类型的Advice：
+
+![img.png](./asserts/5_aop_advice.png)
+
+## 8.3 使用 AOP
+
+需要在pom种导入下面的jar包。
+```xml
+
+<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.9.1</version>
+        </dependency>
+```
+

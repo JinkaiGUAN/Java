@@ -16,6 +16,7 @@
         <module>5-spring-autoweired</module>
         <module>6-spring-annotation</module>
         <module>7-spring-proxy</module>
+        <module>8-spring-aop</module>
     </modules>
 
     <properties>
@@ -42,6 +43,14 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.9.1</version>
+        </dependency>
+
 
     </dependencies>
 

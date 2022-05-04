@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- this is the object that will be proxied by Spring's AOP infrastructure -->
+    <bean id="userService" class="com.peter.service.UserServiceImpl"/>
+    <bean id="log" class="com.peter.aop.Log"/>
+    <bean id="afterLog" class="com.peter.aop.AfterLog"/>
+
+    <!-- this is the actual advice itself -->
+    <!--<bean id="profiler" class="x.y.SimpleProfiler"/>-->
+
+    <!--aop configuration-->
+    <aop:config>
+
+            <!--切入点 expression:表达式匹配要执行的方法-->
+            <aop:pointcut id="pointcut"
+                          expression="execution(*com.peter.service.UserServiceImpl.*(..))"/>
+
+            <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
+            <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>
+
+    </aop:config>
+
+</beans>
