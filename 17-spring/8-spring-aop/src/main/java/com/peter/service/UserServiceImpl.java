@@ -1,5 +1,7 @@
 package com.peter.service;
 
+import java.util.ArrayList;
+
 /**
  * Copyright (C), Peter GUAN
  * FileName: UserServiceImpl
