@@ -1,4 +1,4 @@
-package javaLearning.multiprocessLearning;
+package com.peter.demo1;
 
 import java.util.concurrent.*;
 

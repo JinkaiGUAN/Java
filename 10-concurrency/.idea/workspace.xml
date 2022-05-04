@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2d5c7688-d4a6-4a0e-88ea-a34ab63ebceb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/javaLearning/multiprocessLearning/T02_FutureTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/10-Multiprocess.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/out/production/10-Multiprocess/javaLearning/multiprocessLearning/T01_HowToCreateThread$MyRun.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/out/production/10-Multiprocess/javaLearning/multiprocessLearning/T01_HowToCreateThread$MyThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/out/production/10-Multiprocess/javaLearning/multiprocessLearning/T01_HowToCreateThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-/src/javaLearning/multiprocessLearning/T01_HowToCreateThread.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-source-code/1-source-code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-source-code/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaLearning/multiprocessLearning/T01_HowToCreateThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/1-source-code/src/main/java/com/peter/demo1/T01_HowToCreateThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaLearning/multiprocessLearning/T02_FutureTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/1-source-code/src/main/java/com/peter/demo1/T02_FutureTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/SoftwareAPPs/Maven/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="D:\SoftwareAPPs\Maven\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="27SkZE0eD9k550HdG0lxv31NhRV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,20 +51,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunManager">
     <configuration name="T02_FutureTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaLearning.multiprocessLearning.T02_FutureTask" />
-      <module name="10-Multiprocess" />
+      <option name="MAIN_CLASS_NAME" value="demo1.T02_FutureTask" />
+      <module name="1-source-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javaLearning.multiprocessLearning.*" />
+          <option name="PATTERN" value="demo1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,6 +90,7 @@
       <workItem from="1649320933515" duration="1480000" />
       <workItem from="1649324390459" duration="1634000" />
       <workItem from="1649404019100" duration="5024000" />
+      <workItem from="1651691656764" duration="584000" />
     </task>
     <servers />
   </component>
